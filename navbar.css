@@ -76,27 +76,34 @@
     padding-right: 0px;
     width: auto;
   }
+  span {
+    color: rgb(228, 0, 43);
+  }
 
   /* NAVBAR 2 */
   #navbar2 {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    width: 100%;
-    height: 50px;
+    width: 94%;
+    gap:150px;
+    margin: auto;
     margin-top: 4px;
+    /* border: 1px solid red; */
     position: sticky;
     top: 0px;
     font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    background-color: white;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: 
+    #f7f8f7 ;
+    padding: 0px 50px;
   }
   #navbar2 > div:first-child {
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 50%;
+    grid-template-columns: 100px 60px 60px 60px 60px 400px;
     align-items: center;
   }
   #navbar2 > div:first-child > div {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,9 +126,7 @@
     margin-bottom: 7px;
   }
 
-  span {
-    color: rgb(228, 0, 43);
-  }
+  
   #navbar2 > div:first-child > div:last-child > img {
     width: 5%;
     padding: 5px 0px 5px;
@@ -130,7 +135,7 @@
   #navbar2 > div:first-child > div:last-child {
     display: flex;
     justify-content: start;
-    height: 80%;
+  
     gap: 20px;
     background-color: rgb(236, 237, 235);
     padding-left: 10px;
@@ -145,56 +150,66 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     box-sizing: border-box;
-    width: 100%;
+    width: 600px;
+    align-content
+    : center;
   }
 
   #navbar2 > div:first-child + div > div:last-child > img {
-    width: 20%;
+    width: 10%;
+    /* border: 1px solid red; */
   }
   #left-nav {
+    /* border: 1px solid red; */
     display: grid;
-    grid-template-columns: 30% 30%;
-    justify-content: flex-end;
+    grid-template-columns: 120px 150px;
     align-items: center;
+  }
+  
+  #cart-part{
+    display: flex;
+    align-items: center;
+  }
+  #cart-part>div{
+width: 10px;
+margin-left: 10px;
+margin-right: 0px;
+  }
+  #cart-part>div>img{
+    /* border: 1px solid green; */
+    width: 20px;
+    margin-left: 30px;
   }
   #left-nav > div:first-child {
-    height: 60%;
-    border-right: 1px solid rgb(200, 201, 198);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* border: 1px solid blue; */
+    /* border-right: 1px solid rgb(200, 201, 198); */
     cursor: pointer;
   }
-  #left-nav > div:last-child {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    margin-right: 20px;
-    gap: 10px;
+  #left-nav > div:first-child {
+    /* border: 1px solid red; */
+    border-right: 1px solid rgb(200, 201, 198);
     cursor: pointer;
-    align-items: center;
   }
 
   /* NAVBAR 3 */
 
   #navbar3 {
     display: flex;
-    width: 100%;
-    height: 40px;
+    width: 93%;
+    margin: auto;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    position: sticky;
+    font-size: 12px;
+    /* position: sticky; */
     top: 50px;
     margin-bottom: 5px;
     background-color: white;
   }
   #navbar3 > div {
-    height: 100%;
     display: flex;
-
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     cursor: pointer;
+    /* border: 1px solid red; */
     padding: 0px 10px;
   }
   #navbar3 > div:hover {
@@ -202,13 +217,13 @@
     border-bottom: 2px solid rgb(48, 58, 178);
   }
   #navbar3 > div:last-child {
-    padding: 0px 20px;
+    padding: 0px 0px;
     border: none;
   }
   #navbar3 + div {
     text-align: center;
     background-color: rgb(48, 58, 178);
     color: rgb(235, 255, 255);
-    padding: 10px;
+    padding: 10px 0px;
     font-family: Arial, Helvetica, sans-serif;
   }
