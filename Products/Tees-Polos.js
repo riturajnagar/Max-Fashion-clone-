@@ -173,7 +173,7 @@ function displayProducts(teesPoloProductsBoysArr){
         let img=document.createElement("img");
         let avatar=ele.image
         img.setAttribute("src",avatar)
-        console.log(img)
+        // console.log(img)
         let price=document.createElement("h5");
         price.innerText=ele.price
         let name=document.createElement("p")
@@ -184,17 +184,17 @@ function displayProducts(teesPoloProductsBoysArr){
         cart.addEventListener("click",function(){
             addToBasket(ele);
         })
-
         div1.append(img,price,name,cart);
         document.querySelector("#boysProduct").append(div1);
     });
 
     // This code is meant to add items in our cart page
 
-    let basketArr=JSON.parse(localStorage.getItem("basketItem")) || [];
+    let basketArr= [];
     function addToBasket(ele){
         basketArr.push(ele);
         alert("Added to Basket");
+        console.log(basketArr)
         localStorage.setItem("basketItem",JSON.stringify(basketArr));
     }
 

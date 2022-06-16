@@ -136,7 +136,7 @@
       }
       #offer {
         box-sizing: border-box;
-        border: 1px solid red;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         width: 100%;
         height: 100px;
         padding: 10px;
@@ -165,18 +165,37 @@
         justify-content:space-between
       }
       #checkoutDetail {
-        border: 1px solid brown;
-        height: 200px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        
         width: 100%;
         margin-top: 10px;
+        
       }
+      #checkoutDetail>table{
+        margin: 0px 10px;
+        width: 100%;
+      }
+     
+      #checkoutDetail>button{
+        margin: 1px 15px;
+        width: 90%;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+      }
+      #checkoutDetail>button:hover{
+        background-color: teal;
+        color: white;
+        cursor: pointer;
+      }
+      
       #checkout > div:last-child {
         width: 100%;
         height: 100px;
       }
       #dummyImage {
         width:100%;
-        border: 1px solid red;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         margin-top: 10px;
       }
       #dummyImage > img {
@@ -193,6 +212,7 @@
     <div id="basketMain">
       <div id="productDisplay"></div>
       <!-- checkout section html part -->
+
       <div id="checkout">
         <div id="checkoutSub">
           <div>
@@ -214,6 +234,16 @@
                 alt="gift img"
             /></span>
             <div>
+              <input type="text" placeholder="Enter Promo Code" id="promoCodeValue" />
+              <button id="promoCode">Submit</button>
+            </div>
+
+            <!-- <span
+              ><img
+                src="https://www.maxfashion.in/static/icons/gift-box.png"
+                alt="gift img"
+            /></span>
+            <div>
               <div id="selectDiv">
                 <p>Offer for you !</p>
                 <span style="color: #303ab2">Select</span>
@@ -221,10 +251,27 @@
               <div style="font-size: 13px; color: grey; line-height: 12px">
                 Choose and apply voucher in 2 simple steps
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
-        <div id="checkoutDetail"></div>
+        <div id="checkoutDetail">
+          <table>
+            <tr>
+              <td><p>Total MRP</p></td>
+              <td><p id="mrp">₹ 0</p></td>
+            </tr>
+            <tr>
+              <td><p>Shipping charge</p></td>
+              <td><p>Free</p></td>
+            </tr>
+            <tr>
+              <td><p>Total</p></td>
+              <td><p id="total">₹ 0</p></td>
+            </tr>
+          </table>
+
+          <button>Checkout Now</button>
+        </div>
         <div>
           <div id="dummyImage"><img src="https://i.im.ge/2022/06/16/rnO5SG.png" alt="data" /></div>
         </div>
@@ -233,9 +280,10 @@
   </body>
 </html>
 <script>
-  let basketArr = JSON.parse(localStorage.getItem("basketItem"));
+  let basketArr = JSON.parse(localStorage.getItem("basketItem")) || [];
   displayProduct(basketArr);
   function displayProduct(basketArr) {
+    document.querySelector("#productDisplay").innerHTML=""
     let length = basketArr.length;
     basketArr.forEach(function (el, ind) {
       let maincard = document.createElement("div");
@@ -291,4 +339,36 @@
     localStorage.setItem("basketItem", JSON.stringify(basketArr));
     window.location.reload();
   }
+
+  // cart functionality to add card item price etc
+let promocode=""
+calculation(promocode)
+
+  function calculation(promocode){
+    let basketDetails=JSON.parse(localStorage.getItem("basketItem"))
+    let mrp=0;
+    basketDetails.forEach(function(ele){
+      mrp+=+(ele.price)
+    })
+    document.querySelector("#mrp").innerText="₹ "+mrp
+    // console.log(promocode)
+    if(promocode=="masai30"){
+      let dis=(mrp*30)/100;
+            mrp=mrp-dis;
+            // console.log(mrp)
+    }else{
+      if(promocode!=""){
+        alert("Invalid Promo Code")
+        window.location.reload();
+      }
+      
+    }
+    document.querySelector("#total").innerText="₹ "+Math.floor(mrp)
+  }
+document.querySelector("#promoCode").addEventListener("click",applyPromo)
+function applyPromo(){
+let promocode=document.querySelector("#promoCodeValue").value
+calculation(promocode)
+}
+
 </script>
