@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basket</title>
+    <style>
+      * {
+        font-family: ProximaNova-Regular, "Helvetica Neue", Arial, sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      div {
+        /* border: 1px solid red; */
+        margin: auto;
+        width: 90%;
+      }
+      div > h1 {
+        font-size: 24px;
+        font-weight: lighter;
+      }
+      hr {
+        margin-top: 20px;
+        border: 0.2px solid rgb(241, 235, 235);
+      }
+      #basketMain {
+        width: 95%;
+        margin-top: 20px;
+        /* border: 1px solid red; */
+        display: flex;
+        /* height: auto; */
+      }
+      #productDisplay {
+        position: absolute;
+        /* border: 1px solid green; */
+        /* display: flex; */
+        width: 60%;
+      }
+      #checkout {
+        position: absolute;
+        /* border: 1px solid purple; */
+        width: 400px;
+        margin-top: 10px;
+        left: 1050px;
+      }
+      #maincard {
+        /* border: 2px solid brown; */
+        box-sizing: border-box;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+          rgb(209, 213, 219) 0px 0px 0px 1px inset;
+        margin-top: 10px;
+      }
+      #cards {
+        /* border: 1px solid rebeccapurple; */
+        display: flex;
+        box-sizing: inherit;
+      }
+      #imgdiv {
+        /* border: 1px solid orchid; */
+        width: 100px;
+        height: 120px;
+      }
+      #imgdiv > img {
+        width: 100%;
+        height: 100%;
+      }
+      #cards > div:last-child {
+        margin-left: 20px;
+        line-height: 15px;
+      }
+      #bottom {
+        display: flex;
+        margin-top: 10px;
+        /* border: 1px solid lime; */
+        height: 50px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+          rgb(209, 213, 219) 0px 0px 0px 1px inset;
+      }
+      .subBottom {
+        /* border: 1px solid grey; */
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #303ab2;
+      }
+      .subBottom:hover {
+        background: linear-gradient(
+            to bottom,
+            #d5dee7 0%,
+            #e8ebf2 50%,
+            #e2e7ed 100%
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.02) 50%,
+            rgba(255, 255, 255, 0.02) 61%,
+            rgba(0, 0, 0, 0.02) 73%
+          ),
+          linear-gradient(
+            33deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(0, 0, 0, 0.2) 100%
+          );
+        background-blend-mode: normal, color-burn;
+      }
+      /* checkout section Code start here */
+      #checkoutSub {
+        /* border: 1px solid red; */
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #checkoutSub > div {
+        display: flex;
+      }
+      #pincode {
+        border-radius: 7px;
+        background-color: transparent;
+        border: transparent;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        padding-left: 20px;
+      }
+      #check {
+        border-radius: 7px;
+        width: 100px;
+        border: 1px solid #303ab2;
+        color: #303ab2;
+        background-color: transparent;
+      }
+      #offer {
+        box-sizing: border-box;
+        border: 1px solid red;
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        margin-top: 10px;
+      }
+      #offer > div {
+        display: flex;
+      }
+      #innerDiv > span {
+        width: 110px;
+      }
+      #innerDiv > span > img {
+        width: 100%;
+      }
+      #innerDiv > div {
+        margin-left: 10px;
+        /* border: 1px solid rebeccapurple; */
+        height: 60px;
+      }
+      #selectDiv {
+        height: 50%;
+        /* border: 1px solid olivedrab; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content:space-between
+      }
+      #checkoutDetail {
+        border: 1px solid brown;
+        height: 200px;
+        width: 100%;
+        margin-top: 10px;
+      }
+      #checkout > div:last-child {
+        width: 100%;
+        height: 100px;
+      }
+      #dummyImage {
+        width:100%;
+        border: 1px solid red;
+        margin-top: 10px;
+      }
+      #dummyImage > img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Your Shopping Basket</h1>
+      <hr />
+    </div>
+    <div id="productCount">Product count</div>
+    <div id="basketMain">
+      <div id="productDisplay"></div>
+      <!-- checkout section html part -->
+      <div id="checkout">
+        <div id="checkoutSub">
+          <div>
+            <label for="pincode"><p>Delever to</p></label>
+            <input
+              type="number"
+              name="pincode"
+              id="pincode"
+              placeholder="Enter pincode"
+            />
+            <button id="check">Check</button>
+          </div>
+        </div>
+        <div id="offer">
+          <div id="innerDiv">
+            <span
+              ><img
+                src="https://www.maxfashion.in/static/icons/gift-box.png"
+                alt="gift img"
+            /></span>
+            <div>
+              <div id="selectDiv">
+                <p>Offer for you !</p>
+                <span style="color: #303ab2">Select</span>
+              </div>
+              <div style="font-size: 13px; color: grey; line-height: 12px">
+                Choose and apply voucher in 2 simple steps
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="checkoutDetail"></div>
+        <div>
+          <div id="dummyImage"><img src="https://i.im.ge/2022/06/16/rnO5SG.png" alt="data" /></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let basketArr = JSON.parse(localStorage.getItem("basketItem"));
+  displayProduct(basketArr);
+  function displayProduct(basketArr) {
+    let length = basketArr.length;
+    basketArr.forEach(function (el, ind) {
+      let maincard = document.createElement("div");
+      maincard.setAttribute("id", "maincard");
+
+      let card = document.createElement("div");
+      card.setAttribute("id", "cards");
+
+      let imgdiv = document.createElement("div");
+      imgdiv.setAttribute("id", "imgdiv");
+
+      let img = document.createElement("img");
+      img.setAttribute("src", el.image);
+      img.setAttribute("alt", "productimg");
+      imgdiv.append(img);
+
+      let namediv = document.createElement("div");
+
+      let productName = document.createElement("p");
+
+      let productPrice = document.createElement("p");
+      productName.innerText = el.name;
+      productPrice.innerText = "$" + el.price;
+
+      let qty = document.createElement("button");
+      qty.setAttribute("id", "qtyButton");
+      qty.innerText = "Qty";
+      namediv.append(productName, productPrice, qty);
+
+      let bottomDiv = document.createElement("div");
+      bottomDiv.setAttribute("id", "bottom");
+
+      let remove = document.createElement("div");
+      remove.setAttribute("class", "subBottom");
+      remove.innerText = "Remove";
+      remove.addEventListener("click", function () {
+        removeProdect(el, ind);
+      });
+
+      let favourites = document.createElement("div");
+      favourites.setAttribute("class", "subBottom");
+      favourites.innerText = "Move to favourites";
+      bottomDiv.append(remove, favourites);
+      card.append(imgdiv, namediv);
+      maincard.append(card, bottomDiv);
+      document.querySelector("#productDisplay").append(maincard);
+      document.querySelector("#productCount").innerText =
+        length + " " + "Prodcts";
+    });
+  }
+  function removeProdect(el, ind) {
+    basketArr.splice(ind, 1);
+    localStorage.setItem("basketItem", JSON.stringify(basketArr));
+    window.location.reload();
+  }
+</script>
