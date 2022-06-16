@@ -5,10 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Shopping at Max</title>
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="navbar.css" />
     <style>
-      body {
+      #crouser {
+        width: 100%;
+        margin: 30px auto;
+        position: relative;
+      }
+      #crouser > img {
+        width: 90%;
+        display: block;
+        margin: auto;
+      }
+      #crouser > button {
+        width: 4%;
+        border: none;
+        position: absolute;
+        border-radius: 50%;
+        background-color: rgba(77, 77, 77, 0.1);
+      }
+      #crouser > button:hover {
+        background-color: rgba(77, 77, 77, 0.3);
+      }
+
+      #crouser > button:nth-child(2) {
+        left: 70px;
+        top: 40%;
+      }
+      #crouser > button:nth-child(3) {
+        right: 70px;
+        top: 40%;
+      }
+
+      #pageBody {
         width: 90%;
         margin: auto;
         font-family: ProximaNova-Regular, "Helvetica Neue", Arial, sans-serif,
@@ -25,7 +55,7 @@
       }
       #budgetBuy {
         margin: auto;
-        border: 1px solid green;
+        /* border: 1px solid green; */
         margin-bottom: 40px;
         width: 100%;
       }
@@ -95,7 +125,7 @@
       }
     </style>
   </head>
-  <body> 
+  <body>
     <div id="outerNavbar1">
       <div id="navbar1">
         <div>
@@ -128,368 +158,408 @@
         </div>
       </div>
     </div>
+    <div id="nav-2">
+      <div id="navbar2">
+        <div>
+          <div>ma<span>x</span></div>
 
-    <div id="navbar2">
+          <div id="women">Women</div>
+          <div id="men">Men</div>
+          <div id="girl">Girls</div>
+          <div id="boy">Boys</div>
+          <div>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZzUZTGCkvMMXgByuGlASAtKcGo6N4weBaA&usqp=CAU"
+              alt="error search logo"
+            />
+            <input
+              type="text"
+              name=""
+              id="searchbar"
+              placeholder="What are you looking for?"
+            />
+          </div>
+        </div>
+
+        <div id="left-nav">
+          <div>Sign Up - Sign in</div>
+          <div>
+            <div>Basket</div>
+            <img
+              src="https://cdn-icons.flaticon.com/png/128/2838/premium/2838895.png?token=exp=1655215701~hmac=3f79b6c34289e504a4ee88e42b2cd6b9"
+              alt="error"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="nav-3">
+      <!-- <div id="navbar3">
+        <div>Online Exclusives</div>
+        <div>Curves(Plus Size)</div>
+        <div>Tops</div>
+        <div>Bottoms</div>
+        <div>Dresses & Jumpsuits</div>
+        <div>Sleepwear</div>
+        <div>Indian Wear</div>
+        <div>Sportswear</div>
+        <div>Lingerie</div>
+        <div>Accessories</div>
+        <div>Footware</div>
+        <div>Winterwear</div>
+        <div>More</div>
+      </div> -->
+
       <div>
-        <div>ma<span>x</span></div>
-
-        <div id="women">Women</div>
-        <div id="men">Men</div>
-        <div id="girl">Girls</div>
-        <div id="boy">Boys</div>
-        <div>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZzUZTGCkvMMXgByuGlASAtKcGo6N4weBaA&usqp=CAU"
-            alt="error search logo"
-          />
-          <input
-            type="text"
-            name=""
-            id="searchbar"
-            placeholder="What are you looking for?"
-          />
-        </div>
-      </div>
-
-      <div id="left-nav">
-        <div>Sign Up - Sign in</div>
-        <div>
-          <div>Basket</div>
-          <img
-            src="https://cdn-icons.flaticon.com/png/128/2838/premium/2838895.png?token=exp=1655215701~hmac=3f79b6c34289e504a4ee88e42b2cd6b9"
-            alt="error"
-          />
-        </div>
+        Buy 3 @ ₹699/999/1499 + FREE Shipping on all orders above JUST ₹499 >
       </div>
     </div>
-    <div id="navbar3">
-      <div>Online Exclusives</div>
-      <div>Curves(Plus Size)</div>
-      <div>Tops</div>
-      <div>Bottoms</div>
-      <div>Dresses & Jumpsuits</div>
-      <div>Sleepwear</div>
-      <div>Indian Wear</div>
-      <div>Sportswear</div>
-      <div>Lingerie</div>
-      <div>Accessories</div>
-      <div>Footware</div>
-      <div>Winterwear</div>
-      <div>More</div>
-    </div>
-    <div>
-      Buy 3 @ ₹699/999/1499 + FREE Shipping on all orders above JUST ₹499 >
-    </div>
- 
-    <img
-      src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBytwo1A-FREESHIPCOMMON-13JUNE2022.jpg"
-      alt=""
-    />
-    <hr />
-    <h1>Budget Buy</h1>
-    <div id="budgetBuy">
-      <a href="./Tees-Polos.html"
-        ><img
-          src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock7-oneBythree-A-Boys-02JUNE2022.jpg"
+
+    <div id="pageBody">
+      <div id="crouser">
+        <img src="./img/first.png" alt="" />
+        <button><</button>
+        <button>></button>
+      </div>
+
+      <img
+        src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBytwo1A-FREESHIPCOMMON-13JUNE2022.jpg"
+        alt=""
+      />
+      <hr />
+      <h1>Budget Buy</h1>
+      <div id="budgetBuy">
+        <a href="./Tees-Polos.html"
+          ><img
+            src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock7-oneBythree-A-Boys-02JUNE2022.jpg"
+            alt=""
+        /></a>
+      </div>
+      <hr />
+      <h1>The Joy Of Gifting!</h1>
+      <div id="budgetBuy">
+        <img
+          src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-A-ALLCOMMON-10JUNE2022A.jpg"
           alt=""
-      /></a>
-    </div>
-    <hr />
-    <h1>The Joy Of Gifting!</h1>
-    <div id="budgetBuy">
-      <img
-        src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-A-ALLCOMMON-10JUNE2022A.jpg"
-        alt=""
-      />
-    </div>
-    <hr />
-    <h1>Shop By Age</h1>
-    <div id="shopByAge">
-      <img
-        src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-5modularblock-oneBytwo1C-Boys-05MAY2022.jpg"
-        alt=""
-      />
-      <img
-        src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-E-Boys-05MAY2022.jpg"
-        alt=""
-      />
-      <img
-        src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-FF-Boys-05MAY2022.jpg"
-        alt=""
-      />
-    </div>
-    <hr />
+        />
+      </div>
+      <hr />
+      <h1>Shop By Age</h1>
+      <div id="shopByAge">
+        <img
+          src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-5modularblock-oneBytwo1C-Boys-05MAY2022.jpg"
+          alt=""
+        />
+        <img
+          src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-E-Boys-05MAY2022.jpg"
+          alt=""
+        />
+        <img
+          src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-FF-Boys-05MAY2022.jpg"
+          alt=""
+        />
+      </div>
+      <hr />
 
-    <!-- Unable to get How to built that animation image in below section 
+      <!-- Unable to get How to built that animation image in below section 
     <h1>Shop By Category</h1>
     <div id="shopByCategory">
         
     </div> -->
 
-    <h1>Trending Stores</h1>
-    <div class="trendingStores">
-      <div>
-        <img
-          src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-5modularblock-oneBytwo1C-boys-05MAY2022.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <img
-          src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-E-boys-05MAY2022.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <img
-          src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-FF-boys-05MAY2022.jpg"
-          alt=""
-        />
-      </div>
-    </div>
-    <hr />
-    <h1>Max Kids Festival</h1>
-    <img
-      src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock16One-Boys-18MAY2022.gif"
-      alt=""
-    />
-    <hr />
-    <h1>Budget Zone</h1>
-    <div class="trendingStores">
-      <div>
-        <img
-          src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19One-Boys-18MAY2022.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <img
-          src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Two-Boys-18MAY2022.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <img
-          src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Three-Boys-18MAY2022.jpg"
-          alt=""
-        />
-      </div>
-    </div>
-    <hr />
-    <h1>Monsoon Checklist</h1>
-    <img
-      src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-10modularblock-oneBythree-A-Boys-08JUNE2022.jpg"
-      alt=""
-    />
-    <hr />
-    <h1>Summer Must-Haves</h1>
-    <div id="summerMustHave">
-      <img
-        src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-9modularblock-oneBythree-A-Boys-02JUNE2022.jpg"
-        alt=""
-      />
-      <img
-        src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-9modularblock-oneBythree-B-Boys-02JUNE2022.jpg"
-        alt=""
-      />
-    </div>
-    <hr />
-    <a href="./Tees-Polos.html">
-      <img
-        src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-11modularblock-oneBythree-A-Boys-01APR2022.jpg"
-        alt=""
-      />
-    </a>
-
-    <hr style="width: 100%;"/>
-
-    <!-- footer html starts from here -->
-
-    <div id="footerSubDow">
-      <div id="Sub">
-        <h4>Subscribe to our awesome emails.</h4>
-        <p>Get our latest offers and news straight in your inbox.</p>
-        <input type="mail" placeholder="Please enter an email address" />
-        <button><b>Subscribe</b></button>
-      </div>
-      <div id="Dow">
-        <h4>Download our apps</h4>
-        <p>Shop our products and offers on-the-go.</p>
-        <div>
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9VSQ1kGdvnrdAYQVIVM1JdB_MxhKOpXmWoA&usqp=CAU"
-              alt="error"
-            />
-          </div>
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihbMObs2stYan2aQKMttr81DBv6GVs6elSA&usqp=CAU"
-              alt="error"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr />
-    <div id="footerMenu">
-      <div>
-        <h6>Women</h6>
-        <div>tops</div>
-        <div>Dresses & Jumpsuits</div>
-        <div>Sportswear</div>
-        <div>Bottoms</div>
-        <div>Winterwear</div>
-        <div>Ethnicwear</div>
-        <div>Lingerie</div>
-        <div>Sleepwear</div>
-        <div>Accessories</div>
-        <div>Shoes</div>
-      </div>
-      <div>
-        <h6>Men</h6>
-        <div>Tops</div>
-        <div>Bottoms</div>
-        <div>Sportswear</div>
-        <div>Winterwear</div>
-        <div>Accessories</div>
-        <div>Shoes</div>
-      </div>
-      <div>
-        <h6>Boys</h6>
-        <div>Tops</div>
-        <div>Bottoms</div>
-        <div>Indian Wear</div>
-        <div>Winter Wear</div>
-        <div>Essentials</div>
-        <div>Accessories</div>
-        <div>Shoes</div>
-      </div>
-      <div>
-        <h6>Girls</h6>
-        <div>Tops</div>
-        <div>Bottoms</div>
-        <div>Sportswear</div>
-        <div>Winterwear</div>
-        <div>Accessories</div>
-        <div>Shoes</div>
-      </div>
-      <div>
-        <h6>Explore</h6>
-        <div>Offers</div>
-        <div>Magazine</div>
-      </div>
-      <div>
-        <h6>About</h6>
-        <div>About us</div>
-        <div>Write to us</div>
-        <div>Careers</div>
-        <div>Take a Tour</div>
-        <div>Blog</div>
-        <div>Store Locator</div>
-        <div>Landmark Cares</div>
-      </div>
-      <div>
-        <h6>Help</h6>
-        <div>Contact us</div>
-        <div>Shipping</div>
-        <div>Returns Process</div>
-        <div>Returns Policy</div>
-        <div>Help Centre</div>
-      </div>
-    </div>
-    <hr />
-    <div id="footerSocial">
-      <div id="main">
-        <div id="footerSocialSub1">
-          <div>
-            <div>
-              <div>
-                <div>
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/128/633/633544.png"
-                    alt="error"
-                  />
-                </div>
-              </div>
-              <div>
-                <div style="color: rgb(146, 147, 145)">Talk to us</div>
-                <div>1800-123-1444</div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <div>
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/128/7789/7789517.png"
-                    alt="help-center"
-                  />
-                </div>
-              </div>
-              <div>
-                <div style="color: rgb(146, 147, 145)">Helpcentre</div>
-                <div>help.maxfashion.com</div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <div>
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/128/712/712040.png"
-                    alt="email-icon"
-                  />
-                </div>
-              </div>
-              <div>
-                <div style="color: rgb(146, 147, 145)">Write to us</div>
-                <div>help,in@maxfashion.com</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="footerSocialSub2">
-          <div>
-            <div>
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/13/13756.png"
-                alt="facebook"
-              />
-            </div>
-          </div>
-          <div>
-            <div>
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/733/733635.png"
-                alt="twitter"
-              />
-            </div>
-          </div>
-          <div>
-            <div>
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png"
-                alt="instagram"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr />
-    <div id="footerBottom">
-      <div>
+      <h1>Trending Stores</h1>
+      <div class="trendingStores">
         <div>
           <img
-            src="https://www.landmarkgroup.com/int/sites/default/files/Brand-logo/New%20Max%20Logo-%20Eng%20With%20Outline_1.png"
-            alt="error"
+            src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-5modularblock-oneBytwo1C-boys-05MAY2022.jpg"
+            alt=""
           />
         </div>
         <div>
-          <p>© 2022 Retail World Limited.</p>
-          <p>Terms & Conditions - Privacy Policy</p>
+          <img
+            src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-E-boys-05MAY2022.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-FF-boys-05MAY2022.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <hr />
+      <h1>Max Kids Festival</h1>
+      <img
+        src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock16One-Boys-18MAY2022.gif"
+        alt=""
+      />
+      <hr />
+      <h1>Budget Zone</h1>
+      <div class="trendingStores">
+        <div>
+          <img
+            src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19One-Boys-18MAY2022.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Two-Boys-18MAY2022.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Three-Boys-18MAY2022.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <hr />
+      <h1>Monsoon Checklist</h1>
+      <img
+        src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-10modularblock-oneBythree-A-Boys-08JUNE2022.jpg"
+        alt=""
+      />
+      <hr />
+      <h1>Summer Must-Haves</h1>
+      <div id="summerMustHave">
+        <img
+          src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-9modularblock-oneBythree-A-Boys-02JUNE2022.jpg"
+          alt=""
+        />
+        <img
+          src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-9modularblock-oneBythree-B-Boys-02JUNE2022.jpg"
+          alt=""
+        />
+      </div>
+      <hr />
+      <a href="./Tees-Polos.html">
+        <img
+          src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-11modularblock-oneBythree-A-Boys-01APR2022.jpg"
+          alt=""
+        />
+      </a>
+
+      <hr style="width: 100%" />
+
+      <!-- footer html starts from here -->
+
+      <div id="footerSubDow">
+        <div id="Sub">
+          <h4>Subscribe to our awesome emails.</h4>
+          <p>Get our latest offers and news straight in your inbox.</p>
+          <input type="mail" placeholder="Please enter an email address" />
+          <button><b>Subscribe</b></button>
+        </div>
+        <div id="Dow">
+          <h4>Download our apps</h4>
+          <p>Shop our products and offers on-the-go.</p>
+          <div>
+            <div>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9VSQ1kGdvnrdAYQVIVM1JdB_MxhKOpXmWoA&usqp=CAU"
+                alt="error"
+              />
+            </div>
+            <div>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihbMObs2stYan2aQKMttr81DBv6GVs6elSA&usqp=CAU"
+                alt="error"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div id="footerMenu">
+        <div>
+          <h6>Women</h6>
+          <div>tops</div>
+          <div>Dresses & Jumpsuits</div>
+          <div>Sportswear</div>
+          <div>Bottoms</div>
+          <div>Winterwear</div>
+          <div>Ethnicwear</div>
+          <div>Lingerie</div>
+          <div>Sleepwear</div>
+          <div>Accessories</div>
+          <div>Shoes</div>
+        </div>
+        <div>
+          <h6>Men</h6>
+          <div>Tops</div>
+          <div>Bottoms</div>
+          <div>Sportswear</div>
+          <div>Winterwear</div>
+          <div>Accessories</div>
+          <div>Shoes</div>
+        </div>
+        <div>
+          <h6>Boys</h6>
+          <div>Tops</div>
+          <div>Bottoms</div>
+          <div>Indian Wear</div>
+          <div>Winter Wear</div>
+          <div>Essentials</div>
+          <div>Accessories</div>
+          <div>Shoes</div>
+        </div>
+        <div>
+          <h6>Girls</h6>
+          <div>Tops</div>
+          <div>Bottoms</div>
+          <div>Sportswear</div>
+          <div>Winterwear</div>
+          <div>Accessories</div>
+          <div>Shoes</div>
+        </div>
+        <div>
+          <h6>Explore</h6>
+          <div>Offers</div>
+          <div>Magazine</div>
+        </div>
+        <div>
+          <h6>About</h6>
+          <div>About us</div>
+          <div>Write to us</div>
+          <div>Careers</div>
+          <div>Take a Tour</div>
+          <div>Blog</div>
+          <div>Store Locator</div>
+          <div>Landmark Cares</div>
+        </div>
+        <div>
+          <h6>Help</h6>
+          <div>Contact us</div>
+          <div>Shipping</div>
+          <div>Returns Process</div>
+          <div>Returns Policy</div>
+          <div>Help Centre</div>
+        </div>
+      </div>
+      <hr />
+      <div id="footerSocial">
+        <div id="main">
+          <div id="footerSocialSub1">
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/633/633544.png"
+                      alt="error"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div style="color: rgb(146, 147, 145)">Talk to us</div>
+                  <div>1800-123-1444</div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/7789/7789517.png"
+                      alt="help-center"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div style="color: rgb(146, 147, 145)">Helpcentre</div>
+                  <div>help.maxfashion.com</div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/712/712040.png"
+                      alt="email-icon"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div style="color: rgb(146, 147, 145)">Write to us</div>
+                  <div>help,in@maxfashion.com</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="footerSocialSub2">
+            <div>
+              <div>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/13/13756.png"
+                  alt="facebook"
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/733/733635.png"
+                  alt="twitter"
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png"
+                  alt="instagram"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div id="footerBottom">
+        <div>
+          <div>
+            <img
+              src="https://www.landmarkgroup.com/int/sites/default/files/Brand-logo/New%20Max%20Logo-%20Eng%20With%20Outline_1.png"
+              alt="error"
+            />
+          </div>
+          <div>
+            <p>© 2022 Retail World Limited.</p>
+            <p>Terms & Conditions - Privacy Policy</p>
+          </div>
         </div>
       </div>
     </div>
     <!-- footer html ends -->
   </body>
 </html>
+<script>
+  let img = document.querySelector("#crouser>img");
+  let button = document.querySelectorAll("#crouser>button");
+  let count = 0;
+  let imgArr = [
+    "./img/first.png",
+    "./img/second.png",
+    "./img/third.png",
+    "./img/fourth.png",
+  ];
+
+  button[0].addEventListener("click", function () {
+    if (count === 0) {
+      count = imgArr.length - 1;
+    } else {
+      count--;
+    }
+    img.src = imgArr[count];
+  });
+  button[1].addEventListener("click", function () {
+    if (count === imgArr.length - 1) {
+      count = 0;
+    } else {
+      count++;
+    }
+    img.src = imgArr[count];
+  });
+</script>

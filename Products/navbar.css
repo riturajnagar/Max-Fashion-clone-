@@ -6,6 +6,7 @@
   #outerNavbar1{
       background-color: black;
       width: 100%;
+      box-sizing: border-box;
   }
   #navbar1 {
     display: grid;
@@ -17,6 +18,7 @@
     font-family: "Poppins", sans-serif;
     color: white;
     font-size: 14px;
+    box-sizing: border-box;
   }
   #outerNavbar1>div{
       /* border: 1px solid red; */
@@ -78,17 +80,24 @@
   }
 
   /* NAVBAR 2 */
+
+  #nav-2{
+    width: 100%;
+    background-color:#f7f8f7 ;
+  }
   #navbar2 {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     height: 50px;
+    box-sizing: border-box;
     margin-top: 4px;
-    position: sticky;
+    position:sticky;
     top: 0px;
     font-family: "Poppins", sans-serif;
     font-size: 14px;
-    background-color: white;
+    background-color: #f7f8f7;
   }
   #navbar2 > div:first-child {
     display: grid;
@@ -176,11 +185,15 @@
   }
 
   /* NAVBAR 3 */
-
+#nav-3{
+  width: 100%;
+}
   #navbar3 {
     display: flex;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     height: 40px;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     position: sticky;
@@ -205,8 +218,11 @@
     padding: 0px 20px;
     border: none;
   }
-  #navbar3 + div {
+
+  /* i have made changes here */
+  #nav-3 > div {
     text-align: center;
+    box-sizing: border-box;
     background-color: rgb(48, 58, 178);
     color: rgb(235, 255, 255);
     padding: 10px;
