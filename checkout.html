@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkoutPage</title>
+    <style>
+      * {
+        font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+      }
+      #heading {
+        /* border: 1px solid red; */
+        width: 80%;
+        margin: auto;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+      }
+      #heading > div:first-child {
+        margin-top: -10px;
+        width: 10%;
+      }
+      #heading > div > img {
+        width: 100%;
+      }
+      #heading > div:last-child {
+        /* border: 1px solid green; */
+        height: 100%;
+        width: 20%;
+      }
+      #heading > div:last-child > div {
+        height: 50%;
+      }
+      #heading > div:last-child > div:first-child {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        font-size: 10px;
+      }
+      #imgspan {
+        width: 20px;
+        height: 20px;
+      }
+      #imgspan > img {
+        height: 100%;
+      }
+      #mainCheckout {
+        width: 80%;
+        border: 1px solid red;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      #shippingMethod {
+        border: 2px solid green;
+        width: 68%;  
+      }
+      #orderSummary {
+        /* border: 2px solid black; */
+        width: 30%;
+        height: 500px;
+      }
+      #selectMethod {
+        border: 1px solid orange;
+        width: 95%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+      }
+      #selectMethod > div {
+        width: 49%;
+      }
+      h1 {
+        font-size: 16px;
+        text-align: center;
+      }
+      p {
+        font-size: 14px;
+        color: grey;
+        text-align: center;
+      }
+      b{
+        font-size: 13px;
+      }
+      #selectMethod > div:first-child {
+        border: 2px solid #303ab2;
+        line-height: 15px;
+      }
+      #selectMethod > div:last-child {
+        border: 1px solid black;
+        line-height: 15px;
+      }
+      #formDiv {
+        border: 1px solid black;
+        width: 95%;
+      }
+      .input{
+        width: 50%;
+        height: 30px;
+        margin-top: 10px;
+        
+      }
+      #total{
+        display: flex;
+        justify-content:space-between;
+        margin-top: 20px;
+      }
+      /* payment method css starts here */
+         #main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 400px;
+        }
+        img{
+            width:20%;
+        }
+        #main2{
+            display: flex;
+        }
+        #block>label{
+            display: block;
+        }
+        #cvv{
+            display: flex;
+        }
+        #cvv>div:nth-child(2){
+            margin-left: 40px;
+        }
+        #payment{
+          background-color: #303ab2;
+          color: white;
+
+        }
+      /* payment method css ends here */
+      /* Order Summary start here ----> */
+      #subDiv{
+        /* border: 1px solid red; */
+        padding: 10px;
+        box-sizing: border-box;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        width: 100%;
+      }
+      #productFinal{
+        list-style: none;
+        /* border: 2px solid black; */
+        height: 80px;
+        overflow: scroll;
+        overflow-x: hidden;
+      }
+      #subtotal,#shippingfee{
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+      }
+      #DummyDiv{
+        /* border: 3px solid black; */
+        width: 100%;
+        height: 100px;
+        margin-top: 20px;
+      }
+       #DummyDiv>img{
+        width: 100%;
+        height: 100%;
+       }
+       #mainCard{
+        display: flex;
+        width: 330px;
+        height: 80px;
+        align-items: center;
+        justify-content: space-around;
+       }
+       #imgDiv{
+        width:70px;
+        height: 70px;
+       }
+       #imgDiv>img{
+        width: 100%;
+        height: 100%;
+       }
+       #detailDiv{
+        width: 230px;
+        height: 70px;
+       }
+       #productName,#butDiv{
+        height: 50%;
+       }
+       #productName{
+        font-size: small;
+        font-weight: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       #butDiv{
+        display: flex;
+        justify-content:space-around  ;
+        align-items: center;
+        font-size: small;
+
+       }
+    </style>
+  </head>
+  <body>
+    <div id="heading">
+      <div>
+        <img
+          src="https://www.landmarkgroup.com/int/sites/default/files/Brand-logo/New%20Max%20Logo-%20Eng%20With%20Outline_1.png"
+          alt="maxImg"
+        />
+      </div>
+      <div>
+        <div>
+          <span id="imgspan"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/128/1782/1782767.png"
+              alt="call" /></span
+          >Call 1800-123-1444
+        </div>
+        <div style="font-size: 10px; display: flex; justify-content: end">
+          Monday - Saturday, 09:00AM - 07:00PM
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div id="mainCheckout">
+      <div id="shippingMethod">
+        <h2>Select a shipping method</h2>
+        <div id="selectMethod">
+          <div>
+            <h1>Home Delivery</h1>
+            <p>Get your product delivered to your home.</p>
+          </div>
+          <div>
+            <h1>Click & Collect</h1>
+            <p>Collect your order from a store of your choice.</p>
+          </div>
+        </div>
+        <h3>Add your shipping Address</h3>
+        <div id="formDiv">
+          <label for="name"><b>Full Name</b></label
+          ><br />
+          <input type="text" id="name" class="input" placeholder="Enter Name" /><br />
+          <label for="num"><b>Mobile Number</b></label
+          ><br />
+          <input
+            type="number"
+            id="num"
+             class="input" 
+            placeholder="Enter Mobile Number"
+          /><br />
+          <label for="pin"><b>Pincode</b></label
+          ><br />
+          <input type="number" id="pin" class="input"  placeholder="Pincode" /><br />
+          <label for="city"><b>City</b></label
+          ><br />
+          <input type="text" id="city" class="input"  placeholder="City Name" /><br />
+          <label for="state"><b>State</b></label><br>
+          <select id="state" class="input" >
+            <option value="">Select State</option>
+            <option value="Andhre Pradesh">Andhre Pradesh</option>
+            <option value="Odishe">Odishe</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Assam">Assam</option>
+            <option value="Goa">Goa</option>
+            <option value="Dhelhi">Dhelhi</option>
+          </select><br>
+          <label for="Building"><b>Building name or number</b></label><br>
+          <input type="number" id="Building" class="input"  placeholder="Enter Building name ">
+          </select><br>
+          <label for="Street"><b>Street name or number</b></label><br>
+          <input type="number" id="Street" class="input"  placeholder="Enter Street name ">
+          </select><br>
+          <label for="Building"><b>Building name or number</b></label><br>
+          <input type="text" id="Building" class="input"  placeholder="Enter Building name "><br>  
+          <label for="Landmark"><b>Landmark (optional)</b></label><br>
+          <input type="text" id="Landmark" class="input"  placeholder="Landmark"><br>
+          <label for="AddType">Address Type</label><br>
+          <input type="radio" id="AddType"><b>Home</b>
+          <input type="radio" id="AddType"><b>Work</b><hr>
+          <!-- payment method html part starts here -->
+        <h3>Select a payment method</h3>
+  <div id="main">
+      <div>
+        <input type="radio">
+        <img src="https://cdn-icons-png.flaticon.com/128/633/633611.png" alt="">
+       </div>
+       <div>
+        <b>Credit/Debit Card</b>
+        <b>Use your credit or debit card</b>
+       </div>
+  </div>
+  <div id="main2">
+    <b> <input type="radio">Credit card</b>
+    <b> <input type="radio">Debit card</b>
+   </div>
+   <div id="block">
+   <label for="Card Number"><b>Card Number</b></label>
+   <input type="number" id="" placeholder="Enter your 16 Digit card number">
+   <label for="cardName"><b>Name on Card</b></label>
+   <input type="text" id="cardName" class="input" placeholder="Name on card">
+  </div>
+
+  <div id="cvv">
+    <div><b>Expiry Date</b></div>
+    <div><b>CVV</b></div>
+</div>
+    <div>
+    <select name="MM" id="mm">
+        <option value="">MM</option>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    <select name="yy" id="yy">
+        <option value="">YYYY</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+    </select>
+    <input type="number" placeholder="CVV">
+</div>
+ <b> <input type="checkbox">Save this card for future transaction?</b><br>
+ <button id="payment" class="input"><b>Pay Now</b></button>  
+ <!-- payment method html part ends here -->
+          
+        </div>
+      </div>
+      <div id="orderSummary">
+        <div id="subDiv">
+          <h3 style="font-weight:normal">Your order summary</h3><hr>
+          <li id="productFinal"></li><hr>
+          <div id="subtotal">
+            <div>Subtotal:</div>
+            <div>allsum</div>
+          </div><hr>
+          <div id="shippingfee" style="margin-top:20px ;">
+            <div>Standard Ground Shipping:</div>
+            <div>Free</div>
+          </div><hr>
+          <div id="total">
+            <div>Total:</div>
+            <div>GrandTotal</div>
+          </div><hr>
+          <div style="font-size: 12px;text-align: center;padding: 10px; ">
+            Shipping charges might vary based on delivery location
+          </div>
+        </div>
+        <div id="DummyDiv"> <img src="https://i.im.ge/2022/06/18/rB28v6.png" alt="Nothing"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let summaryArr=JSON.parse(localStorage.getItem("basketItem"));
+  displayOnSummary(summaryArr);
+  function displayOnSummary(summaryArr){
+    summaryArr.forEach(function(el){
+    let mainCard=document.createElement("div");
+    mainCard.setAttribute("id","mainCard");
+     
+    let imgsumm=document.createElement("img");
+    imgsumm.setAttribute("src",el.image);
+    let imgDiv=document.createElement("div");
+    imgDiv.setAttribute("id","imgDiv");
+    imgDiv.append(imgsumm);
+
+    let productName=document.createElement("div");
+    productName.setAttribute("id","productName");
+    productName.innerText=el.name;
+
+    let qty=document.createElement("div");
+    qty.innerText="Qty:"+1;
+    
+    let price=document.createElement("div");
+    price.innerText="Price:"+" "+"₹"+el.price;
+    
+    let butDiv=document.createElement("div");
+    butDiv.setAttribute("id","butDiv");
+    butDiv.append(qty,price)
+    let detailDiv=document.createElement("div");
+    detailDiv.setAttribute("id","detailDiv");
+    detailDiv.append(productName,butDiv)
+    mainCard.append(imgDiv,detailDiv)
+    document.querySelector("#productFinal").append(mainCard);
+    })
+  }
+</script>
