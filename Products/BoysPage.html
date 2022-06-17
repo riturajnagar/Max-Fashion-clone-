@@ -5,27 +5,285 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Shopping at Max</title>
-    <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="navbar.css" />
     <style>
-      a{
+      /* navbar css */
+      * {
+        width: 100%;
+        margin: 0px;
+      }
+      /* NAVBAR 1 */
+      #outerNavbar1 {
+        background-color: black;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      #navbar1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+      #outerNavbar1 > div {
+        /* border: 1px solid red; */
+        display: grid;
+        gap: 200px;
+      }
+      #outerNavbar1 > div > div:nth-child(2) {
+        margin-left: 150px;
+        /* border: 1px solid red; */
+      }
+      #navbar1 > div > div:first-child > img {
+        width: 30px;
+      }
+      #navbar1 > div > div > img {
+        display: block;
+        align-items: center;
+        width: 20px;
+      }
+
+      #navbar1 > div:first-child {
+        display: flex;
+        width: auto;
+        cursor: pointer;
+      }
+      #navbar1 > div:first-child > div {
+        display: flex;
+        /* border: 1px solid red; */
+        align-items: center;
+        gap: 10px;
+      }
+      #navbar1 > div:first-child > div:first-child > img {
+        /* border: 1px solid red; */
+        width: 30px;
+      }
+      #navbar1 > div:first-child > div > img {
+        background-color: white;
+      }
+      #navbar1 > div:last-child {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 80%;
+      }
+      #navbar1 > div:last-child > div:nth-child(1),
+      #navbar1 > div:last-child > div:nth-child(2) {
+        padding: 5px 10px;
+        width: auto;
+        border-right: 1px solid rgb(93, 94, 92);
+      }
+      #navbar1 > div {
+        display: flex;
+        /* border: 1px solid grey; */
+      }
+      #navbar1 > div:last-child > div:nth-child(3) {
+        /* border: 1px solid red; */
+        padding-left: 10px;
+        padding-right: 0px;
+        width: auto;
+      }
+
+      /* NAVBAR 2 */
+
+      #nav-2 {
+        width: 100%;
+        background-color: #f7f8f7;
+      }
+      #navbar2 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        width: 90%;
+        margin: auto;
+        height: 50px;
+        box-sizing: border-box;
+        margin-top: 4px;
+        position: sticky;
+        top: 0px;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        background-color: #f7f8f7;
+      }
+      #navbar2 > div:first-child {
+        display: grid;
+        grid-template-columns: 10% 10% 10% 10% 10% 50%;
+        align-items: center;
+      }
+      #navbar2 > div:first-child > div {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      /* hover style */
+      #navbar2 > div:first-child > div:hover {
+        color: rgb(10, 22, 150);
+      }
+
+      #navbar2 > div:first-child > div:first-child {
+        color: rgb(48, 58, 178);
+        font-size: 36px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin-bottom: 7px;
+      }
+
+      span {
+        color: rgb(228, 0, 43);
+      }
+      #navbar2 > div:first-child > div:last-child > img {
+        width: 5%;
+        padding: 5px 0px 5px;
+        background-color: rgb(236, 237, 235);
+      }
+      #navbar2 > div:first-child > div:last-child {
+        display: flex;
+        justify-content: start;
+        height: 80%;
+        gap: 20px;
+        background-color: rgb(236, 237, 235);
+        padding-left: 10px;
+        margin-bottom: 0px;
+      }
+
+      /* input tag */
+      input {
+        background-color: rgb(236, 237, 235);
+        border: none;
+        outline: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      #navbar2 > div:first-child + div > div:last-child > img {
+        width: 20%;
+      }
+      #left-nav {
+        display: grid;
+        grid-template-columns: 30% 30%;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      #left-nav > div:first-child {
+        height: 60%;
+        border-right: 1px solid rgb(200, 201, 198);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      #left-nav > div:last-child {
+        /* border: 1px solid red; */
+        display: flex;
+        gap: 1px;
+        justify-content: center;
+        margin-right: 20px;
+        /* margin-left: -40px; */
+        gap: 10px;
+        cursor: pointer;
+        align-items: center;
+      }
+      #left-nav > div {
+        display: flex;
+        gap: 20px;
+      }
+      #left-nav > div > p {
+        margin-right: -30px;
+      }
+      #left-nav > div > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: 20px;
+      }
+      #left-nav > div > a > p {
+        /* border: 1px solid blue; */
+        /* margin-right: 5px; */
+        font-size: 16px;
+        width: auto;
+        margin-left: 10px;
+      }
+      #left-nav > div > a > img {
+        /* border: 1px solid green; */
+        width: 25px;
+        display: block;
+        margin: auto;
+        /* margin-right: 30px; */
+      }
+
+      /* NAVBAR 3 */
+      #nav-3 {
+        width: 100%;
+      }
+      #navbar3 {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        height: 40px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        position: sticky;
+        top: 50px;
+        margin-bottom: 5px;
+        background-color: white;
+      }
+      #navbar3 > div {
+        height: 100%;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0px 10px;
+      }
+      #navbar3 > div:hover {
+        color: blue;
+        border-bottom: 2px solid rgb(48, 58, 178);
+      }
+      #navbar3 > div:last-child {
+        padding: 0px 20px;
+        border: none;
+      }
+
+      /* i have made changes here */
+      #nav-3 > div {
+        text-align: center;
+        box-sizing: border-box;
+        background-color: rgb(48, 58, 178);
+        color: rgb(235, 255, 255);
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* navbar css end */
+      a {
         text-decoration: none;
         color: black;
       }
       #crouser {
-        width: 100%;
+        width: 80%;
         margin: 30px auto;
-        position: relative;
       }
       #crouser > img {
-        width: 90%;
-        display: block;
-        margin: auto;
+        width: 100%;
       }
       #crouser > button {
+        position: absolute;
         width: 4%;
         border: none;
-        position: absolute;
         border-radius: 50%;
         background-color: rgba(77, 77, 77, 0.1);
       }
@@ -34,11 +292,11 @@
       }
 
       #crouser > button:nth-child(2) {
-        left: 70px;
+        left: 220px;
         top: 40%;
       }
       #crouser > button:nth-child(3) {
-        right: 70px;
+        right: 220px;
         top: 40%;
       }
 
@@ -127,6 +385,243 @@
         width: 100%;
         margin-bottom: 40px;
       }
+      .women > button {
+        background-color: #f7f8f7;
+        border: none;
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding: 8px 0px;
+      }
+      .women > button:hover {
+        cursor: pointer;
+        background-color: white;
+      }
+      #signupBtn > button {
+        background-color: #f7f8f7;
+        border: none;
+        font-size: 14px;
+        border-right: 2px solid rgb(201, 196, 196);
+        padding: 8px 0px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      #signupBtn > button:hover {
+        cursor: pointer;
+        background-color: white;
+      }
+      #basket-btn > button {
+        display: flex;
+      }
+      #basket-btn > button > img {
+        margin-left: 10px;
+        width: 15px;
+      }
+
+      /* footer css start */
+            /* footer styling starts from here */
+      hr {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 40px;
+        border: 0.2px solid rgb(241, 235, 235);
+      }
+      #footerSubDow {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      #Sub {
+        width: 60%;
+      }
+      #Dow {
+        width: 40%;
+        margin-top: 10px;
+      }
+      h4 {
+        font-family: ProximaNova-Bold, "Helvetica Neue", Arial, sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji";
+        font-size: 24px;
+        font-weight: bolder;
+        margin-top: 1px;
+        margin-left: 0px;
+      }
+      h4 + p {
+        color: #929391;
+        margin-top: 5px;
+        margin-left: 0px;
+        font-size: 16px;
+        font-family: ProximaNova-Regular, "Helvetica Neue", Arial, sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      #footerSubDow > div > input,
+      button {
+        margin-top: 10px;
+        padding: 18px 24px;
+        font-size: 20px;
+      }
+      #footerSubDow > div > input {
+        width: 45%;
+
+        background-color: #f7f8f7;
+      }
+      #footerSubDow > div > button {
+        width: 25%;
+        margin-left: -5px;
+        background-color: black;
+
+        color: white;
+      }
+      #Dow > div {
+        display: flex;
+        justify-content: space-between;
+        /* border: 1px solid red; */
+        width: 80%;
+
+        height: 70px;
+        margin-top: 20px;
+        margin-left: 0px;
+      }
+      #Dow > div > div {
+        width: 48%;
+        /* border: 1px solid mediumaquamarine; */
+      }
+      #Dow > div > div > img {
+        width: 100%;
+        height: 100%;
+      }
+      #footerMenu {
+        /* border: 1px solid red; */
+        margin: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 5px;
+      }
+      #footerMenu > div {
+        /* border: 1px solid black; */
+        width: 150px;
+        height: 220px;
+      }
+      #footerMenu > div > div {
+        margin-top: 3px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.576);
+        cursor: pointer;
+      }
+      h6 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      #footerSocial {
+        /* border: 1px solid black; */
+        margin: auto;
+        width: 100%;
+        margin-top: -30px;
+        margin-bottom: 15px;
+      }
+      #footerSocial > #main {
+        width: 100%;
+        /* border: 1px solid red; */
+        justify-content: space-between;
+        display: flex;
+      }
+      #footerSocialSub1 {
+        /* border: 1px solid blue; */
+        width: 80%;
+        margin-left: 0px;
+      }
+      #footerSocialSub1 > div {
+        /* border: 1px solid red; */
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+      #footerSocialSub1 > div > div {
+        /* border: 1px solid black; */
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      #footerSocialSub1 > div > div > div:first-child {
+        border: 1px solid #c8c9c6;
+        width: 50px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #footerSocialSub1 > div > div > div:first-child > div {
+        width: 14px;
+        height: 14px;
+      }
+
+      #footerSocialSub1 > div > div > div:last-child {
+        margin-left: 10px;
+      }
+      #footerSocialSub1 > div > div > div:last-child > div {
+        margin-top: 3px;
+      }
+      #footerSocialSub2 {
+        display: flex;
+        width: 15%;
+      }
+      #footerSocialSub2 > div {
+        /* border: 1px solid red; */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #footerSocialSub2 > div:hover {
+        background-color: rgba(0, 0, 0, 0.067);
+      }
+      #footerSocialSub2 > div > div {
+        width: 25px;
+        height: 25px;
+      }
+      #footerSocialSub2 > div > div > img {
+        width: 100%;
+      }
+      #footerBottom {
+        margin: auto;
+        margin-top: 20px;
+        height: 70px;
+        width: 100%;
+      }
+      #footerBottom > div {
+        display: flex;
+        width: 350px;
+      }
+      #footerBottom > div > div:first-child {
+        margin: auto;
+        width: 30%;
+      }
+      #footerBottom > div {
+        display: flex;
+        margin-left: 0px;
+      }
+      #footerBottom > div > div:first-child > img {
+        display: block;
+        margin-left: 0px;
+        width: 100%;
+      }
+      #footerBottom > div > div:last-child {
+        width: 70%;
+        margin-left: 10px;
+        font-size: 14px;
+        display: block;
+        align-content: center;
+        margin: 20px;
+        color: #929391;
+      }
+
+      /* Footer style ended */
     </style>
   </head>
   <body>
@@ -168,14 +663,14 @@
         <div>
           <div>ma<span>x</span></div>
 
-          <div id="women">Women</div>
-          <div id="men">Men</div>
-          <div id="girl">Girls</div>
-          <div id="boy"><a href="./Tees-Polos.html">Boys</a></div>
-          <div>
+          <div class="women"><button id="wo">Women</button></div>
+          <div class="women"><button id="me">Men</button></div>
+          <div class="women"><button id="ge">Girls</button></div>
+          <div class="women"><button id="bo">Boys</button></div>
+          <div style="margin-bottom: 10px">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZzUZTGCkvMMXgByuGlASAtKcGo6N4weBaA&usqp=CAU"
-              alt="error search logo"
+              alt="search logo"
             />
             <input
               type="text"
@@ -187,12 +682,13 @@
         </div>
 
         <div id="left-nav">
-          <div><p>Sign Up - Sign in</p></div>
-          <div>
-            <a href="./Max-Fashion/Basket.html">
-              <p>Basket</p>
-              <img src="./img/bagIcon.png" alt="bagIcon" />
-            </a>
+          <div id="signupBtn">
+            <button id="login">Sign Up - Sign in</button>
+          </div>
+          <div id="basket-btn" class="women">
+            <button id="cart-nav">
+              Basket<img src="./img/bagIcon.png" alt="bagIcon" />
+            </button>
           </div>
         </div>
       </div>
@@ -221,11 +717,12 @@
     <!-- navbar ends -->
 
     <div id="pageBody">
-      <div id="crouser">
+      <!-- here we have to display inner body -->
+      <!-- <div id="crouser">
         <img src="./img/first.png" alt="" />
         <button><</button>
         <button>></button>
-      </div>
+      </div> -->
 
       <img
         src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBytwo1A-FREESHIPCOMMON-13JUNE2022.jpg"
@@ -541,30 +1038,47 @@
   </body>
 </html>
 <script>
-  let img = document.querySelector("#crouser>img");
-  let button = document.querySelectorAll("#crouser>button");
-  let count = 0;
-  let imgArr = [
-    "./img/first.png",
-    "./img/second.png",
-    "./img/third.png",
-    "./img/fourth.png",
-  ];
+  // let img = document.querySelector("#crouser>img");
+  // let button = document.querySelectorAll("#crouser>button");
+  // let count = 0;
+  // let imgArr = [
+  //   "./img/first.png",
+  //   "./img/second.png",
+  //   "./img/third.png",
+  //   "./img/fourth.png",
+  // ];
 
-  button[0].addEventListener("click", function () {
-    if (count === 0) {
-      count = imgArr.length - 1;
-    } else {
-      count--;
-    }
-    img.src = imgArr[count];
-  });
-  button[1].addEventListener("click", function () {
-    if (count === imgArr.length - 1) {
-      count = 0;
-    } else {
-      count++;
-    }
-    img.src = imgArr[count];
-  });
+  // button[0].addEventListener("click", function () {
+  //   if (count === 0) {
+  //     count = imgArr.length - 1;
+  //   } else {
+  //     count--;
+  //   }
+  //   img.src = imgArr[count];
+  // });
+  // button[1].addEventListener("click", function () {
+  //   if (count === imgArr.length - 1) {
+  //     count = 0;
+  //   } else {
+  //     count++;
+  //   }
+  //   img.src = imgArr[count];
+  // });
+
+  let btn1 = document.querySelector("#bo");
+  btn1.addEventListener("click", loadPage1);
+  function loadPage1() {
+    console.log("clicked")
+    window.location.href = "./BoysPage.html";
+  }
+  let btn2 = document.querySelector("#ge");
+  btn2.addEventListener("click", loadPage2);
+  function loadPage2() {
+    window.location.href = "./girls_page.html";
+  }
+  let btn6 = document.querySelector("#cart-nav");
+  btn6.addEventListener("click", loadPage3);
+  function loadPage3() {
+    window.location.href = "./Basket.html";
+  }
 </script>

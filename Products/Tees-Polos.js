@@ -198,6 +198,20 @@ function displayProducts(teesPoloProductsBoysArr){
         localStorage.setItem("basketItem",JSON.stringify(basketArr));
     }
 
-    
+    let btn1 = document.querySelector("#bo");
+  btn1.addEventListener("click", loadPage1);
+  function loadPage1() {
+    window.location.href = "./BoysPage.html";
+  }
+  let btn2 = document.querySelector("#ge");
+  btn2.addEventListener("click", loadPage2);
+  function loadPage2() {
+    window.location.href = "./girls_page.html";
+  }
+  let btn6 = document.querySelector("#cart-nav");
+  btn6.addEventListener("click", loadPage3);
+  function loadPage3() {
+    window.location.href = "./Basket.html";
+  }
 
 }
