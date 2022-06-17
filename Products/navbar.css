@@ -175,13 +175,43 @@
     cursor: pointer;
   }
   #left-nav > div:last-child {
+    /* border: 1px solid red; */
     display: flex;
-    height: 100%;
+    gap: 1px;
     justify-content: center;
     margin-right: 20px;
+    /* margin-left: -40px; */
     gap: 10px;
     cursor: pointer;
     align-items: center;
+  }
+  #left-nav > div{
+    display: flex;
+    gap: 20px;
+  }
+  #left-nav > div>p{
+    margin-right: -30px;
+  }
+  #left-nav > div>a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+  }
+  #left-nav > div>a>p{
+    /* border: 1px solid blue; */
+    /* margin-right: 5px; */
+    font-size: 16px;
+    width: auto;
+    margin-left: 10px;
+  }
+  #left-nav > div>a>img{
+    /* border: 1px solid green; */
+    width: 25px;
+    display: block;
+    margin: auto;
+    /* margin-right: 30px; */
   }
 
   /* NAVBAR 3 */

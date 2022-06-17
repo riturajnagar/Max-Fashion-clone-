@@ -109,7 +109,8 @@
       /* checkout section Code start here */
       #checkoutSub {
         /* border: 1px solid red; */
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         width: 100%;
         height: 100px;
         display: flex;
@@ -136,7 +137,8 @@
       }
       #offer {
         box-sizing: border-box;
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         width: 100%;
         height: 100px;
         padding: 10px;
@@ -162,40 +164,41 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        justify-content:space-between
+        justify-content: space-between;
       }
       #checkoutDetail {
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-        
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
         width: 100%;
         margin-top: 10px;
-        
       }
-      #checkoutDetail>table{
+      #checkoutDetail > table {
         margin: 0px 10px;
         width: 100%;
       }
-     
-      #checkoutDetail>button{
+
+      #checkoutDetail > button {
         margin: 1px 15px;
         width: 90%;
         padding: 10px;
         background-color: white;
         border-radius: 10px;
       }
-      #checkoutDetail>button:hover{
+      #checkoutDetail > button:hover {
         background-color: teal;
         color: white;
         cursor: pointer;
       }
-      
+
       #checkout > div:last-child {
         width: 100%;
         height: 100px;
       }
       #dummyImage {
-        width:100%;
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         margin-top: 10px;
       }
       #dummyImage > img {
@@ -234,7 +237,11 @@
                 alt="gift img"
             /></span>
             <div>
-              <input type="text" placeholder="Enter Promo Code" id="promoCodeValue" />
+              <input
+                type="text"
+                placeholder="Enter Promo Code"
+                id="promoCodeValue"
+              />
               <button id="promoCode">Submit</button>
             </div>
 
@@ -273,7 +280,9 @@
           <button>Checkout Now</button>
         </div>
         <div>
-          <div id="dummyImage"><img src="https://i.im.ge/2022/06/16/rnO5SG.png" alt="data" /></div>
+          <div id="dummyImage">
+            <img src="https://i.im.ge/2022/06/16/rnO5SG.png" alt="data" />
+          </div>
         </div>
       </div>
     </div>
@@ -283,7 +292,7 @@
   let basketArr = JSON.parse(localStorage.getItem("basketItem")) || [];
   displayProduct(basketArr);
   function displayProduct(basketArr) {
-    document.querySelector("#productDisplay").innerHTML=""
+    document.querySelector("#productDisplay").innerHTML = "";
     let length = basketArr.length;
     basketArr.forEach(function (el, ind) {
       let maincard = document.createElement("div");
@@ -341,34 +350,40 @@
   }
 
   // cart functionality to add card item price etc
-let promocode=""
-calculation(promocode)
 
-  function calculation(promocode){
-    let basketDetails=JSON.parse(localStorage.getItem("basketItem"))
-    let mrp=0;
-    basketDetails.forEach(function(ele){
-      mrp+=+(ele.price)
-    })
-    document.querySelector("#mrp").innerText="₹ "+mrp
-    // console.log(promocode)
-    if(promocode=="masai30"){
-      let dis=(mrp*30)/100;
-            mrp=mrp-dis;
-            // console.log(mrp)
-    }else{
-      if(promocode!=""){
-        alert("Invalid Promo Code")
-        window.location.reload();
+  let basketVal = JSON.parse(localStorage.getItem("basketItem"));
+  // console.log(typeof basketVal.length)
+  if (basketVal.length === 0) {
+    alert("Your cart is Empty");
+    window.location.href = "./EmptyBasket.html";
+  } else {
+    let promocode = "";
+    calculation(promocode);
+
+    function calculation(promocode) {
+      let basketDetails = JSON.parse(localStorage.getItem("basketItem"));
+      let mrp = 0;
+      basketDetails.forEach(function (ele) {
+        mrp += +ele.price;
+      });
+      document.querySelector("#mrp").innerText = "₹ " + mrp;
+      // console.log(promocode)
+      if (promocode == "masai30") {
+        let dis = (mrp * 30) / 100;
+        mrp = mrp - dis;
+        // console.log(mrp)
+      } else {
+        if (promocode != "") {
+          alert("Invalid Promo Code");
+          window.location.reload();
+        }
       }
-      
+      document.querySelector("#total").innerText = "₹ " + Math.floor(mrp);
     }
-    document.querySelector("#total").innerText="₹ "+Math.floor(mrp)
+    document.querySelector("#promoCode").addEventListener("click", applyPromo);
+    function applyPromo() {
+      let promocode = document.querySelector("#promoCodeValue").value;
+      calculation(promocode);
+    }
   }
-document.querySelector("#promoCode").addEventListener("click",applyPromo)
-function applyPromo(){
-let promocode=document.querySelector("#promoCodeValue").value
-calculation(promocode)
-}
-
 </script>
