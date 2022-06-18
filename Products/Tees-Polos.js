@@ -201,6 +201,7 @@ function displayProducts(teesPoloProductsBoysArr){
     let btn1 = document.querySelector("#bo");
   btn1.addEventListener("click", loadPage1);
   function loadPage1() {
+    console.log("clicked")
     window.location.href = "./BoysPage.html";
   }
   let btn2 = document.querySelector("#ge");
@@ -209,9 +210,19 @@ function displayProducts(teesPoloProductsBoysArr){
     window.location.href = "./girls_page.html";
   }
   let btn6 = document.querySelector("#cart-nav");
-  btn6.addEventListener("click", loadPage3);
-  function loadPage3() {
+  btn6.addEventListener("click", loadPage10);
+  function loadPage10() {
     window.location.href = "./Basket.html";
+  }
+  let btn3 = document.querySelector("#me");
+  btn3.addEventListener("click", loadPage3);
+  function loadPage3() {
+    window.location.href = "./men/men.html";
+  }
+  let btn4=document.querySelector("#wo");
+  btn4.addEventListener("click",loadPage4);
+  function loadPage4(){
+    window.location.href = "../WomensHomePage.html";
   }
 
 }
