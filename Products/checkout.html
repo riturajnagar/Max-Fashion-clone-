@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>checkoutPage</title>
+    <title>checkout</title>
     <style>
       * {
         font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial,
@@ -48,14 +48,17 @@
       }
       #mainCheckout {
         width: 80%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         margin: auto;
+        margin-bottom: 20px;
+        margin-top: 30px;
         display: flex;
         justify-content: space-between;
       }
       #shippingMethod {
-        border: 2px solid green;
+        border: 2px solid rgb(174, 181, 174);
         width: 68%;  
+        padding: 5px 20px;
       }
       #orderSummary {
         /* border: 2px solid black; */
@@ -63,7 +66,7 @@
         height: 500px;
       }
       #selectMethod {
-        border: 1px solid orange;
+        /* border: 1px solid orange; */
         width: 95%;
         height: 70px;
         display: flex;
@@ -85,16 +88,15 @@
         font-size: 13px;
       }
       #selectMethod > div:first-child {
-        border: 2px solid #303ab2;
+        border: 2px solid #dcdde1;
         line-height: 15px;
       }
       #selectMethod > div:last-child {
-        border: 1px solid black;
-        line-height: 15px;
+        border: 2px solid rgb(174, 181, 174);
+                line-height: 15px;
       }
       #formDiv {
-        border: 1px solid black;
-        width: 95%;
+       width: 95%;
       }
       .input{
         width: 50%;
@@ -300,7 +302,7 @@
    </div>
    <div id="block">
    <label for="Card Number"><b>Card Number</b></label>
-   <input type="number" id="" placeholder="Enter your 16 Digit card number">
+   <input type="number" id="cardnum" placeholder="Enter your 16 Digit card number">
    <label for="cardName"><b>Name on Card</b></label>
    <input type="text" id="cardName" class="input" placeholder="Name on card">
   </div>
@@ -334,7 +336,7 @@
         <option value="2024">2024</option>
         <option value="2025">2025</option>
     </select>
-    <input type="number" placeholder="CVV">
+    <input type="number" placeholder="CVV" id="cvvv">
 </div>
  <b> <input type="checkbox">Save this card for future transaction?</b><br>
  <button id="payment" class="input"><b>Pay Now</b></button>  
@@ -348,7 +350,7 @@
           <li id="productFinal"></li><hr>
           <div id="subtotal">
             <div>Subtotal:</div>
-            <div>allsum</div>
+            <div id="subTotal">allsum</div>
           </div><hr>
           <div id="shippingfee" style="margin-top:20px ;">
             <div>Standard Ground Shipping:</div>
@@ -356,7 +358,7 @@
           </div><hr>
           <div id="total">
             <div>Total:</div>
-            <div>GrandTotal</div>
+            <div id="gTotal">GrandTotal</div>
           </div><hr>
           <div style="font-size: 12px;text-align: center;padding: 10px; ">
             Shipping charges might vary based on delivery location
@@ -365,6 +367,7 @@
         <div id="DummyDiv"> <img src="https://i.im.ge/2022/06/18/rB28v6.png" alt="Nothing"></div>
       </div>
     </div>
+    
   </body>
 </html>
 <script>
@@ -400,5 +403,25 @@
     mainCard.append(imgDiv,detailDiv)
     document.querySelector("#productFinal").append(mainCard);
     })
+
+    let mrp=JSON.parse(localStorage.getItem("p1"))
+    let subTotalprice=JSON.parse(localStorage.getItem("p2"))
+    document.querySelector("#subTotal").innerHTML=mrp
+    document.querySelector("#gTotal").innerHTML=subTotalprice
   }
+document.querySelector("#payment").addEventListener("click",verifyDetails);
+function verifyDetails(){
+  let cardnum=509061036200;
+  let cvv=123;
+  let inCardnum=document.querySelector("#cardnum").value
+
+  let inCvv=document.querySelector("#cvvv").value
+  console.log(inCardnum,inCvv)
+  if(cardnum == inCardnum && inCvv == cvv){
+    window.location.href="./paymentSuccessfull.html"
+  }else{
+    alert("Invalid card number or cvv")
+  }
+}
+  
 </script>

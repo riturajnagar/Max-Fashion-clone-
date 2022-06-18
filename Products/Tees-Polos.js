@@ -193,7 +193,7 @@ function displayProducts(teesPoloProductsBoysArr){
     let basketArr= [];
     function addToBasket(ele){
         basketArr.push(ele);
-        alert("Added to Basket");
+        window.location.href="./alert.html"
         console.log(basketArr)
         localStorage.setItem("basketItem",JSON.stringify(basketArr));
     }
