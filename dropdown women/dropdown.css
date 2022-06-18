@@ -1,6 +1,6 @@
-*{
+/* *{
   font-size: 14px;
- }
+ } */
      
  /* main menu position */
  .list{
@@ -8,6 +8,7 @@
           z-index: 1;
           left: 0px;
           font-size: 12px;
+        
       }
       ul.menu{
              display: inline-block;          
