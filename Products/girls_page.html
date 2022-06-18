@@ -1,947 +1,1760 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Shopping at Max</title>
-    <link rel="stylesheet" href="footerPart.css">
+    <!-- <link rel="stylesheet" href="dropdown.css"> -->
     <style>
-      /* navbar css starts here */
-      /* * {
-    width: 100%;
-    margin: 0px;
-  } */
-  /* NAVBAR 1 */
-  #outerNavbar1{
-      background-color: black;
-      /* width: 100%; */
-      width: 110%;
-      height: 50px;
-  }
-  #navbar1 {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
-    /* justify-content: space-between; */
-    font-family: "Poppins", sans-serif;
-    color: white;
-    font-size: 14px;
-  }
-  #outerNavbar1>div{
-      /* border: 1px solid red; */
-      display: grid;
-      /* gap:200px */
-      gap: 500px;
-  }
-  #outerNavbar1>div>div:nth-child(2){
-      margin-left: 150px;
-      /* border: 1px solid red; */
-  }
-  #navbar1 > div > div:first-child > img {
-    width: 30px;
-  }
-  #navbar1 > div > div > img {
-    display: block;
-    align-items: center;
-    width: 20px;
-  }
 
-  #navbar1 > div:first-child {
-    display: flex;
-    width: auto;
-    cursor: pointer;
-  }
-  #navbar1 > div:first-child > div {
-    display: flex;
-    /* border: 1px solid red; */
-    align-items: center;
-    justify-content: center;
-    /* gap: 10px; */
-    gap: 30px;
-  }
-  #navbar1 > div:first-child > div:first-child > img {
-    /* border: 1px solid red; */
-    width: 30px;
-  }
-  #navbar1 > div:first-child > div > img {
-    background-color: white;
-  }
-  #navbar1 > div:last-child {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    width: 80%;
-  }
-  #navbar1 > div:last-child > div:nth-child(1),
-  #navbar1 > div:last-child > div:nth-child(2) {
-    padding: 5px 10px;
-    width: auto;
-    border-right: 1px solid rgb(93, 94, 92);
-  }
-  #navbar1 > div {
-    display: flex;
-    /* border: 1px solid grey; */
-  }
-  #navbar1 > div:last-child > div:nth-child(3) {
-    /* border: 1px solid red; */
-    padding-left: 10px;
-    padding-right: 0px;
-    width: auto;
-  }
-  span {
-    color: rgb(228, 0, 43);
-  }
+      /* dropdown css starts here */
+      /* *{
+  font-size: 14px;
+ } */
+     
+ /* main menu position */
+ .list{
+          position: absolute;
+          z-index: 1;
+          left: 0px;
+          font-size: 12px;
+      }
+      ul.menu{
+             /* display: inline-block;           */
+             margin-left: 4.5%;
+        width: 140%;
+        font-weight: bolder;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-around;
+      }
+      ul.menu li{
+          display: inline-block;
+           /* border: 1px solid red; */
+          padding: 5px 10px;
+          cursor: pointer;
+      }
 
-  /* NAVBAR 2 */
-  #navbar2 {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    /* width: 94%; */
-    /* gap:150px; */
-    width: 103%;
-    gap: 420px;
-    margin: auto;
-    /* margin-top: 4px; */
-    /* border: 1px solid red; */
-    position: sticky;
-    top: 0px;
-    font-family: "Poppins", sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    background-color: 
-    #f7f8f7 ;
-    padding: 0px 50px;
-  }
-  #navbar2 > div:first-child {
-    display: grid;
-    grid-template-columns: 100px 60px 60px 60px 60px 400px;
-    align-items: center;
-  }
-  #navbar2 > div:first-child > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
+      /* drop down div  */
+      .dropdown-content{
+            display: flex;
+            gap:20px ;
+            width: 100%;
+            /* opacity: 0; 
+            visibility: hidden; */
+            display: none;
+            position: absolute;
+            left: 50px;
+            top: 55px;
+            padding: 20px 0px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+      } 
+      /* unline border */
+      ul.menu li:hover{
+          border-bottom: 2px solid darkblue;
+      }
+      /* showing after hover */
+      ul.menu>li:nth-child(1):hover .dropdown-content{
+        display: flex;
+        transition-duration: 3000ms;
+        transition-timing-function: ease-in;   
+      }
+      ul.menu>li:nth-child(2):hover .dropdown-content{
+          display: flex;  
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;  
+        }
+        ul.menu>li:nth-child(3):hover .dropdown-content{
+          display: flex; 
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;   
+        }
+        ul.menu>li:nth-child(4):hover .dropdown-content{
+          display: flex; 
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;   
+        }
+        ul.menu>li:nth-child(5):hover .dropdown-content{
+          display: flex;  
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;  
+        }
+        ul.menu>li:nth-child(6):hover .dropdown-content{
+          display: flex;  
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;  
+         
+        }
+        ul.menu>li:nth-child(7):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(8):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(9):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(10):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(11):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(12):hover .dropdown-content{
+          display: flex;   
+        }
 
-  /* hover style */
-  #navbar2 > div:first-child > div:hover {
-    color: rgb(10, 22, 150);
-  }
+       
+       /* more menu selection */
+      ul.menu>li:last-of-type{
+          margin-left: 15px;
+          border: none; 
+       }
+        /* more menu div part */
+        .dropdown-more{
+            /* opacity: 0; 
+            visibility: hidden; */
+            display: none;
+            position: absolute;
+            right:-55px; 
+            top: 45px; 
+            background-color: white;
+            width: 120px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;   
+        }
+        ul.inner-more{
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          position: relative;
+          right: 35px;
+        }
+        ul.inner-more li{
+          font-size: 12px; 
+        }
+        ul.menu>li:last-of-type:hover .dropdown-more{
+         display: block;
+          
+       }
+    
 
-  #navbar2 > div:first-child > div:first-child {
-    color: rgb(48, 58, 178);
-    font-size: 36px;
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    margin-bottom: 7px;
-  }
-
-  
-  #navbar2 > div:first-child > div:last-child > img {
-    width: 5%;
-    padding: 5px 0px 5px;
-    background-color: rgb(236, 237, 235);
-  }
-  #navbar2 > div:first-child > div:last-child {
-    display: flex;
-    justify-content: start;
-  
-    gap: 20px;
-    background-color: rgb(236, 237, 235);
-    padding-left: 10px;
-    margin-bottom: 0px;
-  }
-
-  /* input tag */
-  input {
-    background-color: rgb(236, 237, 235);
-    border: none;
-    outline: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    box-sizing: border-box;
-    width: 600px;
-    align-content
-    : center;
-  }
-
-  #navbar2 > div:first-child + div > div:last-child > img {
-    width: 10%;
-    /* border: 1px solid red; */
-  }
-  #left-nav {
-    /* border: 1px solid red; */
-    display: grid;
-    grid-template-columns: 120px 150px;
-    align-items: center;
-  }
-  
-  #cart-part{
-    display: flex;
-    align-items: center;
-  }
-  #cart-part>div{
-width: 10px;
-margin-left: 10px;
-margin-right: 0px;
-  }
-  #cart-part>div>img{
-    /* border: 1px solid green; */
-    width: 20px;
-    margin-left: 30px;
-  }
-  #left-nav > div:first-child {
-    /* border: 1px solid blue; */
-    /* border-right: 1px solid rgb(200, 201, 198); */
-    cursor: pointer;
-  }
-  #left-nav > div:first-child {
-    /* border: 1px solid red; */
-    border-right: 1px solid rgb(200, 201, 198);
-    cursor: pointer;
-  }
-
-  /* NAVBAR 3 */
-
-  #navbar3 {
-    display: flex;
-    width: 93%;
-    height: 60px;
-    margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    font-weight: bolder;
-    /* position: sticky; */
-    top: 50px;
-    margin-bottom: 5px;
-    background-color: white;
-  }
-  #navbar3 > div {
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    cursor: pointer;
-    /* border: 1px solid red; */
-    padding: 0px 10px;
-  }
-  #navbar3 > div:hover {
-    color: blue;
-    border-bottom: 2px solid rgb(48, 58, 178);
-  }
-  #navbar3 > div:last-child {
-    padding: 0px 0px;
-    border: none;
-  }
-  #navbar3 + div {
-    width: 110%;
-    text-align: center;
-    background-color: rgb(48, 58, 178);
-    color: rgb(235, 255, 255);
-    padding: 10px 0px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-      /* navbar css ends here */
-
-
-
-
-
+       ul.innermenu{
+          position: absolute;
+          left: -30px;
+    
+      }
+      ul.innermenu li{
+          display: block;  
+      }
+     
+      .dropdown-content p{
+         font-size: 20px;
+         margin-left: 20px;
+      }
+      .box2{
+          position: relative;
+          left: -90px;
+       
+      }
+      .box2>p{
+          opacity: 0;
+      }
+      .box3{
+          position: relative;
+          left: -40px;
+          display: flex;
+          gap: 10px; 
+      } 
+      /* dropdown css end */
       
+
+      /* navbar css */
+      /* * {
+        width: 100%;
+        margin: 0px;
+      } */
+      /* NAVBAR 1 */
+      div#navbar1>div{
+      display: flex;
+      justify-content: space-around;
+     }
+      #outerNavbar1 {
+        background-color: black;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      #navbar1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+      #outerNavbar1 > div {
+        /* border: 1px solid red; */
+        display: grid;
+        gap: 200px;
+      }
+      #outerNavbar1 > div > div:nth-child(2) {
+        margin-left: 150px;
+        /* border: 1px solid red; */
+      }
+      #navbar1 > div > div:first-child > img {
+        width: 30px;
+      }
+      #navbar1 > div > div > img {
+        display: block;
+        align-items: center;
+        width: 20px;
+      }
+
+      #navbar1 > div:first-child {
+        display: flex;
+        width: auto;
+        cursor: pointer;
+      }
+      #navbar1 > div:first-child > div {
+        display: flex;
+        /* border: 1px solid red; */
+        align-items: center;
+        gap: 10px;
+      }
+      #navbar1 > div:first-child > div:first-child > img {
+        /* border: 1px solid red; */
+        width: 30px;
+      }
+      #navbar1 > div:first-child > div > img {
+        background-color: white;
+      }
+      #navbar1 > div:last-child {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 80%;
+      }
+      #navbar1 > div:last-child > div:nth-child(1),
+      #navbar1 > div:last-child > div:nth-child(2) {
+        padding: 5px 10px;
+        width: auto;
+        border-right: 1px solid rgb(93, 94, 92);
+      }
+      #navbar1 > div {
+        display: flex;
+        /* border: 1px solid grey; */
+      }
+      #navbar1 > div:last-child > div:nth-child(3) {
+        /* border: 1px solid red; */
+        padding-left: 10px;
+        padding-right: 0px;
+        width: auto;
+      }
+
+      /* NAVBAR 2 */
+      div#navbar2{
+        margin-left: 100px;
+      }
+
+      #nav-2 {
+        width: 100%;
+        background-color: #f7f8f7;
+      }
+      #navbar2 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        width: 90%;
+        margin: auto;
+        height: 50px;
+        box-sizing: border-box;
+        margin-top: 4px;
+        position: sticky;
+        top: 0px;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        background-color: #f7f8f7;
+      }
+      #navbar2 > div:first-child {
+        display: grid;
+        grid-template-columns: 10% 10% 10% 10% 10% 50%;
+        align-items: center;
+      }
+      #navbar2 > div:first-child > div {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      /* hover style */
+      #navbar2 > div:first-child > div:hover {
+        color: rgb(10, 22, 150);
+      }
+
+      #navbar2 > div:first-child > div:first-child {
+        color: rgb(48, 58, 178);
+        font-size: 36px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin-bottom: 7px;
+      }
+
+      span {
+        color: rgb(228, 0, 43);
+      }
+      #navbar2 > div:first-child > div:last-child > img {
+        width: 5%;
+        padding: 5px 0px 5px;
+        background-color: rgb(236, 237, 235);
+      }
+      #navbar2 > div:first-child > div:last-child {
+        display: flex;
+        justify-content: start;
+        height: 80%;
+        gap: 20px;
+        background-color: rgb(236, 237, 235);
+        padding-left: 10px;
+        margin-bottom: 0px;
+      }
+
+      /* input tag */
+      input {
+        background-color: rgb(236, 237, 235);
+        border: none;
+        outline: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      #navbar2 > div:first-child + div > div:last-child > img {
+        width: 20%;
+      }
+      #left-nav {
+        display: grid;
+        grid-template-columns: 30% 30%;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      #left-nav > div:first-child {
+        height: 60%;
+        border-right: 1px solid rgb(200, 201, 198);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      #left-nav > div:last-child {
+        /* border: 1px solid red; */
+        display: flex;
+        gap: 1px;
+        justify-content: center;
+        margin-right: 20px;
+        /* margin-left: -40px; */
+        gap: 10px;
+        cursor: pointer;
+        align-items: center;
+      }
+      #left-nav > div {
+        display: flex;
+        gap: 20px;
+      }
+      #left-nav > div > p {
+        margin-right: -30px;
+      }
+      #left-nav > div > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: 20px;
+      }
+      #left-nav > div > a > p {
+        /* border: 1px solid blue; */
+        /* margin-right: 5px; */
+        font-size: 16px;
+        width: auto;
+        margin-left: 10px;
+      }
+      #left-nav > div > a > img {
+        /* border: 1px solid green; */
+        width: 25px;
+        display: block;
+        margin: auto;
+        /* margin-right: 30px; */
+      }
+
+      /* NAVBAR 3 */
+      #nav-3 {
+        width: 100%;
+        margin-top: 40px;
+      }
+      #navbar3 {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        height: 40px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        position: sticky;
+        top: 50px;
+        margin-bottom: 5px;
+        background-color: white;
+      }
+      #navbar3 > div {
+        height: 100%;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0px 10px;
+      }
+      #navbar3 > div:hover {
+        color: blue;
+        border-bottom: 2px solid rgb(48, 58, 178);
+      }
+      #navbar3 > div:last-child {
+        padding: 0px 20px;
+        border: none;
+      }
+
+      /* i have made changes here */
+      #nav-3 > div {
+        text-align: center;
+        box-sizing: border-box;
+        background-color: rgb(48, 58, 178);
+        color: rgb(235, 255, 255);
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .women > button {
+        background-color: #f7f8f7;
+        border: none;
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding: 8px 0px;
+      }
+      .women > button:hover {
+        cursor: pointer;
+        background-color: white;
+      }
+      #signupBtn > button {
+        background-color: #f7f8f7;
+        border: none;
+        font-size: 14px;
+        border-right: 2px solid rgb(201, 196, 196);
+        padding: 8px 0px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      #signupBtn > button:hover {
+        cursor: pointer;
+        background-color: white;
+      }
+      #basket-btn > button {
+        display: flex;
+      }
+      #basket-btn > button > img {
+        margin-left: 10px;
+        width: 15px;
+      }
+
+      /* navbar css end */
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
       /* girls page css starts from here */
-        /* *{
+      /* *{
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
         } */
 
-        body {
-        width: 90%;
-        /* margin: auto; */
+      #pageBody {
         font-family: ProximaNova-Regular, "Helvetica Neue", Arial, sans-serif,
           "Apple Color Emoji", "Segoe UI Emoji";
       }
 
+      .caruser {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 2%;
+      }
+      .caruser > img {
+        width: 100%;
+        /* margin-top: 15%; */
+      }
+      .caruser > button {
+        position: absolute;
+        /* top: 200px; */
+        /* top: 445px; */
+        top: 400px;
+        border: none;
+        font-size: 24px;
+        background-color: white;
+        color: black;
+      }
+      .caruser > button:nth-child(2) {
+        left: 135px;
+      }
+      .caruser > button:nth-child(3) {
+        right: 105px;
+      }
+      #freeship {
+        display: block;
+        margin: auto;
+        margin-top: 5%;
+        margin-left: 9%;
+      }
+      hr {
+        margin-top: 50px;
+        width: 80%;
+        border: 0.2px solid rgb(241, 235, 235);
+        margin-left: 10%;
+      }
+      h1 {
+        margin-top: 60px;
+        margin-left: 10%;
+        font-weight: lighter;
+      }
+      #printedTees {
+        margin-left: 10%;
+      }
+      #gift {
+        margin-left: 10%;
+      }
+      #shopByAge {
+        width: 80%;
+
+        margin-left: 10%;
+        display: flex;
+        justify-content: space-between;
+      }
+      #shopByAge > div {
+        width: 32%;
+      }
+      #shopByAge > div > img {
+        width: 100%;
+      }
+      #trending {
+        width: 80%;
+
+        margin-left: 10%;
+        display: flex;
+        justify-content: space-between;
+      }
+      #trending > div {
+        width: 32%;
+      }
+      #trending > div > img {
+        width: 100%;
+      }
+      #festival {
+        margin-left: 10%;
+      }
+      #budget {
+        /* width: 90%; */
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      #budget > div {
+        width: 32%;
+        margin: auto;
+      }
+      #budget > div > img {
+        width: 100%;
+        display: block;
+        margin: auto;
+      }
+      #monsoon {
+        margin-left: 10%;
+      }
+      #summer {
+        width: 80%;
+        margin-left: 10%;
+        display: flex;
+        justify-content: space-between;
+      }
+      #summer > div {
+        width: 49%;
+        height: 100%;
+      }
+      #summer > div > img {
+        width: 100%;
+        height: 100%;
+      }
+      #viewAll {
+        margin-left: 10%;
+        width: 80%;
+        margin-top: 5%;
+      }
+      #gifting {
+        margin-left: 10%;
+        height: 230px;
+        width: 80%;
+      }
+      #connect {
+        margin-left: 10%;
+        height: 230px;
+        width: 80%;
+      }
+      /* girls page css ends here */
+      /* footer css start */
+      /* footer styling starts from here */
+      hr {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 40px;
+        border: 0.2px solid rgb(241, 235, 235);
+      }
+      #footerSubDow {
+        display: flex;
+        /* width: 100%; */
+        width: 80%;
+        margin-left: 10%;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      #Sub {
+        width: 60%;
+      }
+      #Dow {
+        width: 40%;
+        margin-top: 10px;
+      }
+      h4 {
+        font-family: ProximaNova-Bold, "Helvetica Neue", Arial, sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji";
+        font-size: 24px;
+        font-weight: bolder;
+        margin-top: 1px;
+        margin-left: 0px;
+      }
+      h4 + p {
+        color: #929391;
+        margin-top: 5px;
+        margin-left: 0px;
+        font-size: 16px;
+        font-family: ProximaNova-Regular, "Helvetica Neue", Arial, sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      #footerSubDow > div > input,
+      button {
+        margin-top: 10px;
+        padding: 18px 24px;
+        font-size: 20px;
+      }
+      #footerSubDow > div > input {
+        width: 45%;
+
+        background-color: #f7f8f7;
+      }
+      #footerSubDow > div > button {
+        width: 25%;
+        margin-left: -5px;
+        background-color: black;
+
+        color: white;
+      }
+      #Dow > div {
+        display: flex;
+        justify-content: space-between;
+        /* border: 1px solid red; */
+        width: 80%;
+
+        height: 70px;
+        margin-top: 20px;
+        margin-left: 0px;
+      }
+      #Dow > div > div {
+        width: 48%;
+        /* border: 1px solid mediumaquamarine; */
+      }
+      #Dow > div > div > img {
+        width: 100%;
+        height: 100%;
+      }
+      #footerMenu {
+        /* border: 1px solid red; */
+        margin: auto;
+        /* width: 100%; */
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 5px;
+      }
+      #footerMenu > div {
+        /* border: 1px solid black; */
+        width: 150px;
+        height: 220px;
+      }
+      #footerMenu > div > div {
+        margin-top: 3px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.576);
+        cursor: pointer;
+      }
+      h6 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      #footerSocial {
+        /* border: 1px solid black; */
+        margin: auto;
+        /* width: 100%; */
+        width: 80%;
+        margin-top: -30px;
+        margin-bottom: 15px;
+      }
+      #footerSocial > #main {
+        width: 100%;
+        /* border: 1px solid red; */
+        justify-content: space-between;
+        display: flex;
+      }
+      #footerSocialSub1 {
+        /* border: 1px solid blue; */
+        width: 80%;
+        margin-left: 0px;
+      }
+
+      #footerSocialSub1 > div {
+        /* border: 1px solid red; */
+        display: flex;
+        /* width: 100%; */
+        justify-content: space-between;
+
+        width: 80%;
+
+      }
+      #footerSocialSub1 > div > div {
+        /* border: 1px solid black; */
+        /* width: 100%; */
+        display: flex;
+        justify-content: space-between;
+      }
+      #footerSocialSub1 > div > div > div:first-child {
+        border: 1px solid #c8c9c6;
+        width: 50px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #footerSocialSub1 > div > div > div:first-child > div {
+        width: 14px;
+        height: 14px;
+      }
+
+      /* #footerSocialSub1 > div > div > div:last-child {
+        margin-left: 10px;
+      } */
+      #footerSocialSub1 > div > div > div:last-child > div {
+        margin-top: 3px;
+      }
+      #footerSocial>#main>#footerSocialSub1>div>div>div>div>img{
+        width: 100%;
+      }
 
 
 
-        .caruser{
-            width: 80%;
-            margin-left: 10%;
-            margin-top: 2%;
-        }
-        .caruser>img{
-            width: 100%;
-            /* margin-top: 15%; */
-        }
-        .caruser>button{
-            position: absolute;
-            /* top: 200px; */
-            top: 445px;
-            border: none;
-            font-size: 24px;
-            background-color: white;
-            color: black;
-        }
-        .caruser>button:nth-child(2){
-            left: 135px;
-        }
-        .caruser>button:nth-child(3){
-            right: 105px;
-        }
-        #freeship{
-            display: block;
-            margin: auto;
-            margin-top: 5%;
-            margin-left: 9%;
-        }
-        hr{
-            margin-top: 50px;
-            width: 80%;
-            border: .2px solid rgb(241, 235, 235);
-            margin-left: 10%;
-        }
-        h1{
-            margin-top: 60px;
-            margin-left: 10%;
-            font-weight: lighter;
-        }
-        #printedTees{
-            margin-left: 10%;
-        }
-        #gift{
-            margin-left: 10%;
-        }
-        #shopByAge{
-            width: 80%;
-            height: 180px;
-            margin-left: 10%;
-            display: flex;   
-            justify-content: space-between;
+      #footerSocialSub2 {
+        display: flex;
+        /* width: 15%; */
+      }
+      #footerSocialSub2 > div {
+        /* border: 1px solid red; */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        }
-        #shopByAge>div{
-            width: 32%;
-            height: 100%;
-        }
-        #shopByAge>div>img{
-            width: 100%;
-            height: 100%;
-        }
-        #trending{
-            width: 80%;
-            height: 400px;
-            margin-left: 10%;
-            display: flex;   
-            justify-content: space-between;
-        }
-        #trending>div{
-            width: 32%;
-            height: 100%;
-        }
-        #trending>div>img{
-            width: 100%;
-            height: 100%;
-        }
-        #festival{
-            margin-left: 10%;
-        }
-        #budget{
-            width: 80%;
-            height: 200px;
-            margin-left: 10%;
-            display: flex;   
-            justify-content: space-between;
-        }
-        #budget>div{
-            width: 32%;
-            height: 100%;
-        }
-        #budget>div>img{
-            width: 100%;
-            height: 100%;
-        }
-        #monsoon{
-            margin-left: 10%;
-        }
-        #summer{
-            width: 80%;
-            height: 580px;
-            margin-left: 10%;
-            display: flex;
-            justify-content: space-between;
-        }
-        #summer>div{
-            width: 49%;
-            height: 100%;
-        }
-        #summer>div>img{
-            width: 100%;
-            height: 100%;
-        }
-        #viewAll{
-            margin-left: 10%;
-            width: 80%;
-            margin-top: 5%;
-        }
-        #gifting{
-            margin-left: 10%;
-            height: 230px;
-            width: 80%;
-        }
-        #connect{
-            margin-left: 10%;
-            height: 230px;
-            width: 80%;
-        }
-        /* girls page css ends here */
+
+
+      #footerSocialSub2 > div:hover {
+        background-color: rgba(0, 0, 0, 0.067);
+      }
+      #footerSocialSub2 > div > div {
+        width: 25px;
+        height: 25px;
+        margin-left: 30%;
+      }
+      #footerSocialSub2 > div > div > img {
+        width: 100%;
+      }
+      #footerBottom {
+        /* margin: auto; */
+        margin-top: 20px;
+        height: 70px;
+        /* width: 100%; */
+        width: 80%;
+        margin-left: 10%;
+      }
+      #footerBottom > div {
+        display: flex;
+        width: 350px;
+      }
+      #footerBottom > div > div:first-child {
+        margin: auto;
+        width: 30%;
+      }
+      #footerBottom > div {
+        display: flex;
+        margin-left: 0px;
+      }
+      #footerBottom > div > div:first-child > img {
+        display: block;
+        margin-left: 0px;
+        width: 100%;
+      }
+      #footerBottom > div > div:last-child {
+        width: 70%;
+        margin-left: 10px;
+        font-size: 14px;
+        display: block;
+        align-content: center;
+        margin: 20px;
+        color: #929391;
+      }
+
+      /* Footer style ended */
     </style>
-</head>
-<body>
-  <!-- navbar html starts here -->
-  <div id="outerNavbar1">
-    <div id="navbar1">
-      <div>
-        <div>
-          <img
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAMAAAApvJHbAAAAYFBMVEUAAAD///+kpKQZGRkwMDDl5eW+vr7Ly8vf399YWFiLi4tJSUmRkZEsLCyCgoKnp6fv7++tra2ZmZlBQUEQEBDFxcUdHR3X19d5eXlqamr4+PglJSUJCQlQUFBvb2+0tLTnw1w/AAABIklEQVRIie3VXZeCIBCAYcd1NiNA0KJV2/r//3IZP6pjwCncbW94L7qZnlCOUpalUqk3tNd5oEqGtYFgm7D+WKsPpnBnntGf3uH/apRsLkLfxVdpKF7Wx9126Mvqw8t63rWGFm9j9Y60WqVBx2vdATTRmjGAMlrzrLQ/EauPegPQmUg9lr9fnwohRN9G6rHtH2nDa967tbCjU1Dnrkdx1Pq6XT5dT1t6edR6GtV+TVMhl0cAaXo3meD2U2TfDt2VJVrcorRclXfRTAFIiWd7cUhfe9DTuYOg9u6/BNEBNu6nRaHNLlCfkdHauIjWZtjycaRcZyPdNzd038s3eLhv2TP3qTjl3vOhy23PveU+PPPcNbrW86r2XFvDKy6COJVK/XI/aU4OG9BpTLoAAAAASUVORK5CYII="
-            alt="error"
-          />
-          <p>Free Shipping</p>
-        </div>
-        <div>
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/590/590511.png"
-            alt="error"
-          />
-          <p>Return to Store</p>
-        </div>
-        <div>
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/2898/2898372.png"
-            alt="error"
-          />
-          <p>Click & Collect</p>
-        </div>
-      </div>
-      <div>
-        <div>Download Our Apps</div>
-        <div>Store Locator</div>
-        <div>Help</div>
-      </div>
-    </div>
-  </div>
-
-  <div id="navbar2">
-    <div>
-      <div>ma<span>x</span></div>
-
-      <div id="women">Women</div>
-      <div id="men">Men</div>
-      <div id="girl">Girls</div>
-      <div id="boy">Boys</div>
-      <div>
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZzUZTGCkvMMXgByuGlASAtKcGo6N4weBaA&usqp=CAU"
-          alt="error search logo"
-        />
-        <input
-          type="text"
-          name=""
-          id="searchbar"
-          placeholder="What are you looking for?"
-        />
-      </div>
-    </div>
-
-    <div id="left-nav">
-      <div>Sign Up - Sign in</div>
-      <div>
-        <div>Basket</div>
-        <img
-          src="https://cdn-icons.flaticon.com/png/128/2838/premium/2838895.png?token=exp=1655215701~hmac=3f79b6c34289e504a4ee88e42b2cd6b9"
-          alt="error"
-        />
-      </div>
-    </div>
-  </div>
-  <div id="navbar3">
-    <div>Online Exclusives</div>
-    <div>Curves(Plus Size)</div>
-    <div>Tops</div>
-    <div>Bottoms</div>
-    <div>Dresses & Jumpsuits</div>
-    <div>Sleepwear</div>
-    <div>Indian Wear</div>
-    <div>Sportswear</div>
-    <div>Lingerie</div>
-    <div>Accessories</div>
-    <div>Footware</div>
-    <div>Winterwear</div>
-    <div>More</div>
-  </div>
-  <div>
-    Buy 3 @ ₹699/999/1499 + FREE Shipping on all orders above JUST ₹499 >
-  </div>
-  <!-- navbar html ends here -->
-
-
-
-
-
-
-
-
-
-  <!-- girls page html starts from here -->
-
-
-    <div class="caruser">
-        <a href="girlsProducts.html">
-            <img id="car" src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-A-ALLCOMMON-10JUNE2022A.jpg" alt="">
-        </a>
-        <button><</button>
-        <button>></button>
-    </div>
-    <a href="girlsProducts.html">
-        <img id="freeship" src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBytwo1A-FREESHIPCOMMON-13JUNE2022.jpg" alt="">
-    </a>
-    <hr>
-    <h1>Budget Buy</h1>
-    <a href="girlsProducts.html">
-        <img id="printedTees" src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/department-modularblock-oneBythree-C-Girls-02JUNE2022.jpg" alt="">
-    </a>
-    <hr>
-    <h1>The Joy Of Gifting!</h1>
-    <a href="girlsProducts.html">
-        <img id="gift" src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-A-ALLCOMMON-10JUNE2022A.jpg" alt="">
-    </a>
-    <hr>
-    <h1>Shop By Age</h1>
-    <a href="girlsProducts.html">
-        <div id="shopByAge">
-            <div><img src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-5modularblock-oneBytwo1C-girls-04MAY2022.jpg" alt=""></div>
-            <div><img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-E-girls-04MAY2022.jpg" alt=""></div>
-            <div><img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-FF-girls-04MAY2022.jpg" alt=""></div>
-         </div>
-    </a>
-    <hr>
-   
-     <h1>Trending Stores</h1>
-     <a href="girlsProducts.html">
-        <div id="trending">
-            <div><img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock18One-Girls-04MAY2022.jpg" alt=""></div>
-            <div><img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock18Two-Girls-04MAY2022.jpg" alt=""></div>
-            <div><img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock18Three-Girls-04MAY2022.jpg" alt=""></div>
-            </div>
-     </a>
-     <hr>
-     <h1>Max Kids Festival</h1>
-     <a href="girlsProducts.html">
-        <img id="festival" src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock16One-Girls-18MAY2022.gif" alt="">
-     </a>
-     <hr>
-     <h1>Budget Zone</h1>
-     <a href="girlsProducts.html">
-        <div id="budget">
-            <div><img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19One-Girls-18MAY2022.jpg" alt=""></div>
-            <div><img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Two-Girls-18MAY2022.jpg" alt=""></div>
-            <div><img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Three-Girls-18MAY2022.jpg" alt=""></div>
-         </div>
-     </a>
-     <hr>
-     <h1>Monsoon Checklist</h1>
-     <a href="girlsProducts.html">
-        <img id="monsoon" src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock7-oneBythree-A-Girls-08JUNE2022.jpg" alt="">
-     </a>
-     <hr>
-     <h1>Summer Must-Haves</h1>
-     <a href="girlsProducts.html">
-        <div id="summer">
-            <div><img src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-5modularblock-oneBytwo1C-Girls-02JUNE2022.jpg" alt=""></div>
-            <div><img src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-E-Girls-02JUNE2022.jpg" alt=""></div>
-         </div>
-     </a>
-     <hr>
-     <a href="girlsProducts.html">
-        <img id="viewAll" src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock22One-Girls-01APR2022.jpg" alt="">
-     </a>
-     <hr>
-     <h1>Gifting Zone</h1>
-     <img id="gifting" src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock14One-Girls-26Oct2021.jpg" alt="">
-     <hr>
-     <h1>Connect With Us</h1>
-     <img id="connect" src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock8-oneBythree-A-Women-21Oct2020.jpg" alt="">
-     <hr>
-     <!-- girls page html ends here -->
-    
-
-
-
-
-     <!-- footer html start -->
-     <div id="footerSubDow">
-        <div id="Sub">
-          <h4>Subscribe to our awesome emails.</h4>
-          <p>Get our latest offers and news straight in your inbox.</p>
-          <input type="mail" placeholder="Please enter an email address" />
-          <button><b>Subscribe</b></button>
-        </div>
-        <div id="Dow">
-          <h4>Download our apps</h4>
-          <p>Shop our products and offers on-the-go.</p>
-          <div>
-            <div>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9VSQ1kGdvnrdAYQVIVM1JdB_MxhKOpXmWoA&usqp=CAU" alt="error"/>
-            </div>
-            <div>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihbMObs2stYan2aQKMttr81DBv6GVs6elSA&usqp=CAU" alt="error"/>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr/>
-      <div id="footerMenu">
-        <div>
-          <h6>Women</h6>
-          <div>tops</div>
-          <div>Dresses & Jumpsuits</div>
-          <div>Sportswear</div>
-          <div>Bottoms</div>
-          <div>Winterwear</div>
-          <div>Ethnicwear</div>
-          <div>Lingerie</div>
-          <div>Sleepwear</div>
-          <div>Accessories</div>
-          <div>Shoes</div>
-        </div>
-        <div>
-          <h6>Men</h6>
-          <div>Tops</div>
-          <div>Bottoms</div>
-          <div>Sportswear</div>
-          <div>Winterwear</div>
-          <div>Accessories</div>
-          <div>Shoes</div>
-        </div>
-        <div>
-          <h6>Boys</h6>
-          <div>Tops</div>
-          <div>Bottoms</div>
-          <div>Indian Wear</div>
-          <div>Winter Wear</div>
-          <div>Essentials</div>
-          <div>Accessories</div>
-          <div>Shoes</div>
-        </div>
-        <div>
-          <h6>Girls</h6>
-          <div>Tops</div>
-          <div>Bottoms</div>
-          <div>Sportswear</div>
-          <div>Winterwear</div>
-          <div>Accessories</div>
-          <div>Shoes</div>
-        </div>
-        <div>
-          <h6>Explore</h6>
-          <div>Offers</div>
-          <div>Magazine</div>
-        </div>
-        <div>
-          <h6>About</h6>
-          <div>About us</div>
-          <div>Write to us</div>
-          <div>Careers</div>
-          <div>Take a Tour</div>
-          <div>Blog</div>
-          <div>Store Locator</div>
-          <div>Landmark Cares</div>
-        </div>
-        <div>
-          <h6>Help</h6>
-          <div>Contact us</div>
-          <div>Shipping</div>
-          <div>Returns Process</div>
-          <div>Returns Policy</div>
-          <div>Help Centre</div>
-        </div>
-      </div>
-      <hr />
-      <div id="footerSocial">
-        <div id="main">
-          <div id="footerSocialSub1">
-            <div>
-              <div>
-                <div>
-                  <div>
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/128/633/633544.png"
-                      alt="error"
-                    />
-                  </div>
-                </div>
-                <div id="a">
-                  <div style="color: rgb(146, 147, 145)">Talk to us</div>
-                  <div>1800-123-1444</div>
-                </div>
-              </div>
-              <div id="b">
-                <div>
-                  <div>
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/128/7789/7789517.png"
-                      alt="help-center"
-                    />
-                  </div>
-                </div>
-                <div id="c">
-                  <div style="color: rgb(146, 147, 145)">Helpcentre</div>
-                  help.maxfashion.com
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div>
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/128/712/712040.png"
-                      alt="email-icon"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div style="color: rgb(146, 147, 145)">Write to us</div>
-                  <div>help,in@maxfashion.com</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="footerSocialSub2">
-            <div>
-              <div>
-                <img
-                  src="https://cdn-icons-png.flaticon.com/128/13/13756.png"
-                  alt="facebook"
-                />
-              </div>
-            </div>
-            <div>
-              <div>
-                <img
-                  src="https://cdn-icons-png.flaticon.com/128/733/733635.png"
-                  alt="twitter"
-                />
-              </div>
-            </div>
-            <div>
-              <div>
-                <img
-                  src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png"
-                  alt="instagram"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <div id="footerBottom">
+  </head>
+  <body>
+    <!-- nav bar starts -->
+    <div id="outerNavbar1">
+      <div id="navbar1">
         <div>
           <div>
             <img
-              src="https://www.landmarkgroup.com/int/sites/default/files/Brand-logo/New%20Max%20Logo-%20Eng%20With%20Outline_1.png" alt="error"/>
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAMAAAApvJHbAAAAYFBMVEUAAAD///+kpKQZGRkwMDDl5eW+vr7Ly8vf399YWFiLi4tJSUmRkZEsLCyCgoKnp6fv7++tra2ZmZlBQUEQEBDFxcUdHR3X19d5eXlqamr4+PglJSUJCQlQUFBvb2+0tLTnw1w/AAABIklEQVRIie3VXZeCIBCAYcd1NiNA0KJV2/r//3IZP6pjwCncbW94L7qZnlCOUpalUqk3tNd5oEqGtYFgm7D+WKsPpnBnntGf3uH/apRsLkLfxVdpKF7Wx9126Mvqw8t63rWGFm9j9Y60WqVBx2vdATTRmjGAMlrzrLQ/EauPegPQmUg9lr9fnwohRN9G6rHtH2nDa967tbCjU1Dnrkdx1Pq6XT5dT1t6edR6GtV+TVMhl0cAaXo3meD2U2TfDt2VJVrcorRclXfRTAFIiWd7cUhfe9DTuYOg9u6/BNEBNu6nRaHNLlCfkdHauIjWZtjycaRcZyPdNzd038s3eLhv2TP3qTjl3vOhy23PveU+PPPcNbrW86r2XFvDKy6COJVK/XI/aU4OG9BpTLoAAAAASUVORK5CYII="
+              alt="error"
+            />
+            <p>Free Shipping</p>
           </div>
           <div>
-            <p>© 2022 Retail World Limited.</p>
-            <p>Terms & Conditions - Privacy Policy</p>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/590/590511.png"
+              alt="error"
+            />
+            <p>Return to Store</p>
+          </div>
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2898/2898372.png"
+              alt="error"
+            />
+            <p>Click & Collect</p>
+          </div>
+        </div>
+        <div>
+          <div>Download Our Apps</div>
+          <div>Store Locator</div>
+          <div>Help</div>
+        </div>
+      </div>
+    </div>
+    <div id="nav-2">
+      <div id="navbar2">
+        <div>
+          <div>ma<span>x</span></div>
+
+          <div class="women"><button id="wo">Women</button></div>
+          <div class="women"><button id="me">Men</button></div>
+          <div class="women"><button id="ge">Girls</button></div>
+          <div class="women"><button id="bo">Boys</button></div>
+          <div style="margin-bottom: 10px">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZzUZTGCkvMMXgByuGlASAtKcGo6N4weBaA&usqp=CAU"
+              alt="search logo"
+            />
+            <input
+              type="text"
+              name=""
+              id="searchbar"
+              placeholder="What are you looking for?"
+            />
+          </div>
+        </div>
+
+        <div id="left-nav">
+          <div id="signupBtn">
+            <button id="login">Sign Up - Sign in</button>
+          </div>
+          <div id="basket-btn" class="women">
+            <button id="cart-nav">
+              Basket<img src="./img/bagIcon.png" alt="bagIcon" />
+            </button>
           </div>
         </div>
       </div>
-      <!-- footer html end-->
+    </div>
 
-    </body>
-   </html>
+<!-- dropdown html starts here -->
+    <div class="list">
+      <ul class="menu">
+         <li>Online Exclusives    
+              <div class="dropdown-content">
+                <div class="box1">
+                      <p>Shop in Online Exclusives</p> 
+                      <ul class="innermenu">
+                          <li>Tops</li>
+                          <li>Bottom</li>
+                          <li>Baby Girls</li>
+                          <li>Essentails</li>
+                          <li>Shoes</li>
+                          <li>Indian Wear</li>
+                      </ul>   
+                 </div>
+                 <div class="box2">
+                  <p>Shop</p>
+                      <ul>
+                          <li></li>
+                      </ul>
+                  </div>
+                  <div class="box3">
+                      <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-OE-Desktop1-05May22.jpg" alt="dresses">
+                      <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-OE-Desktop2-05May22.jpg" alt="bottom">
+                      <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-OE-Desktop3-05May22.jpg" alt="essentails">
+                  </div>
+              </div>
+          </li>  
+          <li>Tops
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Tops</p> 
+                        <ul class="innermenu">
+                            <li>Tees & Tops</li>
+                            <li>Shirts</li>
+                            <li>Dresses & Jumpsuits</li>
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>shope in our djdddf</p>
+                        <ul>
+                          <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Tops-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Tops-Desktop2-05Nov2019.jpg" alt="dreses">
+  
+                      </div>
+                </div>
+          </li>
+          <li>Bottoms
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Botttoms</p> 
+                        <ul class="innermenu">
+                            <li>Jeans & Jeggings</li>
+                            <li>Trousers</li>
+                            <li>Shorts & Skirts</li>
+                            <li>Track Pants & Joggers</li>
+                            <li>Leggings</li>
+                           
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>shop in jeans</p>
+                        <ul>
+                          <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Bottoms-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Bottoms-Desktop2-05Nov2019.jpg" alt="dreses">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Bottoms-Desktop3-05Nov2019.jpg" alt="error">
+                      </div>
+                </div>
+          </li>
+          <li>Essentails
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Essentails</p> 
+                        <ul class="innermenu">
+                            <li>Infant Basics</li>
+                            <li>Innerwear</li>
+                            <li>Sleepwear</li>
+                            
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>shop in jeans</p>
+                        <ul>
+                          <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Essentials-Desktop11-28May2020.png" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Essentials-Desktop1-05Nov2019.jpg" alt="error">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Essentials-Desktop2-05Nov2019.jpg" alt="error">
+                      </div>
+                </div>
+          </li>
+          <li>Accessories
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Accessories</p> 
+                        <ul class="innermenu">
+                            <li>Face Masks</li>
+                            <li>Bags</li>
+                            <li>Caps</li>
+                            <li>Sunglasses</li>
+                            <li>Socks</li>
+                            <li>Back to School</li>
+                           
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>Shop in our</p>
+                        <ul>
+                          <li>Soft Toys</li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Accessories-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Accessories-Desktop2-05Nov2019.jpg" alt="dreses">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Accessories-Desktop1-05Nov2019.jpg" alt="error">
+                      </div>
+                </div>
+          </li>
+          <li>Footware
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Footware</p> 
+                        <ul class="innermenu">
+                          <li>Ballerinas</li>
+                          <li>Casual Shoes</li>
+                            <li>Boots</li>
+                            <li>Sandals & Flip-Flops </li>
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>Shop in our</p>
+                        <ul>
+                          <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                       <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Shoes-Desktop1-05Nov2019.jpg" alt="error">
+                       <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Shoes-Desktop2-05Nov2019.jpg" alt="error">   
+                      </div>
+                </div>
+          </li>
+          <li>Baby Girl (0-2Yrs)
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Baby</p> 
+                        <ul class="innermenu">
+                            <li>Clothing Sets</li>
+                            <li>Leggings</li>
+                            <li>Jeans</li>
+                            <li>Gift Sets</li>
+                            <li>Sleepsuits</li>
+                            <li>Body Suits</li>
+                            <li>Shorts</li>
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>shop in jeans</p>
+                        <ul>
+                          <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls6A-Baby-Desktop1-04Mar2022.jpg" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls6A-Baby-Desktop2-04Mar2022.jpg" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls6A-Baby-Desktop3-04Mar2022.jpg" alt="tops % tees">
+                        
+                      </div>
+                </div>
+          </li>
+         
+          <li>Indian Wear
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Indian Wear</p> 
+                        <ul class="innermenu">
+                          <li>Dresses & Kurtas</li>
+                            <li>Sets</li>
+                         
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>shop in jeans</p>
+                        <ul >
+                         <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Ethnicwear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+               
+                      </div>
+                </div>
+          </li>
+          
+          
+          <li>Winterwear
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in WinterWear</p> 
+                        <ul class="innermenu">
+                            <li>Sweatshirts & Hoddies</li>
+                            <li>Sweaters & Cardigans</li>
+                            <li>Jackets</li>
+                            <li>Accessories</li>
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>Shop in our</p>
+                        <ul>
+                          <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Winterwear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Winterwear-Desktop2-05Nov2019.jpg" alt="dreses">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Girls-Winterwear-Desktop3-10Dec2019.jpg" alt="error">
+                    </div>
+                </div>
+          </li>
+          
+          <li>More
+              <div class="dropdown-more" >
+                 
+                        <ul class="inner-more">
+                            <li>Online Gift Card</li>
+                            <li>Offline Gift Card</li>
+                            <li>Blog</li>
+                            <li>City Buzz</li>
+                            <li>SBI offers</li>
+                            <li>Partner Enquiry</li>
+                        </ul>   
+                 
+                </div>
+          </li>     
+      </ul>
+   </div>
+   <!-- dropdown html end -->
+  
 
-   <script>
+    <div id="nav-3">
+      <!-- <div id="navbar3">
+        <div>Online Exclusives</div>
+        <div>Curves(Plus Size)</div>
+        <div>Tops</div>
+        <div>Bottoms</div>
+        <div>Dresses & Jumpsuits</div>
+        <div>Sleepwear</div>
+        <div>Indian Wear</div>
+        <div>Sportswear</div>
+        <div>Lingerie</div>
+        <div>Accessories</div>
+        <div>Footware</div>
+        <div>Winterwear</div>
+        <div>More</div>
+      </div> -->
+
+      <div>
+        Buy 3 @ ₹699/999/1499 + FREE Shipping on all orders above JUST ₹499 >
+      </div>
+    </div>
+    
+    <!-- navbar ends -->
+
+    <div id="pageBody">
+      <!-- girls page html starts from here -->
+
+      <!-- <div class="caruser">
+        <a href="girlsProducts.html">
+          <img
+            id="car"
+            src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-A-ALLCOMMON-10JUNE2022A.jpg"
+            alt=""
+          />
+        </a>
+        <button><</button>
+        <button>></button>
+      </div> -->
+      <a href="girlsProducts.html">
+        <img
+          id="freeship"
+          src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBytwo1A-FREESHIPCOMMON-13JUNE2022.jpg"
+          alt=""
+        />
+      </a>
+      <hr />
+      <h1>Budget Buy</h1>
+      <a href="girlsProducts.html">
+        <img
+          id="printedTees"
+          src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/department-modularblock-oneBythree-C-Girls-02JUNE2022.jpg"
+          alt=""
+        />
+      </a>
+      <hr />
+      <h1>The Joy Of Gifting!</h1>
+      <a href="girlsProducts.html">
+        <img
+          id="gift"
+          src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-A-ALLCOMMON-10JUNE2022A.jpg"
+          alt=""
+        />
+      </a>
+      <hr />
+      <h1>Shop By Age</h1>
+      <a href="girlsProducts.html">
+        <div id="shopByAge">
+          <div>
+            <img
+              src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-5modularblock-oneBytwo1C-girls-04MAY2022.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-E-girls-04MAY2022.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-FF-girls-04MAY2022.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </a>
+      <hr />
+
+      <h1>Trending Stores</h1>
+      <a href="girlsProducts.html">
+        <div id="trending">
+          <div>
+            <img
+              src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock18One-Girls-04MAY2022.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock18Two-Girls-04MAY2022.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock18Three-Girls-04MAY2022.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </a>
+      <hr />
+      <h1>Max Kids Festival</h1>
+      <a href="girlsProducts.html">
+        <img
+          id="festival"
+          src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock16One-Girls-18MAY2022.gif"
+          alt=""
+        />
+      </a>
+      <hr />
+      <h1>Budget Zone</h1>
+      <a href="girlsProducts.html">
+        <div id="budget">
+          <div>
+            <img
+              src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19One-Girls-18MAY2022.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Two-Girls-18MAY2022.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Three-Girls-18MAY2022.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </a>
+      <hr />
+      <h1>Monsoon Checklist</h1>
+      <a href="girlsProducts.html">
+        <img
+          id="monsoon"
+          src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock7-oneBythree-A-Girls-08JUNE2022.jpg"
+          alt=""
+        />
+      </a>
+      <hr />
+      <h1>Summer Must-Haves</h1>
+      <a href="girlsProducts.html">
+        <div id="summer">
+          <div>
+            <img
+              src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-5modularblock-oneBytwo1C-Girls-02JUNE2022.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-E-Girls-02JUNE2022.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </a>
+      <hr />
+      <a href="girlsProducts.html">
+        <img
+          id="viewAll"
+          src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock22One-Girls-01APR2022.jpg"
+          alt=""
+        />
+      </a>
+      <hr />
+      <h1>Gifting Zone</h1>
+      <img
+        id="gifting"
+        src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock14One-Girls-26Oct2021.jpg"
+        alt=""
+      />
+      <hr />
+      <h1>Connect With Us</h1>
+      <img
+        id="connect"
+        src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock8-oneBythree-A-Women-21Oct2020.jpg"
+        alt=""
+      />
+    </div>
+    <hr />
+    <!-- girls page html ends here -->
+
+    <!-- footer html start -->
+    <div id="footerSubDow">
+      <div id="Sub">
+        <h4>Subscribe to our awesome emails.</h4>
+        <p>Get our latest offers and news straight in your inbox.</p>
+        <input type="mail" placeholder="Please enter an email address" />
+        <button><b>Subscribe</b></button>
+      </div>
+      <div id="Dow">
+        <h4>Download our apps</h4>
+        <p>Shop our products and offers on-the-go.</p>
+        <div>
+          <div>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9VSQ1kGdvnrdAYQVIVM1JdB_MxhKOpXmWoA&usqp=CAU"
+              alt="error"
+            />
+          </div>
+          <div>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihbMObs2stYan2aQKMttr81DBv6GVs6elSA&usqp=CAU"
+              alt="error"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div id="footerMenu">
+      <div>
+        <h6>Women</h6>
+        <div>tops</div>
+        <div>Dresses & Jumpsuits</div>
+        <div>Sportswear</div>
+        <div>Bottoms</div>
+        <div>Winterwear</div>
+        <div>Ethnicwear</div>
+        <div>Lingerie</div>
+        <div>Sleepwear</div>
+        <div>Accessories</div>
+        <div>Shoes</div>
+      </div>
+      <div>
+        <h6>Men</h6>
+        <div>Tops</div>
+        <div>Bottoms</div>
+        <div>Sportswear</div>
+        <div>Winterwear</div>
+        <div>Accessories</div>
+        <div>Shoes</div>
+      </div>
+      <div>
+        <h6>Boys</h6>
+        <div>Tops</div>
+        <div>Bottoms</div>
+        <div>Indian Wear</div>
+        <div>Winter Wear</div>
+        <div>Essentials</div>
+        <div>Accessories</div>
+        <div>Shoes</div>
+      </div>
+      <div>
+        <h6>Girls</h6>
+        <div>Tops</div>
+        <div>Bottoms</div>
+        <div>Sportswear</div>
+        <div>Winterwear</div>
+        <div>Accessories</div>
+        <div>Shoes</div>
+      </div>
+      <div>
+        <h6>Explore</h6>
+        <div>Offers</div>
+        <div>Magazine</div>
+      </div>
+      <div>
+        <h6>About</h6>
+        <div>About us</div>
+        <div>Write to us</div>
+        <div>Careers</div>
+        <div>Take a Tour</div>
+        <div>Blog</div>
+        <div>Store Locator</div>
+        <div>Landmark Cares</div>
+      </div>
+      <div>
+        <h6>Help</h6>
+        <div>Contact us</div>
+        <div>Shipping</div>
+        <div>Returns Process</div>
+        <div>Returns Policy</div>
+        <div>Help Centre</div>
+      </div>
+    </div>
+    <hr />
+    <div id="footerSocial">
+      <div id="main">
+        <div id="footerSocialSub1">
+          <div>
+            <div>
+              <div>
+                <div>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/633/633544.png"
+                    alt="error"
+                  />
+                </div>
+              </div>
+              <div id="a">
+                <div style="color: rgb(146, 147, 145)">Talk to us</div>
+                <div>1800-123-1444</div>
+              </div>
+            </div>
+            <div id="b">
+              <div>
+                <div>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/7789/7789517.png"
+                    alt="help-center"
+                  />
+                </div>
+              </div>
+              <div id="c">
+                <div style="color: rgb(146, 147, 145)">Helpcentre</div>
+                help.maxfashion.com
+              </div>
+            </div>
+            <div>
+              <div>
+                <div>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/712/712040.png"
+                    alt="email-icon"
+                  />
+                </div>
+              </div>
+              <div>
+                <div style="color: rgb(146, 147, 145)">Write to us</div>
+                <div>help,in@maxfashion.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="footerSocialSub2">
+          <div>
+            <div>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/13/13756.png"
+                alt="facebook"
+              />
+            </div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/733/733635.png"
+                alt="twitter"
+              />
+            </div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png"
+                alt="instagram"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div id="footerBottom">
+      <div>
+        <div>
+          <img
+            src="https://www.landmarkgroup.com/int/sites/default/files/Brand-logo/New%20Max%20Logo-%20Eng%20With%20Outline_1.png"
+            alt="error"
+          />
+        </div>
+        <div>
+          <p>© 2022 Retail World Limited.</p>
+          <p>Terms & Conditions - Privacy Policy</p>
+        </div>
+      </div>
+    </div>
+    <!-- footer html end-->
+  </body>
+</html>
+
+<script>
   //  slide js starts
 
-    let img = document.querySelector("#car");
-    let buttons = document.querySelectorAll("button");
-    let imgNum = 0;
-    let imgArray = [
-    "https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/department-modularblock-oneBythree-C-Girls-02JUNE2022.jpg",
-    "https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-A-ALLCOMMON-10JUNE2022A.jpg",
-    "https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock7-oneBythree-A-Girls-08JUNE2022.jpg",
-    ];
+  // let img = document.querySelector("#car");
+  // let buttons = document.querySelectorAll("button");
+  // let imgNum = 0;
+  // let imgArray = [
+  //   "https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/department-modularblock-oneBythree-C-Girls-02JUNE2022.jpg",
+  //   "https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-A-ALLCOMMON-10JUNE2022A.jpg",
+  //   "https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock7-oneBythree-A-Girls-08JUNE2022.jpg",
+  // ];
 
-    buttons[0].addEventListener('click',function(){
-        if(imgNum===0){
-            imgNum=imgArray.length-1;
-        }
-        else{
-            imgNum--;
-        }
-        img.src=imgArray[imgNum];
-    })
+  // buttons[0].addEventListener("click", function () {
+  //   if (imgNum === 0) {
+  //     imgNum = imgArray.length - 1;
+  //   } else {
+  //     imgNum--;
+  //   }
+  //   img.src = imgArray[imgNum];
+  // });
 
-    buttons[1].addEventListener('click',function(){
-        if(imgNum===imgArray.length-1){
-            imgNum=0;
-        }
-        else{
-            imgNum++;
-        }
-        img.src=imgArray[imgNum];
-    })
+  // buttons[1].addEventListener("click", function () {
+  //   if (imgNum === imgArray.length - 1) {
+  //     imgNum = 0;
+  //   } else {
+  //     imgNum++;
+  //   }
+  //   img.src = imgArray[imgNum];
+  // });
 
-    // slide js end
+  // slide js end
 
+  // add to cart js starts
+  let productGirlArr = [
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011012014-Blue-NAVY-1000011012014-07032022_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011012014-Blue-NAVY-1000011012014-07032022_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704669-Blue-NAVY-1000010704669-29122021_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010707100-Blue-MIDBLUE-1000010707100-5012022_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704690-Orange-RUST-1000010704690-15122021_02-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704704-Green-GREEN-1000010704704-29122021_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704725-Blue-NAVY-1000010704725-5012022_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704788-Orange-Rust-1000010704788-8122021_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010705290-Green-MINT-1000010705290-8122021_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704753-Yellow-YELLOW-1000010704753-8122021_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704697-White-WHITE-1000010704697-8122021_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010981435-Green-GREEN-1000010981435-18042022_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704760-White-WHITE-1000010704760-8122021_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010981716-Green-GREEN-1000010981716-22022022_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010981707-Pink-BABYPINK-1000010981707-10032022_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010981272-Blue-AQUA-1000010981272-21052022_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011012091-Pink-BABYPINK-1000011012091-21052022_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704732-Purple-LAVENDER-1000010704732-12012022_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010707064-Red-RED-1000010707064-12012022_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+    {
+      image:
+        "https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010012006-Yellow-Yellow-1000010012006-4092021_01-2100.jpg",
+      price: 169,
+      name: "MAX Girls Printed Round Neck T-shirt",
+    },
+  ]
 
-    // add to cart js starts
-    let productGirlArr=[
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011012014-Blue-NAVY-1000011012014-07032022_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
+  displayProducts(productGirlArr);
 
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011012014-Blue-NAVY-1000011012014-07032022_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704669-Blue-NAVY-1000010704669-29122021_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010707100-Blue-MIDBLUE-1000010707100-5012022_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704690-Orange-RUST-1000010704690-15122021_02-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704704-Green-GREEN-1000010704704-29122021_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704725-Blue-NAVY-1000010704725-5012022_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704788-Orange-Rust-1000010704788-8122021_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010705290-Green-MINT-1000010705290-8122021_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704753-Yellow-YELLOW-1000010704753-8122021_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704697-White-WHITE-1000010704697-8122021_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010981435-Green-GREEN-1000010981435-18042022_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704760-White-WHITE-1000010704760-8122021_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010981716-Green-GREEN-1000010981716-22022022_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010981707-Pink-BABYPINK-1000010981707-10032022_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010981272-Blue-AQUA-1000010981272-21052022_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011012091-Pink-BABYPINK-1000011012091-21052022_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010704732-Purple-LAVENDER-1000010704732-12012022_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010707064-Red-RED-1000010707064-12012022_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-      {
-        image:"https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010012006-Yellow-Yellow-1000010012006-4092021_01-2100.jpg",
-        price:169,
-        name:"MAX Girls Printed Round Neck T-shirt"
-      },
-    ]
+  function displayProducts(productGirlArr){
+    document.querySelector("#container").innerHTML = "";
+    productGirlArr.forEach(function (ele) {
+      let box = document.createElement("div");
 
-    displayProducts(productGirlArr);
+      let img = document.createElement("img");
+      let avatar = ele.image;
+      img.setAttribute("src", avatar);
+      console.log(img);
+      let price = document.createElement("h5");
+      price.innerText = ele.price;
+      let name = document.createElement("p");
+      name.innerText = ele.name;
 
-function displayProducts(productGirlArr){
-   document.querySelector("#container").innerHTML=""
-   productGirlArr.forEach(function(ele){
-        let box=document.createElement("div");
+      let cart = document.createElement("button");
+      cart.innerText = "Add to Basket";
+      cart.addEventListener("click", function () {
+        addToBasket(ele);
+      })
 
-        let img=document.createElement("img");
-        let avatar=ele.image
-        img.setAttribute("src",avatar)
-        console.log(img)
-        let price=document.createElement("h5");
-        price.innerText=ele.price
-        let name=document.createElement("p")
-        name.innerText=ele.name;
-
-        let cart=document.createElement("button")
-        cart.innerText="Add to Basket"
-        cart.addEventListener("click",function(){
-            addToBasket(ele);
-        })
-
-        box.append(img,price,name,cart);
-        document.querySelector("#container").append(box);
+      box.append(img, price, name, cart);
+      document.querySelector("#container").append(box);
     });
 
-    // This code is meant to add items in our cart page
+  // This code is meant to add items in our cart page
 
-    let basketArr=JSON.parse(localStorage.getItem("basketItem")) || [];
-    function addToBasket(ele){
-        basketArr.push(ele);
-        alert("Added to Basket");
-        localStorage.setItem("basketItem",JSON.stringify(basketArr));
-    }
+  let basketArr = JSON.parse(localStorage.getItem("basketItem")) || [];
+  function addToBasket(ele) {
+    basketArr.push(ele);
+    alert("Added to Basket");
+    localStorage.setItem("basketItem", JSON.stringify(basketArr));
+  }
+
+
+  let btn1 = document.querySelector("#bo");
+  btn1.addEventListener("click", loadPage1);
+  function loadPage1() {
+    window.location.href = "./BoysPage.html";
+  }
+  let btn2 = document.querySelector("#ge");
+  btn2.addEventListener("click", loadPage2);
+  function loadPage2() {
+    window.location.href = "./girls_page.html";
+  }
+  let btn6 = document.querySelector("#cart-nav");
+  btn6.addEventListener("click", loadPage3);
+  function loadPage3() {
+    window.location.href = "./Basket.html";
+  }
 }
-// add to cart js ends
 </script>
