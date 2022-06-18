@@ -277,7 +277,7 @@
             </tr>
           </table>
 
-          <button>Checkout Now</button>
+          <button id="checkoutbtn">Checkout Now</button>
         </div>
         <div>
           <div id="dummyImage">
@@ -368,6 +368,7 @@
       });
       document.querySelector("#mrp").innerText = "₹ " + mrp;
       // console.log(promocode)
+      localStorage.setItem("p1",mrp);
       if (promocode == "masai30") {
         let dis = (mrp * 30) / 100;
         mrp = mrp - dis;
@@ -379,11 +380,19 @@
         }
       }
       document.querySelector("#total").innerText = "₹ " + Math.floor(mrp);
+      
+      localStorage.setItem("p2",mrp);
     }
     document.querySelector("#promoCode").addEventListener("click", applyPromo);
     function applyPromo() {
       let promocode = document.querySelector("#promoCodeValue").value;
       calculation(promocode);
     }
+  }
+
+  let btn1=document.querySelector("#checkoutbtn");
+  btn1.addEventListener("click",openCheckoutPage);
+  function openCheckoutPage(){
+    window.location.href="./checkout.html"
   }
 </script>

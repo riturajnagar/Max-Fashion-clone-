@@ -7,262 +7,304 @@
     <title>product page</title>
     <link rel="stylesheet" href="footerPart.css">
     <style>
-    /* navbar css starts here */
-/* * {
-    width: 100%;
-    margin: 0px;
-  } */
-
-  body {
+      
+      /* navbar css */
+      * {
+        width: 100%;
+        margin: 0px;
+      }
+      /* NAVBAR 1 */
+      #outerNavbar1 {
+        background-color: black;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      #navbar1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
         width: 90%;
-        /* margin: auto; */
-        font-family: ProximaNova-Regular, "Helvetica Neue", Arial, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji";
+        margin: auto;
+        justify-content: space-between;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+      #outerNavbar1 > div {
+        /* border: 1px solid red; */
+        display: grid;
+        gap: 200px;
+      }
+      #outerNavbar1 > div > div:nth-child(2) {
+        margin-left: 150px;
+        /* border: 1px solid red; */
+      }
+      #navbar1 > div > div:first-child > img {
+        width: 30px;
+      }
+      #navbar1 > div > div > img {
+        display: block;
+        align-items: center;
+        width: 20px;
       }
 
+      #navbar1 > div:first-child {
+        display: flex;
+        width: auto;
+        cursor: pointer;
+      }
+      #navbar1 > div:first-child > div {
+        display: flex;
+        /* border: 1px solid red; */
+        align-items: center;
+        gap: 10px;
+      }
+      #navbar1 > div:first-child > div:first-child > img {
+        /* border: 1px solid red; */
+        width: 30px;
+      }
+      #navbar1 > div:first-child > div > img {
+        background-color: white;
+      }
+      #navbar1 > div:last-child {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 80%;
+      }
+      #navbar1 > div:last-child > div:nth-child(1),
+      #navbar1 > div:last-child > div:nth-child(2) {
+        padding: 5px 10px;
+        width: auto;
+        border-right: 1px solid rgb(93, 94, 92);
+      }
+      #navbar1 > div {
+        display: flex;
+        /* border: 1px solid grey; */
+      }
+      #navbar1 > div:last-child > div:nth-child(3) {
+        /* border: 1px solid red; */
+        padding-left: 10px;
+        padding-right: 0px;
+        width: auto;
+      }
 
-  /* NAVBAR 1 */
-  #outerNavbar1{
-      background-color: black;
-      /* width: 100%; */
-      width: 110%;
-      height: 50px;
-  }
-  #navbar1 {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
-    /* justify-content: space-between; */
-    font-family: "Poppins", sans-serif;
-    color: white;
-    font-size: 14px;
-  }
-  #outerNavbar1>div{
-      /* border: 1px solid red; */
-      display: grid;
-      /* gap:200px */
-      gap: 500px;
-  }
-  #outerNavbar1>div>div:nth-child(2){
-      margin-left: 150px;
-      /* border: 1px solid red; */
-  }
-  #navbar1 > div > div:first-child > img {
-    width: 30px;
-  }
-  #navbar1 > div > div > img {
-    display: block;
-    align-items: center;
-    width: 20px;
-  }
+      /* NAVBAR 2 */
 
-  #navbar1 > div:first-child {
-    display: flex;
-    width: auto;
-    cursor: pointer;
-  }
-  #navbar1 > div:first-child > div {
-    display: flex;
-    /* border: 1px solid red; */
-    align-items: center;
-    justify-content: center;
-    /* gap: 10px; */
-    gap: 30px;
-  }
-  #navbar1 > div:first-child > div:first-child > img {
-    /* border: 1px solid red; */
-    width: 30px;
-  }
-  #navbar1 > div:first-child > div > img {
-    background-color: white;
-  }
-  #navbar1 > div:last-child {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    width: 80%;
-  }
-  #navbar1 > div:last-child > div:nth-child(1),
-  #navbar1 > div:last-child > div:nth-child(2) {
-    padding: 5px 10px;
-    width: auto;
-    border-right: 1px solid rgb(93, 94, 92);
-  }
-  #navbar1 > div {
-    display: flex;
-    /* border: 1px solid grey; */
-  }
-  #navbar1 > div:last-child > div:nth-child(3) {
-    /* border: 1px solid red; */
-    padding-left: 10px;
-    padding-right: 0px;
-    width: auto;
-  }
-  span {
-    color: rgb(228, 0, 43);
-  }
+      #nav-2 {
+        width: 100%;
+        background-color: #f7f8f7;
+      }
+      #navbar2 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        width: 90%;
+        margin: auto;
+        height: 50px;
+        box-sizing: border-box;
+        margin-top: 4px;
+        position: sticky;
+        top: 0px;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        background-color: #f7f8f7;
+      }
+      #navbar2 > div:first-child {
+        display: grid;
+        grid-template-columns: 10% 10% 10% 10% 10% 50%;
+        align-items: center;
+      }
+      #navbar2 > div:first-child > div {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
 
-  /* NAVBAR 2 */
-  #navbar2 {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    /* width: 94%; */
-    /* gap:150px; */
-    width: 103%;
-    gap: 420px;
-    margin: auto;
-    /* margin-top: 4px; */
-    /* border: 1px solid red; */
-    position: sticky;
-    top: 0px;
-    font-family: "Poppins", sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    background-color: 
-    #f7f8f7 ;
-    padding: 0px 50px;
-  }
-  #navbar2 > div:first-child {
-    display: grid;
-    grid-template-columns: 100px 60px 60px 60px 60px 400px;
-    align-items: center;
-  }
-  #navbar2 > div:first-child > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
+      /* hover style */
+      #navbar2 > div:first-child > div:hover {
+        color: rgb(10, 22, 150);
+      }
 
-  /* hover style */
-  #navbar2 > div:first-child > div:hover {
-    color: rgb(10, 22, 150);
-  }
+      #navbar2 > div:first-child > div:first-child {
+        color: rgb(48, 58, 178);
+        font-size: 36px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin-bottom: 7px;
+      }
 
-  #navbar2 > div:first-child > div:first-child {
-    color: rgb(48, 58, 178);
-    font-size: 36px;
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    margin-bottom: 7px;
-  }
+      span {
+        color: rgb(228, 0, 43);
+      }
+      #navbar2 > div:first-child > div:last-child > img {
+        width: 5%;
+        padding: 5px 0px 5px;
+        background-color: rgb(236, 237, 235);
+      }
+      #navbar2 > div:first-child > div:last-child {
+        display: flex;
+        justify-content: start;
+        height: 80%;
+        gap: 20px;
+        background-color: rgb(236, 237, 235);
+        padding-left: 10px;
+        margin-bottom: 0px;
+      }
 
-  
-  #navbar2 > div:first-child > div:last-child > img {
-    width: 5%;
-    padding: 5px 0px 5px;
-    background-color: rgb(236, 237, 235);
-  }
-  #navbar2 > div:first-child > div:last-child {
-    display: flex;
-    justify-content: start;
-  
-    gap: 20px;
-    background-color: rgb(236, 237, 235);
-    padding-left: 10px;
-    margin-bottom: 0px;
-  }
+      /* input tag */
+      input {
+        background-color: rgb(236, 237, 235);
+        border: none;
+        outline: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        box-sizing: border-box;
+        width: 100%;
+      }
 
-  /* input tag */
-  input {
-    background-color: rgb(236, 237, 235);
-    border: none;
-    outline: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    box-sizing: border-box;
-    width: 600px;
-    align-content
-    : center;
-  }
+      #navbar2 > div:first-child + div > div:last-child > img {
+        width: 20%;
+      }
+      #left-nav {
+        display: grid;
+        grid-template-columns: 30% 30%;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      #left-nav > div:first-child {
+        height: 60%;
+        border-right: 1px solid rgb(200, 201, 198);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      #left-nav > div:last-child {
+        /* border: 1px solid red; */
+        display: flex;
+        gap: 1px;
+        justify-content: center;
+        margin-right: 20px;
+        /* margin-left: -40px; */
+        gap: 10px;
+        cursor: pointer;
+        align-items: center;
+      }
+      #left-nav > div {
+        display: flex;
+        gap: 20px;
+      }
+      #left-nav > div > p {
+        margin-right: -30px;
+      }
+      #left-nav > div > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: 20px;
+      }
+      #left-nav > div > a > p {
+        /* border: 1px solid blue; */
+        /* margin-right: 5px; */
+        font-size: 16px;
+        width: auto;
+        margin-left: 10px;
+      }
+      #left-nav > div > a > img {
+        /* border: 1px solid green; */
+        width: 25px;
+        display: block;
+        margin: auto;
+        /* margin-right: 30px; */
+      }
 
-  #navbar2 > div:first-child + div > div:last-child > img {
-    width: 10%;
-    /* border: 1px solid red; */
-  }
-  #left-nav {
-    /* border: 1px solid red; */
-    display: grid;
-    grid-template-columns: 120px 150px;
-    align-items: center;
-  }
-  
-  #cart-part{
-    display: flex;
-    align-items: center;
-  }
-  #cart-part>div{
-width: 10px;
-margin-left: 10px;
-margin-right: 0px;
-  }
-  #cart-part>div>img{
-    /* border: 1px solid green; */
-    width: 20px;
-    margin-left: 30px;
-  }
-  #left-nav > div:first-child {
-    /* border: 1px solid blue; */
-    /* border-right: 1px solid rgb(200, 201, 198); */
-    cursor: pointer;
-  }
-  #left-nav > div:first-child {
-    /* border: 1px solid red; */
-    border-right: 1px solid rgb(200, 201, 198);
-    cursor: pointer;
-  }
+      /* NAVBAR 3 */
+      #nav-3 {
+        width: 100%;
+      }
+      #navbar3 {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        height: 40px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        position: sticky;
+        top: 50px;
+        margin-bottom: 5px;
+        background-color: white;
+      }
+      #navbar3 > div {
+        height: 100%;
+        display: flex;
 
-  /* NAVBAR 3 */
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0px 10px;
+      }
+      #navbar3 > div:hover {
+        color: blue;
+        border-bottom: 2px solid rgb(48, 58, 178);
+      }
+      #navbar3 > div:last-child {
+        padding: 0px 20px;
+        border: none;
+      }
 
-  #navbar3 {
-    display: flex;
-    /* width: 93%; */
-    /* width: 150%; */
-    height: 60px;
-    margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    font-weight: bolder;
-    /* position: sticky; */
-    top: 50px;
-    margin-bottom: 5px;
-    background-color: white;
-  }
-  #navbar3 > div {
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    cursor: pointer;
-    /* border: 1px solid red; */
-    padding: 0px 10px;
-  }
-  #navbar3 > div:hover {
-    color: blue;
-    border-bottom: 2px solid rgb(48, 58, 178);
-  }
-  #navbar3 > div:last-child {
-    padding: 0px 0px;
-    border: none;
-  }
-  #navbar3 + div {
-    width: 110%;
-    /* width: 100%; */
-    text-align: center;
-    background-color: rgb(48, 58, 178);
-    color: rgb(235, 255, 255);
-    padding: 10px 0px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-      /* navbar css ends here */
+      /* i have made changes here */
+      #nav-3 > div {
+        text-align: center;
+        box-sizing: border-box;
+        background-color: rgb(48, 58, 178);
+        color: rgb(235, 255, 255);
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }a > img {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+      .women > button {
+        background-color: #f7f8f7;
+        border: none;
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding: 8px 0px;
+      }
+      .women > button:hover {
+        cursor: pointer;
+        background-color: white;
+      }
+      #signupBtn > button {
+        background-color: #f7f8f7;
+        border: none;
+        font-size: 14px;
+        border-right: 2px solid rgb(201, 196, 196);
+        padding: 8px 0px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      #signupBtn > button:hover {
+        cursor: pointer;
+        background-color: white;
+      }
+      #basket-btn > button {
+        display: flex;
+      }
+      #basket-btn > button > img {
+        margin-left: 10px;
+        width: 15px;
+      }
 
-
-
-
+      /* navbar css end */
       /* girls product css starts */
         #container{
             display: grid;
@@ -299,55 +341,263 @@ margin-right: 0px;
             background-color: teal;
         }
         /* girls product css ends */
+        
+      /* footer css start */
+            /* footer styling starts from here */
+      hr {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 40px;
+        border: 0.2px solid rgb(241, 235, 235);
+      }
+      #footerSubDow {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      #Sub {
+        width: 60%;
+      }
+      #Dow {
+        width: 40%;
+        margin-top: 10px;
+      }
+      h4 {
+        font-family: ProximaNova-Bold, "Helvetica Neue", Arial, sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji";
+        font-size: 24px;
+        font-weight: bolder;
+        margin-top: 1px;
+        margin-left: 0px;
+      }
+      h4 + p {
+        color: #929391;
+        margin-top: 5px;
+        margin-left: 0px;
+        font-size: 16px;
+        font-family: ProximaNova-Regular, "Helvetica Neue", Arial, sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      #footerSubDow > div > input,
+      button {
+        margin-top: 10px;
+        padding: 18px 24px;
+        font-size: 20px;
+      }
+      #footerSubDow > div > input {
+        width: 45%;
+
+        background-color: #f7f8f7;
+      }
+      #footerSubDow > div > button {
+        width: 25%;
+        margin-left: -5px;
+        background-color: black;
+
+        color: white;
+      }
+      #Dow > div {
+        display: flex;
+        justify-content: space-between;
+        /* border: 1px solid red; */
+        width: 80%;
+
+        height: 70px;
+        margin-top: 20px;
+        margin-left: 0px;
+      }
+      #Dow > div > div {
+        width: 48%;
+        /* border: 1px solid mediumaquamarine; */
+      }
+      #Dow > div > div > img {
+        width: 100%;
+        height: 100%;
+      }
+      #footerMenu {
+        /* border: 1px solid red; */
+        margin: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 5px;
+      }
+      #footerMenu > div {
+        /* border: 1px solid black; */
+        width: 150px;
+        height: 220px;
+      }
+      #footerMenu > div > div {
+        margin-top: 3px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.576);
+        cursor: pointer;
+      }
+      h6 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      #footerSocial {
+        /* border: 1px solid black; */
+        margin: auto;
+        width: 100%;
+        margin-top: -30px;
+        margin-bottom: 15px;
+      }
+      #footerSocial > #main {
+        width: 100%;
+        /* border: 1px solid red; */
+        justify-content: space-between;
+        display: flex;
+      }
+      #footerSocialSub1 {
+        /* border: 1px solid blue; */
+        width: 80%;
+        margin-left: 0px;
+      }
+      #footerSocialSub1 > div {
+        /* border: 1px solid red; */
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+      #footerSocialSub1 > div > div {
+        /* border: 1px solid black; */
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      #footerSocialSub1 > div > div > div:first-child {
+        border: 1px solid #c8c9c6;
+        width: 50px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #footerSocialSub1 > div > div > div:first-child > div {
+        width: 14px;
+        height: 14px;
+      }
+
+      #footerSocialSub1 > div > div > div:last-child {
+        margin-left: 10px;
+      }
+      #footerSocialSub1 > div > div > div:last-child > div {
+        margin-top: 3px;
+      }
+      #footerSocialSub2 {
+        display: flex;
+        width: 15%;
+      }
+      #footerSocialSub2 > div {
+        /* border: 1px solid red; */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #footerSocialSub2 > div:hover {
+        background-color: rgba(0, 0, 0, 0.067);
+      }
+      #footerSocialSub2 > div > div {
+        width: 25px;
+        height: 25px;
+      }
+      #footerSocialSub2 > div > div > img {
+        width: 100%;
+      }
+      #footerBottom {
+        margin: auto;
+        margin-top: 20px;
+        height: 70px;
+        width: 100%;
+      }
+      #footerBottom > div {
+        display: flex;
+        width: 350px;
+      }
+      #footerBottom > div > div:first-child {
+        margin: auto;
+        width: 30%;
+      }
+      #footerBottom > div {
+        display: flex;
+        margin-left: 0px;
+      }
+      #footerBottom > div > div:first-child > img {
+        display: block;
+        margin-left: 0px;
+        width: 100%;
+      }
+      #footerBottom > div > div:last-child {
+        width: 70%;
+        margin-left: 10px;
+        font-size: 14px;
+        display: block;
+        align-content: center;
+        margin: 20px;
+        color: #929391;
+      }
+
+      /* Footer style ended */
     </style>
 </head>
 <body>
-  <!-- navbar html starts here -->
-  <div id="outerNavbar1">
-    <div id="navbar1">
+
+  
+<!-- nav bar starts -->
+<div id="outerNavbar1">
+  <div id="navbar1">
+    <div>
       <div>
-        <div>
-          <img
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAMAAAApvJHbAAAAYFBMVEUAAAD///+kpKQZGRkwMDDl5eW+vr7Ly8vf399YWFiLi4tJSUmRkZEsLCyCgoKnp6fv7++tra2ZmZlBQUEQEBDFxcUdHR3X19d5eXlqamr4+PglJSUJCQlQUFBvb2+0tLTnw1w/AAABIklEQVRIie3VXZeCIBCAYcd1NiNA0KJV2/r//3IZP6pjwCncbW94L7qZnlCOUpalUqk3tNd5oEqGtYFgm7D+WKsPpnBnntGf3uH/apRsLkLfxVdpKF7Wx9126Mvqw8t63rWGFm9j9Y60WqVBx2vdATTRmjGAMlrzrLQ/EauPegPQmUg9lr9fnwohRN9G6rHtH2nDa967tbCjU1Dnrkdx1Pq6XT5dT1t6edR6GtV+TVMhl0cAaXo3meD2U2TfDt2VJVrcorRclXfRTAFIiWd7cUhfe9DTuYOg9u6/BNEBNu6nRaHNLlCfkdHauIjWZtjycaRcZyPdNzd038s3eLhv2TP3qTjl3vOhy23PveU+PPPcNbrW86r2XFvDKy6COJVK/XI/aU4OG9BpTLoAAAAASUVORK5CYII="
-            alt="error"
-          />
-          <p>Free Shipping</p>
-        </div>
-        <div>
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/590/590511.png"
-            alt="error"
-          />
-          <p>Return to Store</p>
-        </div>
-        <div>
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/2898/2898372.png"
-            alt="error"
-          />
-          <p>Click & Collect</p>
-        </div>
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAMAAAApvJHbAAAAYFBMVEUAAAD///+kpKQZGRkwMDDl5eW+vr7Ly8vf399YWFiLi4tJSUmRkZEsLCyCgoKnp6fv7++tra2ZmZlBQUEQEBDFxcUdHR3X19d5eXlqamr4+PglJSUJCQlQUFBvb2+0tLTnw1w/AAABIklEQVRIie3VXZeCIBCAYcd1NiNA0KJV2/r//3IZP6pjwCncbW94L7qZnlCOUpalUqk3tNd5oEqGtYFgm7D+WKsPpnBnntGf3uH/apRsLkLfxVdpKF7Wx9126Mvqw8t63rWGFm9j9Y60WqVBx2vdATTRmjGAMlrzrLQ/EauPegPQmUg9lr9fnwohRN9G6rHtH2nDa967tbCjU1Dnrkdx1Pq6XT5dT1t6edR6GtV+TVMhl0cAaXo3meD2U2TfDt2VJVrcorRclXfRTAFIiWd7cUhfe9DTuYOg9u6/BNEBNu6nRaHNLlCfkdHauIjWZtjycaRcZyPdNzd038s3eLhv2TP3qTjl3vOhy23PveU+PPPcNbrW86r2XFvDKy6COJVK/XI/aU4OG9BpTLoAAAAASUVORK5CYII="
+          alt="error"
+        />
+        <p>Free Shipping</p>
       </div>
       <div>
-        <div>Download Our Apps</div>
-        <div>Store Locator</div>
-        <div>Help</div>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/590/590511.png"
+          alt="error"
+        />
+        <p>Return to Store</p>
+      </div>
+      <div>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/2898/2898372.png"
+          alt="error"
+        />
+        <p>Click & Collect</p>
       </div>
     </div>
+    <div>
+      <div>Download Our Apps</div>
+      <div>Store Locator</div>
+      <div>Help</div>
+    </div>
   </div>
-
+</div>
+<div id="nav-2">
   <div id="navbar2">
     <div>
       <div>ma<span>x</span></div>
 
-      <div id="women">Women</div>
-      <div id="men">Men</div>
-      <div id="girl">Girls</div>
-      <div id="boy">Boys</div>
-      <div>
+      <div class="women"><button id="wo">Women</button></div>
+      <div class="women"><button id="me">Men</button></div>
+      <div class="women"><button id="ge">Girls</button></div>
+      <div class="women"><button id="bo">Boys</button></div>
+      <div style="margin-bottom: 10px">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZzUZTGCkvMMXgByuGlASAtKcGo6N4weBaA&usqp=CAU"
-          alt="error search logo"
+          alt="search logo"
         />
         <input
           type="text"
@@ -359,17 +609,19 @@ margin-right: 0px;
     </div>
 
     <div id="left-nav">
-      <div>Sign Up - Sign in</div>
-      <div>
-        <div>Basket</div>
-        <img
-          src="https://cdn-icons.flaticon.com/png/128/2838/premium/2838895.png?token=exp=1655215701~hmac=3f79b6c34289e504a4ee88e42b2cd6b9"
-          alt="error"
-        />
+      <div id="signupBtn">
+        <button id="login">Sign Up - Sign in</button>
+      </div>
+      <div id="basket-btn" class="women">
+        <button id="cart-nav">
+          Basket<img src="./img/bagIcon.png" alt="bagIcon" />
+        </button>
       </div>
     </div>
   </div>
-  <div id="navbar3">
+</div>
+<div id="nav-3">
+  <!-- <div id="navbar3">
     <div>Online Exclusives</div>
     <div>Curves(Plus Size)</div>
     <div>Tops</div>
@@ -383,12 +635,13 @@ margin-right: 0px;
     <div>Footware</div>
     <div>Winterwear</div>
     <div>More</div>
-  </div>
+  </div> -->
+
   <div>
     Buy 3 @ ₹699/999/1499 + FREE Shipping on all orders above JUST ₹499 >
   </div>
-  <!-- navbar html ends here -->
-
+</div>
+<!-- navbar ends -->
 
 
 
@@ -814,5 +1067,22 @@ margin-right: 0px;
         localStorage.setItem("basketItem",JSON.stringify(basketArr));
     }
     }
+    
+    let btn1 = document.querySelector("#bo");
+  btn1.addEventListener("click", loadPage1);
+  function loadPage1() {
+    window.location.href = "./BoysPage.html";
+  }
+  let btn2 = document.querySelector("#ge");
+  btn2.addEventListener("click", loadPage2);
+  function loadPage2() {
+    window.location.href = "./girls_page.html";
+  }
+  let btn6 = document.querySelector("#cart-nav");
+  btn6.addEventListener("click", loadPage3);
+  function loadPage3() {
+    window.location.href = "./Basket.html";
+  }
+
     
 </script>

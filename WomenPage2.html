@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tops | Women</title>
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+             section{
+        width: 80%;
+        margin: auto;
+        font-family: ProximaNova-Regular, "Helvetica Neue", Arial, sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      footer{
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+      #WomenProduct {
+        width: 100%;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+      #WomenProduct > div {
+        margin-top: 20px;
+        background-color: white;
+      }
+      #WomenProduct > div > img {
+        width: 100%;
+      }
+      #WomenProduct > div > h5 {
+        margin-top: 5px;
+        margin-left: 0px;
+        font-size: 18px;
+      }
+      #WomenProduct > div > h5::before {
+        font-size: small;
+        content: "₹";
+      }
+      #WomenProduct > div > p {
+        margin-left: 0px;
+        margin-top: 5px;
+        font-size: 12px;
+      }
+      #WomenProduct > div > button {
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 10px;
+      }
+      #WomenProduct > div > button:hover {
+        background-color: rgb(20, 149, 181);
+        cursor: pointer;
+        color: white;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      #navbar1{
+        position: fixed;
+        top: 0px;
+        margin-top: 0px;
+        
+      }
+      #navbar2{
+        position: fixed;
+        top: 30px;
+        margin-top: 0px;
+        background-color: white;
+        
+      }
+      #navbar3{
+       position: relative;
+       top: -35px;
+        width: 100%;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        margin-left: -45px;
+      
+      }
+      #navbar3+div{
+      
+        margin-top: 120px;
+        margin-bottom: 20px;
+      }
+      ul.menu>li:last-of-type{
+        opacity: 0;
+      }
+      .dropdown-content{
+        left: 0px;
+        top: 35px;
+      }
+      ul.innermenu{
+        margin-left: 60px;
+        
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="navbar1">
+            <div>
+                <div>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAMAAAApvJHbAAAAYFBMVEUAAAD///+kpKQZGRkwMDDl5eW+vr7Ly8vf399YWFiLi4tJSUmRkZEsLCyCgoKnp6fv7++tra2ZmZlBQUEQEBDFxcUdHR3X19d5eXlqamr4+PglJSUJCQlQUFBvb2+0tLTnw1w/AAABIklEQVRIie3VXZeCIBCAYcd1NiNA0KJV2/r//3IZP6pjwCncbW94L7qZnlCOUpalUqk3tNd5oEqGtYFgm7D+WKsPpnBnntGf3uH/apRsLkLfxVdpKF7Wx9126Mvqw8t63rWGFm9j9Y60WqVBx2vdATTRmjGAMlrzrLQ/EauPegPQmUg9lr9fnwohRN9G6rHtH2nDa967tbCjU1Dnrkdx1Pq6XT5dT1t6edR6GtV+TVMhl0cAaXo3meD2U2TfDt2VJVrcorRclXfRTAFIiWd7cUhfe9DTuYOg9u6/BNEBNu6nRaHNLlCfkdHauIjWZtjycaRcZyPdNzd038s3eLhv2TP3qTjl3vOhy23PveU+PPPcNbrW86r2XFvDKy6COJVK/XI/aU4OG9BpTLoAAAAASUVORK5CYII=" alt="error">
+                   <p>Free Shipping</p>
+                </div>
+                <div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/590/590511.png" alt="error">
+                <p>Return to Store</p>
+                </div>
+                <div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2898/2898372.png" alt="error">
+                <p>Click & Collect</p>
+                </div>
+            </div>
+            <div>
+                <div>Download Our Apps</div>
+                <div>Store Locator</div>
+                <div>Help</div>
+            </div>
+        </div>
+    
+        <div id="navbar2">
+            <div>
+            <div>ma<span>x</span></div>
+            
+            <div id="women">Women</div>
+            <div id="men">Men</div>
+            <div id="girl">Girls</div>
+            <div id="boy">Boys</div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZzUZTGCkvMMXgByuGlASAtKcGo6N4weBaA&usqp=CAU" alt="error search logo">
+                <input type="text" name="" id="searchbar" placeholder="What are you looking for?"></div>
+           
+        </div>
+    
+        <div id="left-nav">
+            <div>Sign Up - Sign in</div>
+            <div>
+                <div>Basket</div>
+                <img src="https://cdn-icons.flaticon.com/png/128/2838/premium/2838895.png?token=exp=1655215701~hmac=3f79b6c34289e504a4ee88e42b2cd6b9" alt="error">
+            </div>
+        </div>
+        </div>
+        <div id="navbar3">
+                <div class="list">
+                   <ul class="menu">
+                      <li>Online Exclusives    
+                           <div class="dropdown-content">
+                             <div class="box1">
+                                   <p>Shop in Online Exclusives</p> 
+                                   <ul class="innermenu">
+                                       <li>Tops</li>
+                                       <li>Indian wear</li>
+                                       <li>Sports wear</li>
+                                       <li>Lingerie</li>
+                                       <li>Dresses</li>
+                                       <li>Bottom wear</li>
+                                   </ul>   
+                              </div>
+                              <div class="box2">
+                               <p>Shop</p>
+                                   <ul>
+                                       <li>Sleepwear</li>
+                                   </ul>
+                               </div>
+                               <div class="box3">
+                                   <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-OE-Desktop1-05May2022.jpg" alt="dresses">
+                                   <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-OE-Desktop2-05May2022.jpg" alt="bottom">
+                                   <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-OE-Desktop3-05May2022.jpg" alt="essentails">
+                               </div>
+                           </div>
+                       </li>  
+                       <li>Curves(Plus Size)
+                           <div class="dropdown-content" id="sub1">
+                               <div class="box1">
+                                     <p>Shop in Curves(Plus Size)</p> 
+                                     <ul class="innermenu">
+                                         <li>Tops & Tees</li>
+                                         <li>Dresses</li>
+                                         <li>Kurtas</li>
+                                         <li>Denims</li>
+                                         <li>Sports wear</li>
+                                         <li>Sleepwear</li>
+                                     </ul>   
+                                </div>
+                                <div class="box2">
+                                   <p>Shop in</p>
+                                     <ul>
+                                       <li>Lingerie</li>
+                                     </ul>
+                                 </div>
+                                 <div class="box3">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Curve-Topsandtees-Desktop1-18APRIL2022.jpg" alt="tops % tees">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Curve-Dresses-Desktop1-13APRIL2022.jpg" alt="dreses">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Curve-Sportswear-Desktop1-18APRIL2022.jpg" alt="sportswear">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Curve-Newarrivals-Desktop1-13APRIL2022.jpg" alt="new arrivals">
+                                   </div>
+                             </div>
+                       </li>
+                       <li>Tops
+                           <div class="dropdown-content" id="sub1">
+                               <div class="box1">
+                                     <p>Shop in Tops</p> 
+                                     <ul class="innermenu">
+                                         <li>Tops & Tees</li>
+                                         <li>Shirts</li>
+                                         <li>Tunics</li>
+                                         <li>Shrugs</li>
+                                         <li>Zodiac Tees</li>
+                                         <li>Curves (Plus Size)</li>
+                                     </ul>   
+                                </div>
+                                <div class="box2">
+                                   <p>shope in our djdddf</p>
+                                     <ul>
+                                       <li></li>
+                                     </ul>
+                                 </div>
+                                 <div class="box3">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Tops-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Tops-Desktop3-05Nov2019.jpg" alt="dreses">
+                                     
+                                   </div>
+                             </div>
+                       </li>
+                       <li>Bottoms
+                           <div class="dropdown-content" id="sub1">
+                               <div class="box1">
+                                     <p>Shop in Botttoms</p> 
+                                     <ul class="innermenu">
+                                         <li>Jeans & Jeggings</li>
+                                         <li>Capris</li>
+                                         <li>Shorts & skirts</li>
+                                         <li>Leggings</li>
+                                         <li>Zodiac Tees</li>
+                                         <li>Jeans (Plus Size)</li>
+                                     </ul>   
+                                </div>
+                                <div class="box2">
+                                   <p>shop in jeans</p>
+                                     <ul>
+                                       <li></li>
+                                     </ul>
+                                 </div>
+                                 <div class="box3">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Bottoms-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Bottoms-Desktop2-05Nov2019.jpg" alt="dreses">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Bottoms-Desktop3-05Nov2019.jpg" alt="error">
+                                   </div>
+                             </div>
+                       </li>
+                       <li>Dresses & Jumpsuits
+                           <div class="dropdown-content" id="sub1">
+                               <div class="box1">
+                                     <p>Shop in Dresses & Jumpsuits</p> 
+                                     <ul class="innermenu">
+                                         <li>Dresses</li>
+                                         <li>Jumpsuits & Dungarees</li>
+                                         <li>Curves</li>
+                                         
+                                     </ul>   
+                                </div>
+                                <div class="box2">
+                                   <p>shop in jeans</p>
+                                     <ul>
+                                       <li></li>
+                                     </ul>
+                                 </div>
+                                 <div class="box3">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-DressandJumpsuit-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                  
+                                   </div>
+                             </div>
+                       </li>
+                       <li>Sleepwear
+                           <div class="dropdown-content" id="sub1">
+                               <div class="box1">
+                                     <p>Shop in Sleepwear</p> 
+                                     <ul class="innermenu">
+                                         <li>Dresses & Gowns</li>
+                                         <li>Sets</li>
+                                         <li>Tops</li>
+                                         <li>Bottoms</li>
+                                         <li>Curves (Plus Size)</li>
+                                     </ul>   
+                                </div>
+                                <div class="box2">
+                                   <p>shop in jeans</p>
+                                     <ul>
+                                       <li></li>
+                                     </ul>
+                                 </div>
+                                 <div class="box3">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Sleepwear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Sleepwear-Desktop2-05Nov2019.jpg" alt="dreses">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Sleepwear-Desktop3-05Nov2019.jpg" alt="error">
+                                   </div>
+                             </div>
+                       </li>
+                       <li>Indian Wear
+                           <div class="dropdown-content" id="sub1">
+                               <div class="box1">
+                                     <p>Shop in Indian Wear</p> 
+                                     <ul class="innermenu">
+                                       <li>Kurtas & Kurtis</li>
+                                       <li>Tops</li>
+                                         <li>Dresses</li>
+                                         <li>Suits & Sets</li>
+                                         <li>Palazzos & Culottes</li>
+                                         <li>Salwar & Patialas</li>
+                                     </ul>   
+                                </div>
+                                <div class="box2">
+                                   <p>shop in jeans</p>
+                                     <ul >
+                                      <li></li>
+                                     </ul>
+                                 </div>
+                                 <div class="box3">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Ethnicwear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Ethnicwear-Desktop2-05Nov2019.jpg" alt="dreses">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Ethnicwear-Desktop3-05Nov2019.jpg" alt="error">
+                                   <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Ethnicwear-Desktop4-05Nov2019.jpg" alt="error">
+                                   </div>
+                             </div>
+                       </li>
+                       <li>Sportswear
+                           <div class="dropdown-content" id="sub1">
+                               <div class="box1">
+                                     <p>Shop in Sports Wear</p> 
+                                     <ul class="innermenu">
+                                       <li>Tops</li>
+                                       <li>Trackpants & Joggers</li>
+                                         <li>Shorts & Capris</li>
+                                         <li>Sports Bra</li>
+                                         <li>Curves (Plus Size)</li>
+                                     </ul>   
+                                </div>
+                                <div class="box2">
+                                   <p>shop in jeans</p>
+                                     <ul >
+                                      <li></li>
+                                     </ul>
+                                 </div>
+                                 <div class="box3">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-SportsWear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-SportsWear-Desktop2-05Nov2019.jpg" alt="dreses">
+                                     
+                                   </div>
+                             </div>
+                       </li>
+                       <li>Lingerie
+                           <div class="dropdown-content" id="sub1">
+                               <div class="box1">
+                                     <p>Shop in Lingerie</p> 
+                                     <ul class="innermenu">
+                                       <li>Bras</li>
+                                       <li>Camisoles</li>
+                                         <li>Panties</li>
+                                         <li>Curves (Plus Size)</li>
+                                     </ul>   
+                                </div>
+                                <div class="box2">
+                                   <p>shop in jeans</p>
+                                     <ul >
+                                      <li></li>
+                                     </ul>
+                                 </div>
+                                 <div class="box3">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Lingerie-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Lingerie-Desktop2-05Nov2019.jpg" alt="dreses">
+                                     
+                                   </div>
+                             </div>
+                       </li>
+                       <li>Accessories
+                           <div class="dropdown-content" id="sub1">
+                               <div class="box1">
+                                     <p>Shop in Accessories</p> 
+                                     <ul class="innermenu">
+                                         <li>Face Masks</li>
+                                         <li>Bags</li>
+                                         <li>Caps</li>
+                                         <li>Scaves & Stoles</li>
+                                         <li>Belts</li>
+                                         <li>Wallets</li>
+                                     </ul>   
+                                </div>
+                                <div class="box2">
+                                   <p>Shop in our</p>
+                                     <ul>
+                                       <li></li>
+                                     </ul>
+                                 </div>
+                                 <div class="box3">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Accesories-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Accesories-Desktop2-05Nov2019.jpg" alt="dreses">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Accesories-Desktop3-05Nov2019.jpg" alt="sportswear">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Accesories-Desktop4-05Nov2019.jpg" alt="new arrivals">
+                                   </div>
+                             </div>
+                       </li>
+                       <li>Footware
+                           <div class="dropdown-content" id="sub1">
+                               <div class="box1">
+                                     <p>Shop in Footware</p> 
+                                     <ul class="innermenu">
+                                         <li>Ballerinas</li>
+                                         <li>Flat Sandles</li>
+                                         <li>Heels</li>
+                                         <li>Casual Shoes</li>
+                                         <li>Flip Flop</li>
+                                         <li>Sports Shoes</li>
+                                     </ul>   
+                                </div>
+                                <div class="box2">
+                                   <p>Shop in our</p>
+                                     <ul>
+                                       <li></li>
+                                     </ul>
+                                 </div>
+                                 <div class="box3">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Shoes-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Shoes-Desktop2-05Nov2019.jpg" alt="dreses">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Shoes-Desktop3-05Nov2019.jpg" alt="sportswear">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Shoes-Desktop4-05Nov2019.jpg" alt="new arrivals">
+                                   </div>
+                             </div>
+                       </li>
+                       <li>Winterwear
+                           <div class="dropdown-content" id="sub1">
+                               <div class="box1">
+                                     <p>Shop in WinterWear</p> 
+                                     <ul class="innermenu">
+                                         <li>Sweatshirts & Hoddies</li>
+                                         <li>Sweaters & Cardigans</li>
+                                         <li>Jackets</li>
+                                         <li>Accessories</li>
+                                     </ul>   
+                                </div>
+                                <div class="box2">
+                                   <p>Shop in our</p>
+                                     <ul>
+                                       <li></li>
+                                     </ul>
+                                 </div>
+                                 <div class="box3">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Winterwear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Winterwear-Desktop2-05Nov2019.jpg" alt="dreses">
+                                     <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Winterwear-Desktop3-10Dec2019.jpg" alt="sportswear">
+                                 </div>
+                             </div>
+                       </li>
+                       <li>More
+                           <div class="dropdown-more" >
+                              
+                                     <ul class="inner-more">
+                                         <li>Online Gift Card</li>
+                                         <li>Offline Gift Card</li>
+                                         <li>Blog</li>
+                                         <li>City Buzz</li>
+                                         <li>SBI offers</li>
+                                         <li>Partner Enquiry</li>
+                                     </ul>   
+                              
+                             </div>
+                       </li>     
+                   </ul>
+                </div>
+         
+        </div>
+        <div>Buy 3 @ ₹699/999/1499 + FREE Shipping on all orders above JUST ₹499 ></div> 
+    </header>
+    <section>
+        <div id="WomenProduct">
+
+        </div>
+    </section>
+    <footer>
+        <div id="footerSubDow">
+            <div id="Sub">
+              <h4>Subscribe to our awesome emails.</h4>
+              <p>Get our latest offers and news straight in your inbox.</p>
+              <input type="mail" placeholder="Please enter an email address" />
+              <button><b>Subscribe</b></button>
+            </div>
+            <div id="Dow">
+              <h4>Download our apps</h4>
+              <p>Shop our products and offers on-the-go.</p>
+              <div>
+                <div>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9VSQ1kGdvnrdAYQVIVM1JdB_MxhKOpXmWoA&usqp=CAU"
+                    alt="error"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihbMObs2stYan2aQKMttr81DBv6GVs6elSA&usqp=CAU"
+                    alt="error"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div id="footerMenu">
+            <div>
+              <h6>Women</h6>
+              <div>tops</div>
+              <div>Dresses & Jumpsuits</div>
+              <div>Sportswear</div>
+              <div>Bottoms</div>
+              <div>Winterwear</div>
+              <div>Ethnicwear</div>
+              <div>Lingerie</div>
+              <div>Sleepwear</div>
+              <div>Accessories</div>
+              <div>Shoes</div>
+            </div>
+            <div>
+              <h6>Men</h6>
+              <div>Tops</div>
+              <div>Bottoms</div>
+              <div>Sportswear</div>
+              <div>Winterwear</div>
+              <div>Accessories</div>
+              <div>Shoes</div>
+            </div>
+            <div>
+              <h6>Boys</h6>
+              <div>Tops</div>
+              <div>Bottoms</div>
+              <div>Indian Wear</div>
+              <div>Winter Wear</div>
+              <div>Essentials</div>
+              <div>Accessories</div>
+              <div>Shoes</div>
+            </div>
+            <div>
+              <h6>Girls</h6>
+              <div>Tops</div>
+              <div>Bottoms</div>
+              <div>Sportswear</div>
+              <div>Winterwear</div>
+              <div>Accessories</div>
+              <div>Shoes</div>
+            </div>
+            <div>
+              <h6>Explore</h6>
+              <div>Offers</div>
+              <div>Magazine</div>
+            </div>
+            <div>
+              <h6>About</h6>
+              <div>About us</div>
+              <div>Write to us</div>
+              <div>Careers</div>
+              <div>Take a Tour</div>
+              <div>Blog</div>
+              <div>Store Locator</div>
+              <div>Landmark Cares</div>
+            </div>
+            <div>
+              <h6>Help</h6>
+              <div>Contact us</div>
+              <div>Shipping</div>
+              <div>Returns Process</div>
+              <div>Returns Policy</div>
+              <div>Help Centre</div>
+            </div>
+          </div>
+          <hr />
+          <div id="footerSocial">
+            <div id="main">
+              <div id="footerSocialSub1">
+                <div>
+                  <div>
+                    <div>
+                      <div>
+                        <img
+                          src="https://cdn-icons-png.flaticon.com/128/633/633544.png"
+                          alt="error" style="width:100% ;"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div style="color: rgb(146, 147, 145)">Talk to us</div>
+                      <div>1800-123-1444</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div>
+                        <img
+                          src="https://cdn-icons-png.flaticon.com/128/7789/7789517.png"
+                          alt="help-center" style="width: 100%;"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div style="color: rgb(146, 147, 145)">Helpcentre</div>
+                      <div>help.maxfashion.com</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div>
+                        <img
+                          src="https://cdn-icons-png.flaticon.com/128/712/712040.png"
+                          alt="email-icon" style="width: 100%;"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div style="color: rgb(146, 147, 145)">Write to us</div>
+                      <div>help,in@maxfashion.com</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="footerSocialSub2">
+                <div>
+                  <div>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/13/13756.png"
+                      alt="facebook"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/733/733635.png"
+                      alt="twitter"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png"
+                      alt="instagram"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div id="footerBottom">
+            <div>
+              <div>
+                <img
+                  src="https://www.landmarkgroup.com/int/sites/default/files/Brand-logo/New%20Max%20Logo-%20Eng%20With%20Outline_1.png"
+                  alt="error"
+                />
+              </div>
+              <div>
+                <p>© 2022 Retail World Limited.</p>
+                <p>Terms & Conditions - Privacy Policy</p>
+              </div>
+            </div>
+          </div>
+    </footer>
+</body>
+</html>
+<script>
+    let Women2Arr=[
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011069519-Green-MINT-1000011069519-18042022_01-2100.jpg",price:"299"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011069467-Blue-LIGHTBLUE-1000011069467-10032022_01-2100.jpg",price:"399"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010971253-Brown-BROWNP-1000010971253-06042022-1_01-2100.jpg",price:"599"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010971253-Brown-BROWN-1000010971253-06042022-1_01-2100.jpg",price:"449"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011386877-Green-GREEN-1000011386877-29052022_01-2100.jpg",price:"999"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010980107-Beige-IVORYP-1000010980107-22022022_01-2100.jpg",price:"1,299"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011090091-Blue-BLUE-1000011090091-21042022_01-2100.jpg",price:"299"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011154713-Beige-IVORYP-1000011154713-12032022_01-2100.jpg",price:"400"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011374524-Green-GREEN-1000011374524-21052022_01-2100.jpg",price:"400"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011378400-Black-BLACK-1000011378400-13052022_01-2100.jpg",price:"999"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011374602-Pink-BLUSH-1000011374602-21052022_01-2100.jpg",price:"899"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011378292-Black-BLACK-1000011378292-13052022_01-2100.jpg",price:"399"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011348463-White-WHITE-1000011348463-21052022_01-2100.jpg",price:"199"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011154860-Pink-BLUSH-1000011154860-10032022-1_01-2100.jpg",price:"809"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011154860-Pink-BLUSHP-1000011154860-10032022-1_01-2100.jpg",price:"749"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010980032-Beige-IVORYP-1000010980032-07032022_01-2100.jpg",price:"600"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011070477-Green-OLIVEGREEN-1000011070477-21042022_01-2100.jpg",price:"799"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011071317-Green-OLIVEGREEN-1000011071317-25032022_01-2100.jpg",price:"899"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011113027-Blue-BLUEP-1000011113027-07032022_01-2100.jpg",price:"999"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011071117-Black-BLACK-1000011071117-21032022_01-2100.jpg",price:"1,299"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011386877-Pink-PINK-1000011386877-29052022_01-2100.jpg",price:"1,399"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011112884-Beige-OATMARLP-1000011112884-07032022_01-2100.jpg",price:"1,499"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011069597-Black-BLACK-1000011069597-18042022_01-2100.jpg",price:"1,599"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011173794-Beige-IVORYP-1000011173794-03032022_01-2100.jpg",price:"699"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011378373-Yellow-YELLOWP-1000011378373-13052022_01-2100.jpg",price:"799"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011069402-Green-GREEN-1000011069402-21042022_01-2100.jpg",price:"899"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010532418-Multicolour-M-1000010532418-7142021_01-2100.jpg",price:"999"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011127973-Grey-DARKGREY-1000011127973-26032022_01-2100.jpg",price:"1,399"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011228635-White-WHITE-1000011228635-10032022_01-2100.jpg",price:"1,200"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011257655-Yellow-MUSTARD-1000011257655-26042022_01-2100.jpg",price:"800"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011124015-Black-BLACK-1000011124015-21042022_01-2100.jpg",price:"799"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011038760-Black-BLACK-1000011038760-18042022_01-2100.jpg",price:"699"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011257655-Purple-LILAC-1000011257655-18042022_01-2100.jpg",price:"899"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011113388-Grey-GREYP-1000011113388-03032022_01-2100.jpg",price:"299"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011113388-Grey-GREYP-1000011113388-03032022_01-2100.jpg",price:"400"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011113388-Grey-GREYP-1000011113388-03032022_01-2100.jpg",price:"699"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011113388-Grey-GREYP-1000011113388-03032022_01-2100.jpg",price:"799"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011378292-Black-BLACKP-1000011378292-13052022_01-2100.jpg",price:"899"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011113388-Grey-GREYP-1000011113388-03032022_01-2100.jpg",price:"999"},
+        {img:"https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011378292-Black-BLACKP-1000011378292-13052022_01-2100.jpg",price:"899"}
+    ]
+    displayProducts(Women2Arr);
+
+function displayProducts(Women2Arr){
+   document.querySelector("#WomenProduct").innerHTML=""
+    Women2Arr.forEach(function(ele){
+        let div1=document.createElement("div");
+
+        let img=document.createElement("img");
+        let avatar=ele.img
+        img.setAttribute("src",avatar)
+        // console.log(img)
+        let price=document.createElement("h5");
+        price.innerText=ele.price
+        let name=document.createElement("p")
+        name.innerText="MAX Women Printed Round Neck Top"
+
+        let cart=document.createElement("button")
+        cart.innerText="Add to Basket"
+        cart.addEventListener("click",function(){
+            addToBasket(ele);
+        })
+        div1.append(img,price,name,cart);
+        document.querySelector("#WomenProduct").append(div1);
+    });
+
+    // This code is meant to add items in our cart page
+
+    let basketArr= [];
+    function addToBasket(ele){
+        basketArr.push(ele);
+        alert("Added to Basket");
+        console.log(basketArr)
+        localStorage.setItem("basketItem",JSON.stringify(basketArr));
+    }
+}
+</script>
