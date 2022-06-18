@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="men.css">
+    <link rel="stylesheet" href="/Max-Fashion/dropdown women/dropdown.css">
 </head>
 <body>
   <!-- nav bar starts -->
-  <div id="outerNavbar1">
+   <!-- nav bar starts -->
+   <div id="outerNavbar1">
     <div id="navbar1">
       <div>
         <div>
@@ -41,61 +43,379 @@
       </div>
     </div>
   </div>
-
-  <div id="navbar2">
-    <div>
-      <div>ma<span>x</span></div>
-
-      <div id="women">Women</div>
-      <div id="men">
-       Men
-      </div>
-      <div id="girl">Girls</div>
-      <div id="boy">Boys</div>
-      <div>
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZzUZTGCkvMMXgByuGlASAtKcGo6N4weBaA&usqp=CAU"
-          alt="error search logo"
-        />
-        <input
-          type="text"
-          name=""
-          id="searchbar"
-          placeholder="What are you looking for?"
-        />
-      </div>
-    </div>
-
-    <div id="left-nav">
-      <div>Sign Up - Sign in</div>
-      <div>
-        <div>Basket</div>
-        <img
-          src="https://cdn-icons.flaticon.com/png/128/2838/premium/2838895.png?token=exp=1655215701~hmac=3f79b6c34289e504a4ee88e42b2cd6b9"
-          alt="error"
-        />
-      </div>
-    </div>
-  </div>
-  <div id="navbar3">
-    <!-- <div>Online Exclusives</div>
-    <div>Curves(Plus Size)</div>
-    <div>Tops</div>
-    <div>Bottoms</div>
-    <div>Dresses & Jumpsuits</div>
-    <div>Sleepwear</div>
-    <div>Indian Wear</div>
-    <div>Sportswear</div>
-    <div>Lingerie</div>
-    <div>Accessories</div>
-    <div>Footware</div>
-    <div>Winterwear</div>
-    <div>More</div> -->
-  </div>
   
-  <div>
-    Buy 3 @ ₹699/999/1499 + FREE Shipping on all orders above JUST ₹499 >
+  <div id="nav-2">
+    <div id="navbar2">
+      <div>
+        <div>ma<span>x</span></div>
+
+        <div class="women"><button id="wo">Women</button></div>
+        <div class="women"><button id="me">Men</button></div>
+        <div class="women"><button id="ge">Girls</button></div>
+        <div class="women"><button id="bo">Boys</button></div>
+        <div style="margin-bottom: 10px">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZzUZTGCkvMMXgByuGlASAtKcGo6N4weBaA&usqp=CAU"
+            alt="search logo"
+          />
+          <input
+            type="text"
+            name=""
+            id="searchbar"
+            placeholder="What are you looking for?"
+          />
+        </div>
+      </div>
+
+      <div id="left-nav">
+        <div id="signupBtn">
+          <button id="login">Sign Up - Sign in</button>
+        </div>
+        <div id="basket-btn" class="women">
+          <button id="cart-nav">
+            Basket<img src="/Max-Fashion/Products/img/bagIcon.png" alt="bagIcon" />
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- <div id="nav-3"> -->
+    <!-- <div id="navbar3">
+      <div>Online Exclusives</div>
+      <div>Curves(Plus Size)</div>
+      <div>Tops</div>
+      <div>Bottoms</div>
+      <div>Dresses & Jumpsuits</div>
+      <div>Sleepwear</div>
+      <div>Indian Wear</div>
+      <div>Sportswear</div>
+      <div>Lingerie</div>
+      <div>Accessories</div>
+      <div>Footware</div>
+      <div>Winterwear</div>
+      <div>More</div>
+    </div> -->
+<!-- <-------------------dropdown-------------------> 
+<div class="list">
+  <ul class="menu">
+     <li>Online Exclusives    
+          <div class="dropdown-content">
+            <div class="box1">
+                  <p>Shop in Online Exclusives</p> 
+                  <ul class="innermenu">
+                      <li>Tops</li>
+                      <li>Indian wear</li>
+                      <li>Sports wear</li>
+                      <li>Loungewear</li>
+                      <li>Bottom</li>
+                      <li>Shoes</li>
+                  </ul>   
+             </div>
+             <div class="box2">
+              <p>Shop</p>
+                  <ul>
+                      <li>Sleepwear</li>
+                  </ul>
+              </div>
+              <div class="box3">
+                  <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Tops-Desktop1-05Nov2019.jpg" alt="dresses">
+                  <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Sportswear-Desktop1-05Nov2019.jpg" alt="bottom">
+                  <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Loungewear-Desktop1-05Nov2019.jpg" alt="essentails">
+              </div>
+          </div>
+      </li>  
+      <li>Polo & Shorts Store
+          <div class="dropdown-content" id="sub1">
+              <div class="box1">
+                    <p>Shop in Polo & Shorts</p> 
+                    <ul class="innermenu">
+                        <li>Racecourse polos</li>
+                        <li>Brunch polos</li>
+                        <li>Golfer Polos</li>
+                        <li>Beach Polos</li>
+                        <li>Brunch Polos</li>
+                        <li>Solid shorts</li>
+                    </ul>   
+               </div>
+               <div class="box2">
+                  <p>Shop in</p>
+                    <ul>
+                      <li>Printed shorts</li>
+                    </ul>
+                </div>
+                <div class="box3">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/MAX-Racecourse-Polo-Desktop1-28APR2022.jpg" alt="tops % tees">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/MAX-Brunch-Polo-Desktop2-28APR2022.jpg" alt="dreses">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/MAX-Solid-Polo-Desktop3-28APR2022.jpg" alt="sportswear">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/MAX-Printed-Polo-Desktop4-28APR2022.jpg" alt="new arrivals">
+                  </div>
+            </div>
+      </li>
+      <li>Tops
+          <div class="dropdown-content" id="sub1">
+              <div class="box1">
+                    <p>Shop in Tops</p> 
+                    <ul class="innermenu">
+                        <li>T-shirts</li>
+                        <li>Polos</li>
+                        <li>Casual Shirts</li>
+                        <li>Formal Shirts</li>
+                    </ul>   
+               </div>
+               <div class="box2">
+                  <p>shope in our djdddf</p>
+                    <ul>
+                      <li></li>
+                    </ul>
+                </div>
+                <div class="box3">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Tops-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Tops-Desktop2-19May2021.jpg" alt="dreses">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Tops-Desktop3-05Nov2019.jpg" alt="error">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Tops-Desktop4-05Nov2019.jpg" alt="error">
+                  </div>
+            </div>
+      </li>
+      <li>Bottoms
+          <div class="dropdown-content" id="sub1">
+              <div class="box1">
+                    <p>Shop in Botttoms</p> 
+                    <ul class="innermenu">
+                        <li>Jeans</li>
+                        <li>Trousers</li>
+                        <li>Shorts & 3/4ths</li>
+                       
+                    </ul>   
+               </div>
+               <div class="box2">
+                  <p>shop in jeans</p>
+                    <ul>
+                      <li></li>
+                    </ul>
+                </div>
+                <div class="box3">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Bottoms-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Bottoms-Desktop2-05Nov2019.jpg" alt="dreses">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Bottoms-Desktop3-05Nov2019.jpg" alt="error">
+                  </div>
+            </div>
+      </li>
+      <li>Sportswear
+          <div class="dropdown-content" id="sub1">
+              <div class="box1">
+                    <p>Shop in Sportswear</p> 
+                    <ul class="innermenu">
+                        <li>Tees & Polos</li>
+                        <li>Trackpants & Joggers</li>
+                        <li>Shorts & 3/4ths</li>
+                        
+                    </ul>   
+               </div>
+               <div class="box2">
+                  <p>shop in jeans</p>
+                    <ul>
+                      <li></li>
+                    </ul>
+                </div>
+                <div class="box3">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Sportswear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Sportswear-Desktop2-05Nov2019.jpg" alt="error">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Sportswear-Desktop3-05Nov2019.jpg" alt="error">
+                  </div>
+            </div>
+      </li>
+      <li>Loungewear
+          <div class="dropdown-content" id="sub1">
+              <div class="box1">
+                    <p>Shop in Loungewear</p> 
+                    <ul class="innermenu">
+                        <li>Tees</li>
+                        <li>Bottoms</li>
+                        <li>Sets</li>
+                    </ul>   
+               </div>
+               <div class="box2">
+                  <p>shop in jeans</p>
+                    <ul>
+                      <li></li>
+                    </ul>
+                </div>
+                <div class="box3">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Loungewear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+        
+                  </div>
+            </div>
+      </li>
+      <li>Innerwear
+          <div class="dropdown-content" id="sub1">
+              <div class="box1">
+                    <p>Shop in Innerwear</p> 
+                    <ul class="innermenu">
+                      <li>Tops</li>
+                      <li>Vets</li>
+                        <li>Briefs</li>
+                        <li>Boxer</li>
+                    </ul>   
+               </div>
+               <div class="box2">
+                  <p>shop in jeans</p>
+                    <ul >
+                     <li></li>
+                    </ul>
+                </div>
+                <div class="box3">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Innerwear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Innerwear-Desktop2-05Nov2019.jpg" alt="dreses">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Innerwear-Desktop3-05Nov2019.jpg" alt="error">
+                  </div>
+            </div>
+      </li>
+      <li>Indian Wear
+          <div class="dropdown-content" id="sub1">
+              <div class="box1">
+                    <p>Shop in Indian Wear</p> 
+                    <ul class="innermenu">
+                      <li>Kurtas </li>
+                      <li>Jackets</li>
+                        <li>Sets</li>
+                     
+                    </ul>   
+               </div>
+               <div class="box2">
+                  <p>shop in jeans</p>
+                    <ul >
+                     <li></li>
+                    </ul>
+                </div>
+                <div class="box3">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Ethnicwear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+           
+                  </div>
+            </div>
+      </li>
+      <li>Accessories
+          <div class="dropdown-content" id="sub1">
+              <div class="box1">
+                    <p>Shop in Accessories</p> 
+                    <ul class="innermenu">
+                        <li>Face Masks</li>
+                        <li>Bags</li>
+                        <li>Caps</li>
+                        <li>wallets</li>
+                        <li>Belts</li>
+                        <li>Neck Ties</li>
+                       
+                    </ul>   
+               </div>
+               <div class="box2">
+                  <p>Shop in our</p>
+                    <ul>
+                      <li>Socks</li>
+                    </ul>
+                </div>
+                <div class="box3">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Accesories-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Accesories-Desktop2-05Nov2019.jpg" alt="dreses">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Accesories-Desktop3-05Nov2019.jpg" alt="sportswear">
+                  </div>
+            </div>
+      </li>
+      <li>Footware
+          <div class="dropdown-content" id="sub1">
+              <div class="box1">
+                    <p>Shop in Footware</p> 
+                    <ul class="innermenu">
+                        <li>Formal Shoes</li>
+                        <li>Sandals & Flip-Flops </li>
+                        <li>Casual Shoes</li>
+                        <li>Sports Shoes</li>
+                    </ul>   
+               </div>
+               <div class="box2">
+                  <p>Shop in our</p>
+                    <ul>
+                      <li></li>
+                    </ul>
+                </div>
+                <div class="box3">
+                   <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Accesories-Desktop2-05Nov2019.jpg" alt="error"> 
+                    
+                  </div>
+            </div>
+      </li>
+      <li>Winterwear
+          <div class="dropdown-content" id="sub1">
+              <div class="box1">
+                    <p>Shop in WinterWear</p> 
+                    <ul class="innermenu">
+                        <li>Sweatshirts & Hoddies</li>
+                        <li>Sweaters & Cardigans</li>
+                        <li>Jackets</li>
+                        <li>Accessories</li>
+                    </ul>   
+               </div>
+               <div class="box2">
+                  <p>Shop in our</p>
+                    <ul>
+                      <li></li>
+                    </ul>
+                </div>
+                <div class="box3">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Winterwear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-Winterwear-Desktop2-05Nov2019.jpg" alt="dreses">
+
+                </div>
+            </div>
+      </li>
+      <li>The Shirts Shop
+          <div class="dropdown-content" id="sub1">
+              <div class="box1">
+                    <p>Shop in Shirts</p> 
+                    <ul class="innermenu">
+                        <li>Liberty Prints</li>
+                        <li>Dates Shirts</li>
+                        <li>Western Shirts</li>
+                        <li>Swadeshi Shirts</li>
+                        <li>Versatile Shirts</li>
+                        <li>Everyday Shirts</li>
+                    </ul>   
+               </div>
+               <div class="box2">
+                  <p>Shop in our</p>
+                    <ul>
+                      <li>City Stripers</li>
+                      
+                      
+                    </ul>
+                </div>
+                <div class="box3">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-TheShirtShop-Desktop1-31Aug21.jpg" alt="tops % tees">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-TheShirtShop-Desktop2-31Aug21.jpg" alt="dreses">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-TheShirtShop-Desktop3-31Aug21.jpg" alt="error">
+                    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Mens-TheShirtShop-Desktop4-31Aug21.jpg" alt="error">                 
+                  </div>
+            </div>
+      </li>
+      <li>More
+          <div class="dropdown-more" >
+             
+                    <ul class="inner-more">
+                        <li>Online Gift Card</li>
+                        <li>Offline Gift Card</li>
+                        <li>Blog</li>
+                        <li>City Buzz</li>
+                        <li>SBI offers</li>
+                        <li>Partner Enquiry</li>
+                    </ul>   
+             
+            </div>
+      </li>     
+  </ul>
+</div>
+    <div class="banner">
+      Buy 3 @ ₹699/999/1499 + FREE Shipping on all orders above JUST ₹499 >
+    </div>
+
   <!-- navbar ends -->
 
     <!-- product section -->
@@ -259,6 +579,7 @@
         <br><br>
     </div>
     <hr>
+    
 </body>
 </html>
 <script>
@@ -298,4 +619,20 @@ function displayProducts(teesPoloProductsBoysArr){
     }
 
 }
+let btn1 = document.querySelector("#me");
+  btn1.addEventListener("click", loadPage1);
+  function loadPage1() {
+    console.log("clicked")
+    window.location.href = "/Max-Fashion/Products/men/men.html";
+  }
+  let btn2 = document.querySelector("#ge");
+  btn2.addEventListener("click", loadPage2);
+  function loadPage2() {
+    window.location.href = "./girls_page.html";
+  }
+  let btn6 = document.querySelector("#cart-nav");
+  btn6.addEventListener("click", loadPage3);
+  function loadPage3() {
+    window.location.href = "/Max-Fashion/Products/Basket.html";
+  }
 </script>

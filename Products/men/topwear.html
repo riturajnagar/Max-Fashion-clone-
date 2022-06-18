@@ -862,6 +862,7 @@ array.forEach(function(elem){
     btn.addEventListener("click",function(){
       addToBasket(elem)
     })
+    
     card.addEventListener("mouseout",myfunc);
     function myfunc(){
       color.classList.add("active")
@@ -875,6 +876,11 @@ array.forEach(function(elem){
       size.classList.remove("active")
       div_btn.classList.remove("active")
     }
+
+
+
+
+
     let basketArr=JSON.parse(localStorage.getItem("basketItem")) || [];
     function addToBasket(elem){
         basketArr.push(elem);
