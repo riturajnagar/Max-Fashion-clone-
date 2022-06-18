@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP page</title>
+    <link rel="stylesheet" href="otp.css">
+</head>
+<body>
+    <h1>One account to rule them all</h1>
+    <p>Manage your account across all participating brands from one place.</p>
+    <div id="logo">
+        <div><img src="https://i1.lmsin.net/website_images/in/logos/logo-lifestyle.svg" alt="lifestyle"></div>
+        <div> <img src="https://i1.lmsin.net/website_images/in/logos/logo-max.svg" alt="max"></div>
+       <div><img src="https://i1.lmsin.net/website_images/in/logos/logo-homecentre.svg" alt="homecenter"></div>
+        
+    </div>
+      <h2>Enter OTP</h2>
+        <form action="">
+            <input type="text" name="" id="one" maxlength = "1">
+            <input type="text" name="" id="two" maxlength = "1">
+            <input type="text" name="" id="three" maxlength = "1">
+            <input type="text" name="" id="four" maxlength = "1">
+            <input type="submit">
+        </form>
+ 
+</body>
+</html>
+<script>
+    let form=document.querySelector("form");
+    form.addEventListener("submit",otpdetails);
+    
+    function otpdetails(event){
+     event.preventDefault();
+     
+       let one=form.one.value;
+        let two=form.two.value;
+       let three=form.three.value;
+       let four=form.four.value
+      
+      let loginData=JSON.parse(localStorage.getItem("loginData"));
+       if(one==""|| two==""||three==""||four=="")
+       {
+        alert("Enter OTP");
+       }
+       else if(one=="1" && two=="2" && three=="3" && four=="4"){
+             alert("login successful") 
+            window.location.href="my account.html"  
+       }
+       else{
+        alert("Wrong OTP")
+       }
+    }
+</script>

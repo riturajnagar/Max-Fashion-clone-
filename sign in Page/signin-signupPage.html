@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <h1>One account to rule them all</h1>
+    <p>Manage your account across all participating brands from one place.</p>
+    <div id="logo">
+        <div><img src="https://i1.lmsin.net/website_images/in/logos/logo-lifestyle.svg" alt="lifestyle"></div>
+        <div> <img src="https://i1.lmsin.net/website_images/in/logos/logo-max.svg" alt="max"></div>
+       <div><img src="https://i1.lmsin.net/website_images/in/logos/logo-homecentre.svg" alt="homecenter"></div>
+        
+    </div>
+      <h2>Signin/Login</h2>
+        <form action="">
+            <input type="text" id="name" placeholder="Enter Your Name">
+            <input type="email" name="" id="email" placeholder="Enter Your Email">
+            <input type="text" id="mno" placeholder="Enter Your Mobile no">
+            <input type="submit">
+        </form>
+ 
+</body>
+</html>
+<script>
+    let form=document.querySelector("form");
+    form.addEventListener("submit",details);
+   
+    function details(event){
+     event.preventDefault();
+      let loginData={
+        name:form.name.value,
+        email:form.email.value,
+        mno:form.mno.value
+      }
+     
+      localStorage.setItem("loginData",JSON.stringify(loginData));
+      if(form.name.value==""||form.email.value==""||form.mno.value==""){
+        alert("Please Enter Your Credential")
+      }
+      else{
+        alert("otp has been sent to your mobile no")
+         window.location.href="otp page.html"
+      }
+    
+    }
+</script>
