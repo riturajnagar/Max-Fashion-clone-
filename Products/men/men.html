@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="men.css">
     <link rel="stylesheet" href="/Max-Fashion/dropdown women/dropdown.css">
+    
 </head>
 <body>
   <!-- nav bar starts -->
@@ -583,31 +584,8 @@
 </body>
 </html>
 <script>
-  displayProducts(teesPoloProductsBoysArr);
 
-function displayProducts(teesPoloProductsBoysArr){
-   document.querySelector("#boysProduct").innerHTML=""
-    teesPoloProductsBoysArr.forEach(function(ele){
-        let div1=document.createElement("div");
-
-        let img=document.createElement("img");
-        let avatar=ele.image
-        img.setAttribute("src",avatar)
-        console.log(img)
-        let price=document.createElement("h5");
-        price.innerText=ele.price
-        let name=document.createElement("p")
-        name.innerText=ele.name;
-
-        let cart=document.createElement("button")
-        cart.innerText="Add to Basket"
-        cart.addEventListener("click",function(){
-            addToBasket(ele);
-        })
-
-        div1.append(img,price,name,cart);
-        document.querySelector("#boysProduct").append(div1);
-    });
+  
 
     // This code is meant to add items in our cart page
 
@@ -618,21 +596,31 @@ function displayProducts(teesPoloProductsBoysArr){
         localStorage.setItem("basketItem",JSON.stringify(basketArr));
     }
 
-}
-let btn1 = document.querySelector("#me");
+
+let btn1 = document.querySelector("#bo");
   btn1.addEventListener("click", loadPage1);
   function loadPage1() {
     console.log("clicked")
-    window.location.href = "/Max-Fashion/Products/men/men.html";
+    window.location.href = "../BoysPage.html";
   }
   let btn2 = document.querySelector("#ge");
   btn2.addEventListener("click", loadPage2);
   function loadPage2() {
-    window.location.href = "./girls_page.html";
+    window.location.href = "../girls_page.html";
   }
   let btn6 = document.querySelector("#cart-nav");
   btn6.addEventListener("click", loadPage3);
   function loadPage3() {
-    window.location.href = "/Max-Fashion/Products/Basket.html";
+    window.location.href = "../Basket.html";
+  }
+  let btn3 = document.querySelector("#me");
+  btn3.addEventListener("click", loadPage3);
+  function loadPage3() {
+    window.location.href = "../men/men.html";
+  }
+  let btn4=document.querySelector("#wo");
+  btn4.addEventListener("click",loadPage4);
+  function loadPage4(){
+    window.location.href = "";
   }
 </script>
