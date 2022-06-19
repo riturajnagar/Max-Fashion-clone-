@@ -1523,6 +1523,7 @@
 <script>
     let form=document.querySelector("form");
     form.addEventListener("submit",details);
+    let flag=false;
    
     function details(event){
      event.preventDefault();
@@ -1533,6 +1534,8 @@
       }
      
       localStorage.setItem("loginData",JSON.stringify(loginData));
+      flag=true
+      localStorage.setItem("flag",JSON.stringify(flag));
       if(form.name.value==""||form.email.value==""||form.mno.value==""){
         alert("Please Enter Your Credential")
       }
