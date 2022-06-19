@@ -69,7 +69,12 @@
       </div>
       <div id="left-nav">
         <div id="signupBtn">
-          <button id="login" style="border-right: none;">Sign Up - Sign in</button>
+
+          <div id="myaccount">Sign Up - Sign in</div>
+         
+
+          
+
         </div>
         <div id="basket-btn" class="women">
           <button id="cart-nav">
@@ -621,4 +626,8 @@
   function loadPage4(){
     window.location.href = "../WomensHomePage.html";
   }
+
+        let loginData=JSON.parse(localStorage.getItem("loginData"));
+        let changeName=document.querySelector("#myaccount");
+        changeName.innerText=`Hi, ${loginData.name}`;
 </script>

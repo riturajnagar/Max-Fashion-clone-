@@ -204,15 +204,29 @@
         font-size: small;
 
        }
+       #myaccountchn{
+        display: flex;
+    
+        width: 300px;
+    
+       }
+       #myaccount{
+      
+        color: black;
+  
+        display: flex;
+      align-items: center;
+       }
     </style>
   </head>
   <body>
     <div id="heading">
-      <div>
+      <div id="myaccountchn" style="width: 200px">
         <img
           src="https://www.landmarkgroup.com/int/sites/default/files/Brand-logo/New%20Max%20Logo-%20Eng%20With%20Outline_1.png"
           alt="maxImg"
         />
+        <p id="myaccount" style="width: 150px"></p>
       </div>
       <div>
         <div>
@@ -423,5 +437,8 @@ function verifyDetails(){
     alert("Invalid card number or cvv")
   }
 }
-  
+
+        let loginData=JSON.parse(localStorage.getItem("loginData"));
+        let changeName=document.querySelector("#myaccount");
+        changeName.innerText=`Hi, ${loginData.name}`; 
 </script>

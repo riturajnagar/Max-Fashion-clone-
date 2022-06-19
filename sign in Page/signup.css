@@ -22,7 +22,7 @@ p{
     justify-content: center;
     align-items: center;
 }
-img{
+#logo>div>img{
     width:100%;
 }
 form{
