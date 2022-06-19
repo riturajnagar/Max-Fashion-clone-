@@ -190,7 +190,7 @@ function displayProducts(teesPoloProductsBoysArr){
 
     // This code is meant to add items in our cart page
 
-    let basketArr= [];
+    let basketArr= JSON.parse(localStorage.getItem("basketItem")) || [];
     function addToBasket(ele){
         basketArr.push(ele);
         window.location.href="./alert.html"
