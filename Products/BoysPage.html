@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Shopping at Max</title>
     
+    
     <style>
       /* navbar css */
       /* * {
@@ -1489,11 +1490,17 @@ img{
   function loadPage2() {
     window.location.href = "./girls_page.html";
   }
-  let btn6 = document.querySelector("#cart-nav");
+
+  let flagDetail=JSON.parse(localStorage.getItem("flag"))
+  if(flagDetail){
+    let btn6 = document.querySelector("#cart-nav");
   btn6.addEventListener("click", loadPage10);
   function loadPage10() {
     window.location.href = "./Basket.html";
   }
+  }
+
+  
   let btn3 = document.querySelector("#me");
   btn3.addEventListener("click", loadPage3);
   function loadPage3() {
@@ -1504,8 +1511,14 @@ img{
   function loadPage4(){
     window.location.href = "../WomensHomePage.html";
   }
+  let btn123=document.querySelector("#myaccount");
+  btn123.addEventListener("click",loginbtn);
+  function loginbtn(){
+    window.location.href="../sign in Page/signin-signupPage.html"
+  }
  
         let loginData=JSON.parse(localStorage.getItem("loginData"));
+        
         let changeName=document.querySelector("#myaccount");
         changeName.innerText=`Hi, ${loginData.name}`;
 </script>

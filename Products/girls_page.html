@@ -901,7 +901,8 @@
 
         <div id="left-nav">
           <div id="signupBtn">
-            <button id="login">Sign Up - Sign in</button>
+            <div id="myaccount">Sign Up - Sign in</div>
+
           </div>
           <div id="basket-btn" class="women">
             <button id="cart-nav">
@@ -1705,32 +1706,7 @@
     },
   ]
 
-  displayProducts(productGirlArr);
-
-  function displayProducts(productGirlArr){
-    document.querySelector("#container").innerHTML = "";
-    productGirlArr.forEach(function (ele) {
-      let box = document.createElement("div");
-
-      let img = document.createElement("img");
-      let avatar = ele.image;
-      img.setAttribute("src", avatar);
-      console.log(img);
-      let price = document.createElement("h5");
-      price.innerText = ele.price;
-      let name = document.createElement("p");
-      name.innerText = ele.name;
-
-      let cart = document.createElement("button");
-      cart.innerText = "Add to Basket";
-      cart.addEventListener("click", function () {
-        addToBasket(ele);
-      })
-
-      box.append(img, price, name, cart);
-      document.querySelector("#container").append(box);
-    });
-
+  
   // This code is meant to add items in our cart page
 
   let basketArr = JSON.parse(localStorage.getItem("basketItem")) || [];
@@ -1756,5 +1732,10 @@
   function loadPage3() {
     window.location.href = "./Basket.html";
   }
-}
+
+
+let loginData=JSON.parse(localStorage.getItem("loginData"));
+        let changeName=document.querySelector("#myaccount");
+        changeName.innerText=`Hi, ${loginData.name}`;
+        console.log(changeName)
 </script>
