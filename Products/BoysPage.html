@@ -1492,13 +1492,18 @@ img{
   }
 
   let flagDetail=JSON.parse(localStorage.getItem("flag"))
-  if(flagDetail){
+  
     let btn6 = document.querySelector("#cart-nav");
   btn6.addEventListener("click", loadPage10);
   function loadPage10() {
+    if(flagDetail){
     window.location.href = "./Basket.html";
+    }else{
+    alert("Please login")
+    }
   }
-  }
+  
+  
 
   
   let btn3 = document.querySelector("#me");
