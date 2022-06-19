@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="men-product-299.css">
     <link rel="stylesheet" href="/Max-Fashion/Products/footer.css">
-    <link rel="stylesheet" href="/Max-Fashion/dropdown women/dropdown.css">
+    <link rel="stylesheet" href="/Max-Fashion/dropdown/dropdown.css">
     
 </head>
 <style>
@@ -117,7 +117,8 @@
 
       <div id="left-nav">
         <div id="signupBtn">
-          <button id="login">Sign Up - Sign in</button>
+          <div id="myaccount">Sign Up - Sign in</div>
+       
         </div>
         <div id="basket-btn" class="women">
           <button id="cart-nav">
@@ -1205,4 +1206,8 @@ let btn1 = document.querySelector("#me");
   function loadPage3() {
     window.location.href = "/Max-Fashion/Products/Basket.html";
   }
+
+        let loginData=JSON.parse(localStorage.getItem("loginData"));
+        let changeName=document.querySelector("#myaccount");
+        changeName.innerText=`Hi, ${loginData.name}`;
 </script>
