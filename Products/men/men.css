@@ -8,7 +8,6 @@
 #budget, #gifting, #category,#budget-zone, #trending-stores,#monsoon-checklist,#youth-store,#summer-must-have,#gift-zone,#connect-with-us,#free-shipping{
  width: 90%;
  margin: 70px auto;
-
 }
 #gift-zone img,#budget img, #gifting img, #trending-stores img, #monsoon-checklist img, #youth-store img, #connect-with-us img, #free-shipping img{
     width: 100%;
@@ -16,7 +15,6 @@
 hr{
     margin-top:50px ;
     border:1px solid rgb(241, 235, 235);
- 
 }
 #category .card{
     display: flex;
