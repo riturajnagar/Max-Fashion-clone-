@@ -233,7 +233,7 @@ function displayProducts(teesPoloProductsBoysArr){
     let btn4=document.querySelector("#wo");
     btn4.addEventListener("click",loadPage4);
     function loadPage4(){
-      window.location.href = "../WomensHomePage.html";
+      window.location.href = "/Max-Fashion/WomensHomePage.html";
     }
     let btn123=document.querySelector("#myaccount");
     btn123.addEventListener("click",loginbtn);
