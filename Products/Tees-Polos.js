@@ -199,30 +199,51 @@ function displayProducts(teesPoloProductsBoysArr){
     }
 
     let btn1 = document.querySelector("#bo");
-  btn1.addEventListener("click", loadPage1);
-  function loadPage1() {
-    console.log("clicked")
-    window.location.href = "./BoysPage.html";
-  }
-  let btn2 = document.querySelector("#ge");
-  btn2.addEventListener("click", loadPage2);
-  function loadPage2() {
-    window.location.href = "./girls_page.html";
-  }
-  let btn6 = document.querySelector("#cart-nav");
-  btn6.addEventListener("click", loadPage10);
-  function loadPage10() {
-    window.location.href = "./Basket.html";
-  }
-  let btn3 = document.querySelector("#me");
-  btn3.addEventListener("click", loadPage3);
-  function loadPage3() {
-    window.location.href = "./men/men.html";
-  }
-  let btn4=document.querySelector("#wo");
-  btn4.addEventListener("click",loadPage4);
-  function loadPage4(){
-    window.location.href = "../WomensHomePage.html";
-  }
+    btn1.addEventListener("click", loadPage1);
+    function loadPage1() {
+      console.log("clicked")
+      window.location.href = "./BoysPage.html";
+    }
+    let btn2 = document.querySelector("#ge");
+    btn2.addEventListener("click", loadPage2);
+    function loadPage2() {
+      window.location.href = "./girls_page.html";
+    }
+  
+    let flagDetail=JSON.parse(localStorage.getItem("flag"))
+    
+      let btn6 = document.querySelector("#cart-nav");
+    btn6.addEventListener("click", loadPage10);
+    function loadPage10() {
+      if(flagDetail){
+      window.location.href = "./Basket.html";
+      }else{
+      alert("Please login")
+      }
+    }
+    
+    
+  
+    
+    let btn3 = document.querySelector("#me");
+    btn3.addEventListener("click", loadPage3);
+    function loadPage3() {
+      window.location.href = "./men/men.html";
+    }
+    let btn4=document.querySelector("#wo");
+    btn4.addEventListener("click",loadPage4);
+    function loadPage4(){
+      window.location.href = "../WomensHomePage.html";
+    }
+    let btn123=document.querySelector("#myaccount");
+    btn123.addEventListener("click",loginbtn);
+    function loginbtn(){
+      window.location.href="../sign in Page/signin-signupPage.html"
+    }
+   
+          let loginData=JSON.parse(localStorage.getItem("loginData"));
+          
+          let changeName=document.querySelector("#myaccount");
+          changeName.innerText=`Hi, ${loginData.name}`;
 
 }
