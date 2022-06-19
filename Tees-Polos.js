@@ -202,7 +202,7 @@ function displayProducts(teesPoloProductsBoysArr){
     btn1.addEventListener("click", loadPage1);
     function loadPage1() {
       console.log("clicked")
-      window.location.href = "./BoysPage.html";
+      window.location.href = "./index.html";
     }
     let btn2 = document.querySelector("#ge");
     btn2.addEventListener("click", loadPage2);
