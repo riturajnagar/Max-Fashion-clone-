@@ -145,7 +145,7 @@
   </div>
 
   <div id="left-nav">
-      <div>Sign Up - Sign in</div>
+      <div id="myaccount">Sign Up - Sign in</div>
       <div>
           <div>Basket</div>
           <img src="https://cdn-icons.flaticon.com/png/128/2838/premium/2838895.png?token=exp=1655215701~hmac=3f79b6c34289e504a4ee88e42b2cd6b9" alt="error">
@@ -759,7 +759,9 @@ function displayProducts(Women1Arr){
         localStorage.setItem("basketItem",JSON.stringify(basketArr));
     }
 
-    
+    let loginData=JSON.parse(localStorage.getItem("loginData"));
+   let changeName=document.querySelector("#myaccount");
+   changeName.innerText=`Hi, ${loginData.name}`;
 
 }
 let btn1 = document.querySelector("#bo");
