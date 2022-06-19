@@ -115,7 +115,8 @@
       </div>
 
       <div id="left-nav">
-        <div>Sign Up - Sign in</div>
+        <div id="myaccount">Sign Up - Sign in</div>
+    
         <div>
           <div>Basket</div>
           <img
@@ -882,6 +883,9 @@ array.forEach(function(elem){
         localStorage.setItem("basketItem",JSON.stringify(basketArr));
     }
 })
- 
+
+        let loginData=JSON.parse(localStorage.getItem("loginData"));
+        let changeName=document.querySelector("#myaccount");
+        changeName.innerText=`Hi, ${loginData.name}`;
 
 </script>

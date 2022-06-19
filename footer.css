@@ -1,0 +1,201 @@
+hr {
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 40px;
+    border: 0.2px solid rgb(241, 235, 235);
+  }
+  #footerSubDow {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #Sub {
+    width: 60%;
+  }
+  #Dow {
+    width: 40%;
+    margin-top: 10px;
+  }
+  h4 {
+    font-family: ProximaNova-Bold, "Helvetica Neue", Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 24px;
+    font-weight: bolder;
+    margin-top: 1px;
+    margin-left: 0px;
+  }
+  h4 + p {
+    color: #929391;
+    margin-top: 5px;
+    margin-left: 0px;
+    font-size: 16px;
+    font-family: ProximaNova-Regular, "Helvetica Neue", Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji";
+  }
+  #footerSubDow > div > input,
+  button {
+    margin-top: 10px;
+    padding: 18px 24px;
+    font-size: 20px;
+  }
+  #footerSubDow > div > input {
+    width: 45%;
+
+    background-color: #f7f8f7;
+  }
+  #footerSubDow > div > button {
+    width: 25%;
+    margin-left: -5px;
+    background-color: black;
+
+    color: white;
+  }
+  #Dow > div {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    width: 80%;
+
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+  #Dow > div > div {
+    width: 48%;
+    /* border: 1px solid mediumaquamarine; */
+  }
+  #Dow > div > div > img {
+    width: 100%;
+    height: 100%;
+  }
+  #footerMenu {
+    /* border: 1px solid red; */
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+  }
+  #footerMenu > div {
+    /* border: 1px solid black; */
+    width: 150px;
+    height: 220px;
+  }
+  #footerMenu > div > div {
+    margin-top: 3px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.576);
+    cursor: pointer;
+  }
+  h6 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  #footerSocial {
+    /* border: 1px solid black; */
+    margin: auto;
+    width: 100%;
+    margin-top: -30px;
+    margin-bottom: 15px;
+  }
+  #footerSocial > #main {
+    width: 100%;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    display: flex;
+  }
+  #footerSocialSub1 {
+    /* border: 1px solid blue; */
+    width: 80%;
+    margin-left: 0px;
+  }
+  #footerSocialSub1 > div {
+    /* border: 1px solid red; */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  #footerSocialSub1 > div > div {
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #footerSocialSub1 > div > div > div:first-child {
+    border: 1px solid #c8c9c6;
+    width: 50px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #footerSocialSub1 > div > div > div:first-child > div {
+    width: 14px;
+    height: 14px;
+  }
+
+  #footerSocialSub1 > div > div > div:last-child {
+    margin-left: 10px;
+  }
+  #footerSocialSub1 > div > div > div:last-child > div {
+    margin-top: 3px;
+  }
+  #footerSocialSub2 {
+    display: flex;
+    width: 15%;
+  }
+  #footerSocialSub2 > div {
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #footerSocialSub2 > div:hover {
+    background-color: rgba(0, 0, 0, 0.067);
+  }
+  #footerSocialSub2 > div > div {
+    width: 25px;
+    height: 25px;
+  }
+  #footerSocialSub2 > div > div > img {
+    width: 100%;
+  }
+  #footerBottom {
+    margin: auto;
+    margin-top: 20px;
+    height: 70px;
+    width: 100%;
+  }
+  #footerBottom > div {
+    display: flex;
+    width: 350px;
+  }
+  #footerBottom > div > div:first-child {
+    margin: auto;
+    width: 30%;
+  }
+  #footerBottom > div {
+    display: flex;
+    margin-left: 0px;
+  }
+  #footerBottom > div > div:first-child > img {
+    display: block;
+    margin-left: 0px;
+    width: 100%;
+  }
+  #footerBottom > div > div:last-child {
+    width: 70%;
+    margin-left: 10px;
+    font-size: 14px;
+    display: block;
+    align-content: center;
+    margin: 20px;
+    color: #929391;
+  }

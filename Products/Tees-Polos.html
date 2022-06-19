@@ -7,16 +7,20 @@
     <title>Boys | Tops</title>
     
     <style>
-      
+      img{
+  width: 15px;
+}
       /* navbar css */
-      * {
+      body, #upper2nav {
         width: 100%;
         margin: 0px;
-      }
+        box-sizing: border-box;
+      } 
       /* NAVBAR 1 */
       #outerNavbar1 {
         background-color: black;
         width: 100%;
+        box-sizing: border-box;
         box-sizing: border-box;
       }
       #navbar1 {
@@ -29,6 +33,7 @@
         font-family: "Poppins", sans-serif;
         color: white;
         font-size: 14px;
+        
         box-sizing: border-box;
       }
       #outerNavbar1 > div {
@@ -141,6 +146,7 @@
 
       span {
         color: rgb(228, 0, 43);
+        font-size: 36px;
       }
       #navbar2 > div:first-child > div:last-child > img {
         width: 5%;
@@ -225,6 +231,172 @@
         /* margin-right: 30px; */
       }
 
+
+      #dropDownNav{
+        position: relative;
+        left: 40px;
+        margin-bottom: 50px;
+      }
+
+      *{
+        font-size: 14px;
+      }
+     
+ /* main menu position */
+ .list{
+          position: absolute;
+          z-index: 1;
+          left: 0px;
+          font-size: 12px;
+      }
+      ul.menu{
+             display: inline-block;          
+      }
+      ul.menu li{
+          display: inline-block;
+           /* border: 1px solid red; */
+          padding: 5px 10px;
+          cursor: pointer;
+      }
+
+      /* drop down div  */
+      .dropdown-content{
+          display: flex;
+            gap:20px ;
+            width: 100%;
+            /* opacity: 0; 
+            visibility: hidden; */
+            display: none;
+            position: absolute;
+            left: 50px;
+            top: 55px;
+            padding: 20px 0px;
+            background-color: white;
+            height: 250px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+      } 
+      /* unline border */
+      ul.menu li:hover{
+          border-bottom: 2px solid darkblue;
+      }
+      /* showing after hover */
+      ul.menu>li:nth-child(1):hover .dropdown-content{
+        display: flex;
+        transition-duration: 3000ms;
+        transition-timing-function: ease-in;   
+      }
+      ul.menu>li:nth-child(2):hover .dropdown-content{
+          display: flex;  
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;  
+        }
+        ul.menu>li:nth-child(3):hover .dropdown-content{
+          display: flex; 
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;   
+        }
+        ul.menu>li:nth-child(4):hover .dropdown-content{
+          display: flex; 
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;   
+        }
+        ul.menu>li:nth-child(5):hover .dropdown-content{
+          display: flex;  
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;  
+        }
+        ul.menu>li:nth-child(6):hover .dropdown-content{
+          display: flex;  
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;  
+         
+        }
+        ul.menu>li:nth-child(7):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(8):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(9):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(10):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(11):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(12):hover .dropdown-content{
+          display: flex;   
+        }
+
+       
+       /* more menu selection */
+      ul.menu>li:last-of-type{
+          margin-left: 15px;
+          border: none; 
+       }
+        /* more menu div part */
+        .dropdown-more{
+            /* opacity: 0; 
+            visibility: hidden; */
+            display: none;
+            position: absolute;
+            right:-55px; 
+            top: 45px; 
+            background-color: white;
+            width: 120px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;   
+        }
+        ul.inner-more{
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          position: relative;
+          right: 35px;
+        }
+        ul.inner-more li{
+          font-size: 12px; 
+        }
+        ul.menu>li:last-of-type:hover .dropdown-more{
+         display: block;
+          
+       }
+    
+
+       ul.innermenu{
+          position: absolute;
+          left: -30px;
+    
+      }
+      ul.innermenu li{
+          display: block;  
+      }
+     
+      .dropdown-content p{
+         font-size: 20px;
+         margin-left: 20px;
+      }
+      .box2{
+          position: relative;
+          left: -90px;
+       
+      }
+      .box2>p{
+          opacity: 0;
+      }
+      .box3{
+          position: relative;
+          left: -40px;
+          display: flex;
+          gap: 10px;
+          width: 100%; 
+      }
+      .box3>img{
+        width: 30%;
+       
+      }
+
       /* NAVBAR 3 */
       #nav-3 {
         width: 100%;
@@ -284,7 +456,7 @@
         background-color: #f7f8f7;
         border: none;
         font-size: 14px;
-        border-right: 2px solid rgb(201, 196, 196);
+        /* border-right: 2px solid rgb(201, 196, 196); */
         padding: 8px 0px;
         margin-right: 10px;
         margin-bottom: 10px;
@@ -570,73 +742,318 @@
   </head>
   <body>
    <!-- nav bar starts -->
-   <div id="outerNavbar1">
-    <div id="navbar1">
-      <div>
+   <div id="upper2nav">
+    <div id="outerNavbar1">
+      <div id="navbar1">
         <div>
-          <img
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAMAAAApvJHbAAAAYFBMVEUAAAD///+kpKQZGRkwMDDl5eW+vr7Ly8vf399YWFiLi4tJSUmRkZEsLCyCgoKnp6fv7++tra2ZmZlBQUEQEBDFxcUdHR3X19d5eXlqamr4+PglJSUJCQlQUFBvb2+0tLTnw1w/AAABIklEQVRIie3VXZeCIBCAYcd1NiNA0KJV2/r//3IZP6pjwCncbW94L7qZnlCOUpalUqk3tNd5oEqGtYFgm7D+WKsPpnBnntGf3uH/apRsLkLfxVdpKF7Wx9126Mvqw8t63rWGFm9j9Y60WqVBx2vdATTRmjGAMlrzrLQ/EauPegPQmUg9lr9fnwohRN9G6rHtH2nDa967tbCjU1Dnrkdx1Pq6XT5dT1t6edR6GtV+TVMhl0cAaXo3meD2U2TfDt2VJVrcorRclXfRTAFIiWd7cUhfe9DTuYOg9u6/BNEBNu6nRaHNLlCfkdHauIjWZtjycaRcZyPdNzd038s3eLhv2TP3qTjl3vOhy23PveU+PPPcNbrW86r2XFvDKy6COJVK/XI/aU4OG9BpTLoAAAAASUVORK5CYII="
-            alt="error"
-          />
-          <p>Free Shipping</p>
+          <div>
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAMAAAApvJHbAAAAYFBMVEUAAAD///+kpKQZGRkwMDDl5eW+vr7Ly8vf399YWFiLi4tJSUmRkZEsLCyCgoKnp6fv7++tra2ZmZlBQUEQEBDFxcUdHR3X19d5eXlqamr4+PglJSUJCQlQUFBvb2+0tLTnw1w/AAABIklEQVRIie3VXZeCIBCAYcd1NiNA0KJV2/r//3IZP6pjwCncbW94L7qZnlCOUpalUqk3tNd5oEqGtYFgm7D+WKsPpnBnntGf3uH/apRsLkLfxVdpKF7Wx9126Mvqw8t63rWGFm9j9Y60WqVBx2vdATTRmjGAMlrzrLQ/EauPegPQmUg9lr9fnwohRN9G6rHtH2nDa967tbCjU1Dnrkdx1Pq6XT5dT1t6edR6GtV+TVMhl0cAaXo3meD2U2TfDt2VJVrcorRclXfRTAFIiWd7cUhfe9DTuYOg9u6/BNEBNu6nRaHNLlCfkdHauIjWZtjycaRcZyPdNzd038s3eLhv2TP3qTjl3vOhy23PveU+PPPcNbrW86r2XFvDKy6COJVK/XI/aU4OG9BpTLoAAAAASUVORK5CYII="
+              alt="error"
+            />
+            <p>Free Shipping</p>
+          </div>
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/590/590511.png"
+              alt="error"
+            />
+            <p>Return to Store</p>
+          </div>
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2898/2898372.png"
+              alt="error"
+            />
+            <p>Click & Collect</p>
+          </div>
         </div>
         <div>
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/590/590511.png"
-            alt="error"
-          />
-          <p>Return to Store</p>
-        </div>
-        <div>
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/2898/2898372.png"
-            alt="error"
-          />
-          <p>Click & Collect</p>
-        </div>
-      </div>
-      <div>
-        <div>Download Our Apps</div>
-        <div>Store Locator</div>
-        <div>Help</div>
-      </div>
-    </div>
-  </div>
-  <div id="nav-2">
-    <div id="navbar2">
-      <div>
-        <div>ma<span>x</span></div>
-
-        <div class="women"><button id="wo">Women</button></div>
-        <div class="women"><button id="me">Men</button></div>
-        <div class="women"><button id="ge">Girls</button></div>
-        <div class="women"><button id="bo">Boys</button></div>
-        <div style="margin-bottom: 10px">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZzUZTGCkvMMXgByuGlASAtKcGo6N4weBaA&usqp=CAU"
-            alt="search logo"
-          />
-          <input
-            type="text"
-            name=""
-            id="searchbar"
-            placeholder="What are you looking for?"
-          />
-        </div>
-      </div>
-
-      <div id="left-nav">
-        <div id="signupBtn">
-          <button id="login">Sign Up - Sign in</button>
-        </div>
-        <div id="basket-btn" class="women">
-          <button id="cart-nav">
-            Basket<img src="./img/bagIcon.png" alt="bagIcon" />
-          </button>
+          <div>Download Our Apps</div>
+          <div>Store Locator</div>
+          <div>Help</div>
         </div>
       </div>
     </div>
+    <div id="nav-2">
+      <div id="navbar2">
+        <div>
+          <div>ma<span>x</span></div>
+  
+          <div class="women"><button id="wo">Women</button></div>
+          <div class="women"><button id="me">Men</button></div>
+          <div class="women"><button id="ge">Girls</button></div>
+          <div class="women"><button id="bo">Boys</button></div>
+          <div style="margin-bottom: 10px">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZzUZTGCkvMMXgByuGlASAtKcGo6N4weBaA&usqp=CAU"
+              alt="search logo"
+            />
+            <input
+              type="text"
+              name=""
+              id="searchbar"
+              placeholder="What are you looking for?"
+            />
+          </div>
+        </div>
+  
+        <div id="left-nav">
+          <div id="signupBtn">
+            <button id="login">Sign Up - Sign in</button>
+          </div>
+          <div id="basket-btn" class="women">
+            <button id="cart-nav">
+              Basket<img src="./img/bagIcon.png" alt="bagIcon" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  <div id="dropDownNav">
+    <div class="list">
+      <ul class="menu">
+         <li>Online Exclusives    
+              <div class="dropdown-content">
+                <div class="box1">
+                      <p>Shop in Online Exclusives</p> 
+                      <ul class="innermenu">
+                          <li>Tops</li>
+                          <li>Bottom</li>
+                          <li>Baby Boys</li>
+                          <li>Essentails</li>
+                          <li>Shoes</li>
+                          <li>Accessories</li>
+                      </ul>   
+                 </div>
+                 <div class="box2">
+                  <p>Shop</p>
+                      <ul>
+                          <li></li>
+                      </ul>
+                  </div>
+                  <div class="box3">
+                      <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-OE-Desktop1-05May2022.jpg" alt="dresses">
+                      <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-OE-Desktop2-05May2022.jpg" alt="bottom">
+                      <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-OE-Desktop3-05May2022.jpg" alt="essentails">
+                  </div>
+              </div>
+          </li>  
+          <li>Tops
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Tops</p> 
+                        <ul class="innermenu">
+                            <li>Tees & Polos</li>
+                            <li>Shirts</li>
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>shope in our djdddf</p>
+                        <ul>
+                          <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Tops-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Tops-Desktop2-05Nov2019.jpg" alt="dreses">
+  
+                      </div>
+                </div>
+          </li>
+          <li>Bottoms
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Botttoms</p> 
+                        <ul class="innermenu">
+                            <li>Jeans</li>
+                            <li>Trousers</li>
+                            <li>Shorts & 3/4ths</li>
+                            <li>Track Pants & Joggers</li>
+                           
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>shop in jeans</p>
+                        <ul>
+                          <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Bottoms-Desktop2-05Nov2019.jpg" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Bottoms-Desktop3-05Nov2019.jpg" alt="dreses">
+                        
+                      </div>
+                </div>
+          </li>
+          <li>Essentails
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Essentails</p> 
+                        <ul class="innermenu">
+                            <li>Infant Basics</li>
+                            <li>Innerwear</li>
+                            <li>Sleepwear</li>
+                            
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>shop in jeans</p>
+                        <ul>
+                          <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-MASK-Essentials-Desktop1-03July2020.png" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Essentials-Desktop1-05Nov2019.jpg" alt="error">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Essentials-Desktop2-05Nov2019.jpg" alt="error">
+                      </div>
+                </div>
+          </li>
+          <li>Baby Boy (0-2Yrs)
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Baby Boy (0-2Yrs)</p> 
+                        <ul class="innermenu">
+                            <li>Clothing Sets</li>
+                            <li>Shirts</li>
+                            <li>Jeans</li>
+                            <li>Gift Sets</li>
+                            <li>Sleepsuits</li>
+                            <li>Body Suits</li>
+                            <li>Shorts</li>
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>shop in jeans</p>
+                        <ul>
+                          <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-BabyBoy-Desktop1-04Mar2022.jpg" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-BabyBoy-Desktop2-04Mar2022.jpg" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-BabyBoy-Desktop3-04Mar2022.jpg" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-BabyBoy-Desktop4-04Mar2022.jpg" alt="tops % tees">
+                      </div>
+                </div>
+          </li>
+         
+          <li>Indian Wear
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Indian Wear</p> 
+                        <ul class="innermenu">
+                          <li>Jackets</li>
+                            <li>Sets</li>
+                         
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>shop in jeans</p>
+                        <ul >
+                         <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-indianwear-05Nov2019.jpg" alt="tops % tees">
+               
+                      </div>
+                </div>
+          </li>
+          <li>Accessories
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Accessories</p> 
+                        <ul class="innermenu">
+                            <li>Face Masks</li>
+                            <li>Bags</li>
+                            <li>Caps</li>
+                            <li>Sunglasses</li>
+                            <li>Socks</li>
+                            <li>Back to School</li>
+                           
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>Shop in our</p>
+                        <ul>
+                          <li>Soft Toys</li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Accessories-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Accessories-Desktop2-05Nov2019.jpg" alt="dreses">
+                        
+                      </div>
+                </div>
+          </li>
+          <li>Footware
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in Footware</p> 
+                        <ul class="innermenu">
+                          <li>Casual Shoes</li>
+                            <li>Boots</li>
+                            <li>Sandals & Flip-Flops </li>
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>Shop in our</p>
+                        <ul>
+                          <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                       <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Shoes-Desktop1-05Nov2019.jpg" alt="error">
+                       <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Shoes-Desktop2-05Nov2019.jpg" alt="error">   
+                      </div>
+                </div>
+          </li>
+          <li>Winterwear
+              <div class="dropdown-content" id="sub1">
+                  <div class="box1">
+                        <p>Shop in WinterWear</p> 
+                        <ul class="innermenu">
+                            <li>Sweatshirts & Hoddies</li>
+                            <li>Sweaters & Cardigans</li>
+                            <li>Jackets</li>
+                            <li>Accessories</li>
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                      <p>Shop in our</p>
+                        <ul>
+                          <li></li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Winterwear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Winterwear-Desktop2-05Nov2019.jpg" alt="dreses">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Boys-Winterwear-Desktop3-10Dec2019.jpg" alt="error">
+                    </div>
+                </div>
+          </li>
+          
+          <li>More
+              <div class="dropdown-more" >
+                 
+                        <ul class="inner-more">
+                            <li>Online Gift Card</li>
+                            <li>Offline Gift Card</li>
+                            <li>Blog</li>
+                            <li>City Buzz</li>
+                            <li>SBI offers</li>
+                            <li>Partner Enquiry</li>
+                        </ul>   
+                 
+                </div>
+          </li>     
+      </ul>
+   </div>
   </div>
+
   <div id="nav-3">
     <!-- <div id="navbar3">
       <div>Online Exclusives</div>

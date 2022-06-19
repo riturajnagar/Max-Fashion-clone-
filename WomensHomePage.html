@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping at Max</title>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="dropdown.css">
+    
+    <style>
+        section,footer{
+          margin-left: 10%;
+          margin-right: 10%;
+          margin-top: 20px;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: 100%;
+            row-gap: 50px;
+        }
+        #container>div>img{
+            width: 100%;
+        }
+        #container>div:nth-child(3){
+            height: 80px;
+        }
+        hr{
+            width: 100%;
+        }
+        body, #upper2nav {
+        width: 100%;
+        margin: 0px;
+        box-sizing: border-box;
+      } 
+      /* NAVBAR 1 */
+      #outerNavbar1 {
+        background-color: black;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      #navbar1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+      #outerNavbar1 > div {
+        /* border: 1px solid red; */
+        display: grid;
+        gap: 200px;
+      }
+      #outerNavbar1 > div > div:nth-child(2) {
+        margin-left: 150px;
+        /* border: 1px solid red; */
+      }
+      #navbar1 > div > div:first-child > img {
+        width: 30px;
+      }
+      #navbar1 > div > div > img {
+        display: block;
+        align-items: center;
+        width: 20px;
+      }
+
+      #navbar1 > div:first-child {
+        display: flex;
+        width: auto;
+        cursor: pointer;
+      }
+      #navbar1 > div:first-child > div {
+        display: flex;
+        /* border: 1px solid red; */
+        align-items: center;
+        gap: 10px;
+      }
+      #navbar1 > div:first-child > div:first-child > img {
+        /* border: 1px solid red; */
+        width: 30px;
+      }
+      #navbar1 > div:first-child > div > img {
+        background-color: white;
+      }
+      #navbar1 > div:last-child {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 80%;
+      }
+      #navbar1 > div:last-child > div:nth-child(1),
+      #navbar1 > div:last-child > div:nth-child(2) {
+        padding: 5px 10px;
+        width: auto;
+        border-right: 1px solid rgb(93, 94, 92);
+      }
+      #navbar1 > div {
+        display: flex;
+        /* border: 1px solid grey; */
+      }
+      #navbar1 > div:last-child > div:nth-child(3) {
+        /* border: 1px solid red; */
+        padding-left: 10px;
+        padding-right: 0px;
+        width: auto;
+      }
+
+      /* NAVBAR 2 */
+
+      #nav-2 {
+        width: 100%;
+        background-color: #f7f8f7;
+      }
+      #navbar2 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        width: 90%;
+        margin: auto;
+        height: 50px;
+        box-sizing: border-box;
+        margin-top: 4px;
+        position: sticky;
+        top: 0px;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        background-color: #f7f8f7;
+      }
+      #navbar2 > div:first-child {
+        display: grid;
+        grid-template-columns: 10% 10% 10% 10% 10% 50%;
+        align-items: center;
+      }
+      #navbar2 > div:first-child > div {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      /* hover style */
+      #navbar2 > div:first-child > div:hover {
+        color: rgb(10, 22, 150);
+      }
+
+      #navbar2 > div:first-child > div:first-child {
+        color: rgb(48, 58, 178);
+        font-size: 36px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin-bottom: 7px;
+      }
+
+      span {
+        color: rgb(228, 0, 43);
+        font-size: 36px;
+      }
+      #navbar2 > div:first-child > div:last-child > img {
+        width: 5%;
+        padding: 5px 0px 5px;
+        background-color: rgb(236, 237, 235);
+      }
+      #navbar2 > div:first-child > div:last-child {
+        display: flex;
+        justify-content: start;
+        height: 80%;
+        gap: 20px;
+        background-color: rgb(236, 237, 235);
+        padding-left: 10px;
+        margin-bottom: 0px;
+      }
+
+      /* input tag */
+      input {
+        background-color: rgb(236, 237, 235);
+        border: none;
+        outline: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      #navbar2 > div:first-child + div > div:last-child > img {
+        width: 20%;
+      }
+      #left-nav {
+        display: grid;
+        grid-template-columns: 30% 30%;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      #left-nav > div:first-child {
+        height: 60%;
+        border-right: 1px solid rgb(200, 201, 198);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      #left-nav > div:last-child {
+        /* border: 1px solid red; */
+        display: flex;
+        gap: 1px;
+        justify-content: center;
+        margin-right: 20px;
+        /* margin-left: -40px; */
+        gap: 10px;
+        cursor: pointer;
+        align-items: center;
+      }
+      #left-nav > div {
+        display: flex;
+        gap: 20px;
+      }
+      #left-nav > div > p {
+        margin-right: -30px;
+      }
+      #left-nav > div > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: 20px;
+      }
+      #left-nav > div > a > p {
+        /* border: 1px solid blue; */
+        /* margin-right: 5px; */
+        font-size: 16px;
+        width: auto;
+        margin-left: 10px;
+      }
+      #left-nav > div > a > img {
+        /* border: 1px solid green; */
+        width: 25px;
+        display: block;
+        margin: auto;
+        /* margin-right: 30px; */
+      }
+
+      /* NAVBAR 3 */
+      #dropDownNav{
+        position: relative;
+        left: -10px;
+        margin-bottom: 50px;
+      }
+
+      *{
+        font-size: 14px;
+      }
+     
+ /* main menu position */
+ .list{
+          position: absolute;
+          z-index: 1;
+          left: 0px;
+          font-size: 12px;
+      }
+      ul.menu{
+             display: inline-block;          
+      }
+      ul.menu li{
+          display: inline-block;
+           /* border: 1px solid red; */
+          padding: 5px 10px;
+          cursor: pointer;
+      }
+
+      /* drop down div  */
+      .dropdown-content{
+          display: flex;
+            gap:20px ;
+            width: 100%;
+            /* opacity: 0; 
+            visibility: hidden; */
+            display: none;
+            position: absolute;
+            left: 50px;
+            top: 55px;
+            padding: 20px 0px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+            height: 250px;
+      } 
+      /* unline border */
+      ul.menu li:hover{
+          border-bottom: 2px solid darkblue;
+      }
+      /* showing after hover */
+      ul.menu>li:nth-child(1):hover .dropdown-content{
+        display: flex;
+        transition-duration: 3000ms;
+        transition-timing-function: ease-in;   
+      }
+      ul.menu>li:nth-child(2):hover .dropdown-content{
+          display: flex;  
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;  
+        }
+        ul.menu>li:nth-child(3):hover .dropdown-content{
+          display: flex; 
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;   
+        }
+        ul.menu>li:nth-child(4):hover .dropdown-content{
+          display: flex; 
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;   
+        }
+        ul.menu>li:nth-child(5):hover .dropdown-content{
+          display: flex;  
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;  
+        }
+        ul.menu>li:nth-child(6):hover .dropdown-content{
+          display: flex;  
+          transition-duration: 3000ms;
+          transition-timing-function: ease-in;  
+         
+        }
+        ul.menu>li:nth-child(7):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(8):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(9):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(10):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(11):hover .dropdown-content{
+          display: flex;   
+        }
+        ul.menu>li:nth-child(12):hover .dropdown-content{
+          display: flex;   
+        }
+
+       
+       /* more menu selection */
+      ul.menu>li:last-of-type{
+          margin-left: 15px;
+          border: none; 
+       }
+        /* more menu div part */
+        .dropdown-more{
+            /* opacity: 0; 
+            visibility: hidden; */
+            display: none;
+            position: absolute;
+            right:-55px; 
+            top: 45px; 
+            background-color: white;
+            width: 120px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;   
+        }
+        ul.inner-more{
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          position: relative;
+          right: 35px;
+        }
+        ul.inner-more li{
+          font-size: 12px; 
+        }
+        ul.menu>li:last-of-type:hover .dropdown-more{
+         display: block;
+          
+       }
+    
+
+       ul.innermenu{
+          position: absolute;
+          left: -30px;
+    
+      }
+      ul.innermenu li{
+          display: block;  
+      }
+     
+      .dropdown-content p{
+         font-size: 20px;
+         margin-left: 20px;
+      }
+      .box2{
+          position: relative;
+          left: -90px;
+       
+      }
+      .box2>p{
+          opacity: 0;
+      }
+      .box3{
+          position: relative;
+          left: -40px;
+          display: flex;
+          gap: 10px; 
+          width: 100%;
+          
+         
+      } 
+      .box3>img{
+        width: 30%;
+       
+      }
+      
+      #nav-3 {
+        width: 100%;
+      }
+      /* 
+      #navbar3 {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        height: 40px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        position: sticky;
+        top: 50px;
+        margin-bottom: 5px;
+        background-color: white;
+      }
+      #navbar3 > div {
+        height: 100%;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0px 10px;
+      }
+      #navbar3 > div:hover {
+        color: blue;
+        border-bottom: 2px solid rgb(48, 58, 178);
+      }
+      #navbar3 > div:last-child {
+        padding: 0px 20px;
+        border: none;
+      }
+
+      /* i have made changes here */
+       #nav-3 > div {
+        text-align: center;
+        box-sizing: border-box;
+        background-color: rgb(48, 58, 178);
+        color: rgb(235, 255, 255);
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      } 
+
+      /* navbar css end */
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .women > button {
+        background-color: #f7f8f7;
+        border: none;
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding: 8px 0px;
+      }
+      .women > button:hover {
+        cursor: pointer;
+        background-color: white;
+      }
+      #signupBtn > button {
+        background-color: #f7f8f7;
+        border: none;
+        font-size: 14px;
+        /* border-right: 2px solid rgb(201, 196, 196); */
+        padding: 8px 0px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      #signupBtn > button:hover {
+        cursor: pointer;
+        background-color: white;
+      }
+      #basket-btn > button {
+        display: flex;
+      }
+      #basket-btn > button > img {
+        margin-left: 10px;
+        width: 15px;
+      }
+
+    </style>
+</head>
+<body>
+   <!-- nav bar starts -->
+   <div id="upper2nav">
+    <div id="outerNavbar1">
+      <div id="navbar1">
+        <div>
+          <div>
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAMAAAApvJHbAAAAYFBMVEUAAAD///+kpKQZGRkwMDDl5eW+vr7Ly8vf399YWFiLi4tJSUmRkZEsLCyCgoKnp6fv7++tra2ZmZlBQUEQEBDFxcUdHR3X19d5eXlqamr4+PglJSUJCQlQUFBvb2+0tLTnw1w/AAABIklEQVRIie3VXZeCIBCAYcd1NiNA0KJV2/r//3IZP6pjwCncbW94L7qZnlCOUpalUqk3tNd5oEqGtYFgm7D+WKsPpnBnntGf3uH/apRsLkLfxVdpKF7Wx9126Mvqw8t63rWGFm9j9Y60WqVBx2vdATTRmjGAMlrzrLQ/EauPegPQmUg9lr9fnwohRN9G6rHtH2nDa967tbCjU1Dnrkdx1Pq6XT5dT1t6edR6GtV+TVMhl0cAaXo3meD2U2TfDt2VJVrcorRclXfRTAFIiWd7cUhfe9DTuYOg9u6/BNEBNu6nRaHNLlCfkdHauIjWZtjycaRcZyPdNzd038s3eLhv2TP3qTjl3vOhy23PveU+PPPcNbrW86r2XFvDKy6COJVK/XI/aU4OG9BpTLoAAAAASUVORK5CYII="
+              alt="error"
+            />
+            <p>Free Shipping</p>
+          </div>
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/590/590511.png"
+              alt="error"
+            />
+            <p>Return to Store</p>
+          </div>
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2898/2898372.png"
+              alt="error"
+            />
+            <p>Click & Collect</p>
+          </div>
+        </div>
+        <div>
+          <div>Download Our Apps</div>
+          <div>Store Locator</div>
+          <div>Help</div>
+        </div>
+      </div>
+    </div>
+    <div id="nav-2">
+      <div id="navbar2">
+        <div>
+          <div>ma<span>x</span></div>
+
+          <div class="women"><button id="wo">Women</button></div>
+          <div class="women"><button id="me">Men</button></div>
+          <div class="women"><button id="ge">Girls</button></div>
+          <div class="women"><button id="bo">Boys</button></div>
+          <div style="margin-bottom: 10px">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZzUZTGCkvMMXgByuGlASAtKcGo6N4weBaA&usqp=CAU"
+              alt="search logo"
+            />
+            <input
+              type="text"
+              name=""
+              id="searchbar"
+              placeholder="What are you looking for?"
+            />
+          </div>
+        </div>
+
+        <div id="left-nav">
+          <div id="signupBtn">
+            <div id="myaccount">Sign Up - Sign in</div>
+        
+          </div>
+          <div id="basket-btn" class="women">
+            <button id="cart-nav">
+              Basket<img src="/Max-Fashion/Products/img/bagIcon.png" alt="bagIcon" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- this code is for dropdown at navbar -->
+    <div id="dropDownNav">
+      <div class="list">
+        <ul class="menu">
+           <li>Online Exclusives    
+                <div class="dropdown-content">
+                  <div class="box1">
+                        <p>Shop in Online Exclusives</p> 
+                        <ul class="innermenu">
+                            <li>Tops</li>
+                            <li>Indian wear</li>
+                            <li>Sports wear</li>
+                            <li>Lingerie</li>
+                            <li>Dresses</li>
+                            <li>Bottom wear</li>
+                        </ul>   
+                   </div>
+                   <div class="box2">
+                    <p>Shop</p>
+                        <ul>
+                            <li>Sleepwear</li>
+                        </ul>
+                    </div>
+                    <div class="box3">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-OE-Desktop1-05May2022.jpg" alt="dresses">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-OE-Desktop2-05May2022.jpg" alt="bottom">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-OE-Desktop3-05May2022.jpg" alt="essentails">
+                    </div>
+                </div>
+            </li>  
+            <li>Curves(Plus Size)
+                <div class="dropdown-content" id="sub1">
+                    <div class="box1">
+                          <p>Shop in Curves(Plus Size)</p> 
+                          <ul class="innermenu">
+                              <li>Tops & Tees</li>
+                              <li>Dresses</li>
+                              <li>Kurtas</li>
+                              <li>Denims</li>
+                              <li>Sports wear</li>
+                              <li>Sleepwear</li>
+                          </ul>   
+                     </div>
+                     <div class="box2">
+                        <p>Shop in</p>
+                          <ul>
+                            <li>Lingerie</li>
+                          </ul>
+                      </div>
+                      <div class="box3">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Curve-Topsandtees-Desktop1-18APRIL2022.jpg" alt="tops % tees">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Curve-Dresses-Desktop1-13APRIL2022.jpg" alt="dreses">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Curve-Sportswear-Desktop1-18APRIL2022.jpg" alt="sportswear">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Curve-Newarrivals-Desktop1-13APRIL2022.jpg" alt="new arrivals">
+                        </div>
+                  </div>
+            </li>
+            <li>Tops
+                <div class="dropdown-content" id="sub1">
+                    <div class="box1">
+                          <p>Shop in Tops</p> 
+                          <ul class="innermenu">
+                              <li>Tops & Tees</li>
+                              <li>Shirts</li>
+                              <li>Tunics</li>
+                              <li>Shrugs</li>
+                              <li>Zodiac Tees</li>
+                              <li>Curves (Plus Size)</li>
+                          </ul>   
+                     </div>
+                     <div class="box2">
+                        <p>shope in our djdddf</p>
+                          <ul>
+                            <li></li>
+                          </ul>
+                      </div>
+                      <div class="box3">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Tops-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Tops-Desktop3-05Nov2019.jpg" alt="dreses">
+                          
+                        </div>
+                  </div>
+            </li>
+            <li>Bottoms
+                <div class="dropdown-content" id="sub1">
+                    <div class="box1">
+                          <p>Shop in Botttoms</p> 
+                          <ul class="innermenu">
+                              <li>Jeans & Jeggings</li>
+                              <li>Capris</li>
+                              <li>Shorts & skirts</li>
+                              <li>Leggings</li>
+                              <li>Zodiac Tees</li>
+                              <li>Jeans (Plus Size)</li>
+                          </ul>   
+                     </div>
+                     <div class="box2">
+                        <p>shop in jeans</p>
+                          <ul>
+                            <li></li>
+                          </ul>
+                      </div>
+                      <div class="box3">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Bottoms-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Bottoms-Desktop2-05Nov2019.jpg" alt="dreses">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Bottoms-Desktop3-05Nov2019.jpg" alt="error">
+                        </div>
+                  </div>
+            </li>
+            <li>Dresses & Jumpsuits
+                <div class="dropdown-content" id="sub1">
+                    <div class="box1">
+                          <p>Shop in Dresses & Jumpsuits</p> 
+                          <ul class="innermenu">
+                              <li>Dresses</li>
+                              <li>Jumpsuits & Dungarees</li>
+                              <li>Curves</li>
+                              
+                          </ul>   
+                     </div>
+                     <div class="box2">
+                        <p>shop in jeans</p>
+                          <ul>
+                            <li></li>
+                          </ul>
+                      </div>
+                      <div class="box3">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-DressandJumpsuit-Desktop1-05Nov2019.jpg" alt="tops % tees">
+       
+                        </div>
+                  </div>
+            </li>
+            <li>Sleepwear
+                <div class="dropdown-content" id="sub1">
+                    <div class="box1">
+                          <p>Shop in Sleepwear</p> 
+                          <ul class="innermenu">
+                              <li>Dresses & Gowns</li>
+                              <li>Sets</li>
+                              <li>Tops</li>
+                              <li>Bottoms</li>
+                              <li>Curves (Plus Size)</li>
+                          </ul>   
+                     </div>
+                     <div class="box2">
+                        <p>shop in jeans</p>
+                          <ul>
+                            <li></li>
+                          </ul>
+                      </div>
+                      <div class="box3">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Sleepwear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Sleepwear-Desktop2-05Nov2019.jpg" alt="dreses">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Sleepwear-Desktop3-05Nov2019.jpg" alt="error">
+                        </div>
+                  </div>
+            </li>
+            <li>Indian Wear
+                <div class="dropdown-content" id="sub1">
+                    <div class="box1">
+                          <p>Shop in Indian Wear</p> 
+                          <ul class="innermenu">
+                            <li>Kurtas & Kurtis</li>
+                            <li>Tops</li>
+                              <li>Dresses</li>
+                              <li>Suits & Sets</li>
+                              <li>Palazzos & Culottes</li>
+                              <li>Salwar & Patialas</li>
+                          </ul>   
+                     </div>
+                     <div class="box2">
+                        <p>shop in jeans</p>
+                          <ul >
+                           <li></li>
+                          </ul>
+                      </div>
+                      <div class="box3">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Ethnicwear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Ethnicwear-Desktop2-05Nov2019.jpg" alt="dreses">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Ethnicwear-Desktop3-05Nov2019.jpg" alt="error">
+                        <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Ethnicwear-Desktop4-05Nov2019.jpg" alt="error">
+                        </div>
+                  </div>
+            </li>
+            <li>Sportswear
+                <div class="dropdown-content" id="sub1">
+                    <div class="box1">
+                          <p>Shop in Sports Wear</p> 
+                          <ul class="innermenu">
+                            <li>Tops</li>
+                            <li>Trackpants & Joggers</li>
+                              <li>Shorts & Capris</li>
+                              <li>Sports Bra</li>
+                              <li>Curves (Plus Size)</li>
+                          </ul>   
+                     </div>
+                     <div class="box2">
+                        <p>shop in jeans</p>
+                          <ul >
+                           <li></li>
+                          </ul>
+                      </div>
+                      <div class="box3">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-SportsWear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-SportsWear-Desktop2-05Nov2019.jpg" alt="dreses">
+                          
+                        </div>
+                  </div>
+            </li>
+            <li>Lingerie
+                <div class="dropdown-content" id="sub1">
+                    <div class="box1">
+                          <p>Shop in Lingerie</p> 
+                          <ul class="innermenu">
+                            <li>Bras</li>
+                            <li>Camisoles</li>
+                              <li>Panties</li>
+                              <li>Curves (Plus Size)</li>
+                          </ul>   
+                     </div>
+                     <div class="box2">
+                        <p>shop in jeans</p>
+                          <ul >
+                           <li></li>
+                          </ul>
+                      </div>
+                      <div class="box3">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Lingerie-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Lingerie-Desktop2-05Nov2019.jpg" alt="dreses">
+                          
+                        </div>
+                  </div>
+            </li>
+            <li>Accessories
+                <div class="dropdown-content" id="sub1">
+                    <div class="box1">
+                          <p>Shop in Accessories</p> 
+                          <ul class="innermenu">
+                              <li>Face Masks</li>
+                              <li>Bags</li>
+                              <li>Caps</li>
+                              <li>Scaves & Stoles</li>
+                              <li>Belts</li>
+                              <li>Wallets</li>
+                          </ul>   
+                     </div>
+                     <div class="box2">
+                        <p>Shop in our</p>
+                          <ul>
+                            <li></li>
+                          </ul>
+                      </div>
+                      <div class="box3">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Accesories-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Accesories-Desktop2-05Nov2019.jpg" alt="dreses">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Accesories-Desktop3-05Nov2019.jpg" alt="sportswear">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Accesories-Desktop4-05Nov2019.jpg" alt="new arrivals">
+                        </div>
+                  </div>
+            </li>
+            <li>Footware
+                <div class="dropdown-content" id="sub1">
+                    <div class="box1">
+                          <p>Shop in Footware</p> 
+                          <ul class="innermenu">
+                              <li>Ballerinas</li>
+                              <li>Flat Sandles</li>
+                              <li>Heels</li>
+                              <li>Casual Shoes</li>
+                              <li>Flip Flop</li>
+                              <li>Sports Shoes</li>
+                          </ul>   
+                     </div>
+                     <div class="box2">
+                        <p>Shop in our</p>
+                          <ul>
+                            <li></li>
+                          </ul>
+                      </div>
+                      <div class="box3">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Shoes-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Shoes-Desktop2-05Nov2019.jpg" alt="dreses">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Shoes-Desktop3-05Nov2019.jpg" alt="sportswear">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Shoes-Desktop4-05Nov2019.jpg" alt="new arrivals">
+                        </div>
+                  </div>
+            </li>
+            <li>Winterwear
+                <div class="dropdown-content" id="sub1">
+                    <div class="box1">
+                          <p>Shop in WinterWear</p> 
+                          <ul class="innermenu">
+                              <li>Sweatshirts & Hoddies</li>
+                              <li>Sweaters & Cardigans</li>
+                              <li>Jackets</li>
+                              <li>Accessories</li>
+                          </ul>   
+                     </div>
+                     <div class="box2">
+                        <p>Shop in our</p>
+                          <ul>
+                            <li></li>
+                          </ul>
+                      </div>
+                      <div class="box3">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Winterwear-Desktop1-05Nov2019.jpg" alt="tops % tees">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Winterwear-Desktop2-05Nov2019.jpg" alt="dreses">
+                          <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Winterwear-Desktop3-10Dec2019.jpg" alt="sportswear">
+                      </div>
+                  </div>
+            </li>
+            <li>More
+                <div class="dropdown-more" >
+                   
+                          <ul class="inner-more">
+                              <li>Online Gift Card</li>
+                              <li>Offline Gift Card</li>
+                              <li>Blog</li>
+                              <li>City Buzz</li>
+                              <li>SBI offers</li>
+                              <li>Partner Enquiry</li>
+                          </ul>   
+                   
+                  </div>
+            </li>     
+        </ul>
+     </div>
+    
+    </div>
+    
+    <!-- dropdown ends -->
+
+
+    <div id="nav-3">
+      
+
+      <div>
+        Buy 3 @ ₹699/999/1499 + FREE Shipping on all orders above JUST ₹499 >
+      </div>
+    </div>
+    <!-- navbar ends -->
+    <section> 
+        <div id="container">
+
+        </div>
+    </section>
+    <footer>
+        <div id="footerSubDow">
+            <div id="Sub">
+              <h4>Subscribe to our awesome emails.</h4>
+              <p>Get our latest offers and news straight in your inbox.</p>
+              <input type="mail" placeholder="Please enter an email address" />
+              <button><b>Subscribe</b></button>
+            </div>
+            <div id="Dow">
+              <h4>Download our apps</h4>
+              <p>Shop our products and offers on-the-go.</p>
+              <div>
+                <div>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9VSQ1kGdvnrdAYQVIVM1JdB_MxhKOpXmWoA&usqp=CAU"
+                    alt="error"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihbMObs2stYan2aQKMttr81DBv6GVs6elSA&usqp=CAU"
+                    alt="error"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div id="footerMenu">
+            <div>
+              <h6>Women</h6>
+              <div>tops</div>
+              <div>Dresses & Jumpsuits</div>
+              <div>Sportswear</div>
+              <div>Bottoms</div>
+              <div>Winterwear</div>
+              <div>Ethnicwear</div>
+              <div>Lingerie</div>
+              <div>Sleepwear</div>
+              <div>Accessories</div>
+              <div>Shoes</div>
+            </div>
+            <div>
+              <h6>Men</h6>
+              <div>Tops</div>
+              <div>Bottoms</div>
+              <div>Sportswear</div>
+              <div>Winterwear</div>
+              <div>Accessories</div>
+              <div>Shoes</div>
+            </div>
+            <div>
+              <h6>Boys</h6>
+              <div>Tops</div>
+              <div>Bottoms</div>
+              <div>Indian Wear</div>
+              <div>Winter Wear</div>
+              <div>Essentials</div>
+              <div>Accessories</div>
+              <div>Shoes</div>
+            </div>
+            <div>
+              <h6>Girls</h6>
+              <div>Tops</div>
+              <div>Bottoms</div>
+              <div>Sportswear</div>
+              <div>Winterwear</div>
+              <div>Accessories</div>
+              <div>Shoes</div>
+            </div>
+            <div>
+              <h6>Explore</h6>
+              <div>Offers</div>
+              <div>Magazine</div>
+            </div>
+            <div>
+              <h6>About</h6>
+              <div>About us</div>
+              <div>Write to us</div>
+              <div>Careers</div>
+              <div>Take a Tour</div>
+              <div>Blog</div>
+              <div>Store Locator</div>
+              <div>Landmark Cares</div>
+            </div>
+            <div>
+              <h6>Help</h6>
+              <div>Contact us</div>
+              <div>Shipping</div>
+              <div>Returns Process</div>
+              <div>Returns Policy</div>
+              <div>Help Centre</div>
+            </div>
+          </div>
+          <hr />
+          <div id="footerSocial">
+            <div id="main">
+              <div id="footerSocialSub1">
+                <div>
+                  <div>
+                    <div>
+                      <div>
+                        <img
+                          src="https://cdn-icons-png.flaticon.com/128/633/633544.png"
+                          alt="error" style="width:100% ;"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div style="color: rgb(146, 147, 145)">Talk to us</div>
+                      <div>1800-123-1444</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div>
+                        <img
+                          src="https://cdn-icons-png.flaticon.com/128/7789/7789517.png"
+                          alt="help-center" style="width: 100%;"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div style="color: rgb(146, 147, 145)">Helpcentre</div>
+                      <div>help.maxfashion.com</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div>
+                        <img
+                          src="https://cdn-icons-png.flaticon.com/128/712/712040.png"
+                          alt="email-icon" style="width: 100%;"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div style="color: rgb(146, 147, 145)">Write to us</div>
+                      <div>help,in@maxfashion.com</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="footerSocialSub2">
+                <div>
+                  <div>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/13/13756.png"
+                      alt="facebook"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/733/733635.png"
+                      alt="twitter"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png"
+                      alt="instagram"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div id="footerBottom">
+            <div>
+              <div>
+                <img
+                  src="https://www.landmarkgroup.com/int/sites/default/files/Brand-logo/New%20Max%20Logo-%20Eng%20With%20Outline_1.png"
+                  alt="error"
+                />
+              </div>
+              <div>
+                <p>© 2022 Retail World Limited.</p>
+                <p>Terms & Conditions - Privacy Policy</p>
+              </div>
+            </div>
+          </div>
+    </footer>
+</body>
+</html>
+<script>
+   let a1=document.createElement("a")
+   a1.setAttribute("href","WomenPage3.html")
+    let div1 =document.createElement("div")
+    let img1 =document.createElement("img")
+    img1.setAttribute("src","https://lmsin.net/cdn-cgi/image/w=1232,q=85,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/MAX-Banner1-desktop-WMCOMMON-14JUNE2022.gif")
+    a1.append(img1)
+    div1.append(a1)
+    let hr1=document.createElement("hr")
+    
+    let a6=document.createElement("a")
+    a6.setAttribute("href","WomenPage6.html")
+    let div2 =document.createElement("div")
+    let img2 =document.createElement("img")
+    img2.setAttribute("src","https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBytwo1A-FREESHIPCOMMON-13JUNE2022.jpg")
+    a6.append(img2)
+    div2.append(a6)
+    let hr2=document.createElement("hr")
+  
+    let a2=document.createElement("a")
+    a2.setAttribute("href","WomenPage1.html")
+    let div3 =document.createElement("div")
+    let img3 =document.createElement("img")
+    img3.setAttribute("src","https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/department-modularblock-oneBythree-C-Women-02JUNE2022.jpg")
+    let h1=document.createElement("h1")
+    h1.innerText="Budget Buy"
+    a2.append(img3)
+    div3.append(h1,a2)
+    let hr3=document.createElement("hr")
+    
+    let a4=document.createElement("a")
+    a4.setAttribute("href","WomenPage5.html")
+    let div4 =document.createElement("div")
+    let img4 =document.createElement("img")
+    img4.setAttribute("src","https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-A-ALLCOMMON-10JUNE2022A.jpg")
+    let h2=document.createElement("h2")
+    h2.innerText="The Joy Of Gifting!"
+    a4.append(img4)
+    div4.append(h2,a4)
+    let hr4=document.createElement("hr")
+   
+    
+    let div5 =document.createElement("div")
+    let d1=document.createElement("div")
+    d1.setAttribute("id","box1")
+    let h5=document.createElement("h1")
+    h5.innerText="Shop By Category"
+    div5.append(h5,d1)
+    let hr5=document.createElement("hr")
+    
+    let div6=document.createElement("div")
+    let d2=document.createElement("div")
+    d2.setAttribute("id","box2")
+    let h6=document.createElement("h1")
+    h6.innerText="Trending Stores"
+    div6.append(h6,d2)
+    let hr6=document.createElement("hr")
+     
+    let div7 =document.createElement("div")
+    let d3=document.createElement("div")
+    d3.setAttribute("id","box3")
+    let h=document.createElement("h1")
+    h.innerText="Budget Zone"
+    div7.append(h,d3)
+    let hr7=document.createElement("hr")
+
+    let a5=document.createElement("a")
+    a5.setAttribute("href","WomenPage2.html")
+    let div8 =document.createElement("div")
+    let img8 =document.createElement("img")
+    img8.setAttribute("src","https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-5modularblock-oneBytwo1C-Women-08JUNE2022.jpg")
+    let h7=document.createElement("h1")
+    h7.innerText="Monsoon Checklist"
+    a5.append(img8)
+    div8.append(h7,a5)
+    let hr8=document.createElement("hr")
+
+    let a3=document.createElement("a")
+    a3.setAttribute("href","WomenPage4.html")
+    let div9 =document.createElement("div")
+    let img9 =document.createElement("img")
+    img9.setAttribute("src","https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBytwo1A-Women-25April2022.jpg")
+    let h8=document.createElement("h1")
+    h8.innerText="Youth Store"
+    a3.append(img9)
+    div9.append(h8,a3)
+    let hr9=document.createElement("hr")
+
+    let div =document.createElement("div")
+    let d=document.createElement("div")
+    d.setAttribute("id","box4")
+    let h11=document.createElement("h1")
+    h11.innerText="Budget Zone"
+    div.append(h11,d)
+    let hr=document.createElement("hr")
+    
+    let div10 =document.createElement("div")
+    let img10 =document.createElement("img")
+    img10.setAttribute("src","https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-9modularblock-oneBythree-A-Women-01APR2022.jpg")
+    div10.append(img10)
+    let hr10=document.createElement("hr")
+
+    let div11 =document.createElement("div")
+    let img11 =document.createElement("img")
+    img11.setAttribute("src","https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock14One-Women-26Oct2021.jpg")
+    let h9=document.createElement("h1")
+    h9.innerText="Gifting Zone"
+    div11.append(h9,img11)
+    let hr11=document.createElement("hr")
+
+    let div12 =document.createElement("div")
+    let img12 =document.createElement("img")
+    img12.setAttribute("src","https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock8-oneBythree-A-Women-21Oct2020.jpg")
+    let h10=document.createElement("h1")
+    h10.innerText="Connect With Us"
+    div12.append(h10,img12)
+    let hr12=document.createElement("hr")
+    
+    document.querySelector("#container").append(div1,hr1,div2,hr2,div3,hr3,div4,hr4,div5,hr5,div6,hr6,div7,hr7,div8,hr8,div9,hr9,div,hr,div10,hr10,div11,hr11,div12,hr12)
+    let box1obj=[
+        { img:"https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-B-1-Desktop-Women-11MAY2022.jpg",name:"Topwear"},
+        { img:"https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-B-2-Desktop-Women-11MAY2022.jpg",name:"Dresses"},
+        { img:"https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-B-3-Desktop-Women-11MAY2022.jpg",name:"Bottom Wear"},
+        { img:"https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-B-4-Desktop-Women-11MAY2022.jpg",name:"Kurtas"},
+        { img:"https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-B-5-Desktop-Women-11MAY2022.jpg",name:"Suits Sets"},
+        { img:"https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-B-6-Desktop-Women-11MAY2022.jpg",name:"Fusion Dresses"},
+        {img:"https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-B-7-Desktop-Women-11MAY2022.jpg",name:"Ethnic Bottoms"},
+        {img:"https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-B-8-Desktop-Women-11MAY2022.jpg",name:"Lingerie"},
+        {img:"https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-B-9-Desktop-Women-11MAY2022.jpg",name:"Sportwear"},
+        {img:"https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-B-10-Desktop-Women-11MAY2022.jpg",name:"Sleepwear"},
+        {img:"https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-B-11-Desktop-Women-11MAY2022.jpg",name:"Accessories"},
+        {img:"https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-B-12-Desktop-Women-11MAY2022.jpg",name:"Footwear"}
+
+    ]
+    
+    box1obj.map(function(elem,index){
+        let div=document.createElement("div")
+        let a=document.createElement("a")
+        a.setAttribute("href","WomenPage3.html")
+        let img=document.createElement("img")
+        img.setAttribute("src",elem.img)
+        let h3=document.createElement("h3")
+        h3.innerText=elem.name
+        div.append(img,h3)
+        document.querySelector("#box1").append(div)
+    })
+    let box2obj=[
+        { img:"https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-Women-modularblock8-oneBythree-A-Women-04MAY2022.jpg"},
+        {img:"https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock8-oneBythree-B-Women-04MAY2022.jpg"},
+        {img:"https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock8-oneBythree-C-Women-04MAY2022.jpg"}
+    ]
+    box2obj.map(function(elem){
+        let div=document.createElement("div")
+        let img=document.createElement("img")
+        img.setAttribute("src",elem.img)
+        div.append(img)
+        document.querySelector("#box2").append(div)
+    })
+    let box3obj=[
+        { img:"https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19One-Women-18MAY2022.jpg"},
+        {img:"https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Two-Women-18MAY2022.jpg"},
+        {img:"https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Three-Women-18MAY2022.jpg"}
+    ]
+    box3obj.map(function(elem){
+        let div=document.createElement("div")
+        let img=document.createElement("img")
+        img.setAttribute("src",elem.img)
+        div.append(img)
+       document.querySelector("#box3").append(div)
+    })
+    let box4obj=[
+        { img:"https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock15One-Women-02JUNE2022.jpg"},
+        {img:"https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock15Two-Women-02JUNE2022.jpg"},
+        {img:"https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock15Three-Women-02JUNE2022.jpg"}
+    ]
+    box4obj.map(function(elem){
+      let div=document.createElement("div")
+        let img=document.createElement("img")
+        img.setAttribute("src",elem.img)
+        div.append(img)
+       document.querySelector("#box4").append(div)
+    })
+    let loginData=JSON.parse(localStorage.getItem("loginData"));
+   let changeName=document.querySelector("#myaccount");
+   changeName.innerText=`Hi, ${loginData.name}`;
+
+    let btn1 = document.querySelector("#bo");
+  btn1.addEventListener("click", loadPage1);
+  function loadPage1() {
+    console.log("clicked")
+    window.location.href = "./BoysPage.html";
+  }
+  let btn2 = document.querySelector("#ge");
+  btn2.addEventListener("click", loadPage2);
+  function loadPage2() {
+    window.location.href = "./girls_page.html";
+  }
+  let btn6 = document.querySelector("#cart-nav");
+  btn6.addEventListener("click", loadPage10);
+  function loadPage10() {
+    window.location.href = "./Basket.html";
+  }
+  let btn3 = document.querySelector("#me");
+  btn3.addEventListener("click", loadPage3);
+  function loadPage3() {
+    window.location.href = "./men/men.html";
+  }
+  let btn4=document.querySelector("#wo");
+  btn4.addEventListener("click",loadPage4);
+  function loadPage4(){
+    window.location.href = "../WomensHomePage.html";
+  }
+
+</script>    
