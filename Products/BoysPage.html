@@ -1034,6 +1034,7 @@
         </div>
       </div>
     </div>
+    
     <!-- footer html ends -->
   </body>
 </html>
@@ -1076,9 +1077,15 @@
   function loadPage2() {
     window.location.href = "./girls_page.html";
   }
-  let btn6 = document.querySelector("#cart-nav");
-  btn6.addEventListener("click", loadPage3);
+  let btn3 = document.querySelector("#me");
+  btn3.addEventListener("click", loadPage3);
   function loadPage3() {
+    console.log("clicked")
+    window.location.href = "/Max-Fashion/Products/men/men.html";
+  }
+  let btn6 = document.querySelector("#cart-nav");
+  btn6.addEventListener("click", loadPage4);
+  function loadPage4() {
     window.location.href = "./Basket.html";
   }
 </script>

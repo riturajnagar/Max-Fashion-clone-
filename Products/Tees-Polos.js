@@ -208,9 +208,14 @@ function displayProducts(teesPoloProductsBoysArr){
   function loadPage2() {
     window.location.href = "./girls_page.html";
   }
-  let btn6 = document.querySelector("#cart-nav");
-  btn6.addEventListener("click", loadPage3);
+  let btn3 = document.querySelector("#me");
+  btn3.addEventListener("click", loadPage3);
   function loadPage3() {
+    window.location.href = "/Max-Fashion/Products/men/men.html";
+  }
+  let btn6 = document.querySelector("#cart-nav");
+  btn6.addEventListener("click", loadPage6);
+  function loadPage6() {
     window.location.href = "./Basket.html";
   }
 
